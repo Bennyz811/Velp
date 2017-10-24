@@ -1,6 +1,6 @@
 class Business < ApplicationRecord
   validates :user_id, :biz_name, :address, :phone,
-            :neighborhood, :category, :rating,
+            :neighborhood, :category,
             :cost, presence: true
 
   belongs_to :users
