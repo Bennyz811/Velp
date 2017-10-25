@@ -5,6 +5,8 @@ const SessionErrors = (state=[], action) => {
   switch (action.type) {
     case RECEIVE_SESSION_ERRORS:
       return action.errors;
+    case RECEIVE_SESSION_ERRORS:
+      return _nullErrors;
     default:
       return state;
   }
