@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+html, body, div, span, h1, h2, h3, h4,
+a, p, ol, ul, li, form, label, article,
+aside, figure, figcaption, footer, header, nav {
+  font-family: sans-serif;
+}
+
+ .red-button {
+   color: white;
+   border: solid 1px #8d0005;
+   background-color: ##d90007;
+   background: linear-gradient(#d90007, #c91400);
+   border-radius: 3px;
+   font-size: 14px;
+   padding: 7px 0;
+   font-family: arial;
+   font-weight: 700;
+   width: 300px;
+   text-align: center;
+ }
+
+ .red-button:hover {
+   background-color: #ed0008;
+   background: linear-gradient(#ed0008, #dd1600);
+   cursor: pointer;
+ }

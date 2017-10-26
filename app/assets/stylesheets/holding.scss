@@ -1,0 +1,44 @@
+
+.homepage {
+  background-size: cover;
+  height: 570px;
+  background:
+  linear-gradient(
+    rgba(0, 0, 0, .4),
+    rgba(0, 0, 0, .4)
+    ),
+    url("tacos.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  background-position: 50%;
+  font-family: arial;
+}
+
+.main-header-nav {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: black;
+  width: 410px;
+  display: flex;
+  float: right;
+  padding-top: 30px;
+}
+
+.main-header-nav .login-link{
+  padding: 9px;
+  padding-right: 24px;
+}
+
+.main-header-nav .signup-link{
+  border: 2px solid #fff;
+  border-radius: 4px;
+  padding: 7px 24px 8px;
+  background: transparent;
+}
+
+.homepage .center-nav {
+  position: relative;
+}

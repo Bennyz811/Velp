@@ -11,10 +11,9 @@ import {
 } from 'react-router-dom';
 
 const App = () => (
-    <div className="homepage">
+    <div>
       <GreetingContainer/>
       <Link to='/' className="logo-nav-link">
-        <h1>VELP</h1>
       </Link>
 
     <Switch>

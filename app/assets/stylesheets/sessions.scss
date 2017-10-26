@@ -2,46 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.homepage {
-  background-size: cover;
-  height: 570px;
-  background:
-  linear-gradient(
-    rgba(0, 0, 0, .4),
-    rgba(0, 0, 0, .4)
-    ),
-    url("tacos.jpg");
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  background-position: 50%;
-  font-family: arial;
-}
-
-.main-header-nav {
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 700;
-  white-space: nowrap;
-  color: #fff;
-  width: 410px;
+.login-signup-container {
+  width: 100%;
+  min-width: 1020px;
   display: flex;
-  float: right;
-  padding-top: 30px;
+  flex-direction: column;;
 }
 
-.main-header-nav .login-link{
-  padding: 9px;
-  padding-right: 24px;
+.wrap-header {
+  width: 100%;
+  height: 64px;
+  background: #d32323;
 }
 
-.main-header-nav .signup-link{
-  border: 2px solid #fff;
-  border-radius: 4px;
-  padding: 7px 24px 8px;
-  background: transparent;
+.login-signup-container {
+  text-align: center;
+  width: 400px;
 }
 
-.homepage .center-nav {
-  position: relative;
+.img-container {
+  
 }
