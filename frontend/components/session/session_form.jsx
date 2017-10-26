@@ -139,16 +139,21 @@ class SessionForm extends React.Component {
         </div>
       )
     }
-
-    // let demoLoginButton;
-    // if (this.props.formType === 'login') {
-    //   demoLoginButton = <button onClick={this.demoLogin}>Demo</button>
+    // let img = document.images[0];
+    // let dwnload = new Image();
+    // dwnload.onload = function(){
+    //   image.src = this.src;
     // }
+    // dwnload.src = "velp_logo.jpg";
 
     return(
       <div className="main-session-wrap">
 
-          <div className="wrap-header"><h1 className="logo-head">VELP</h1></div>
+          <div className="wrap-header">
+            <div className="logo-header">
+              <Link to='/'><img className='velp-logo' src={window.velpLogo}/></Link>
+            </div>
+          </div>
 
           {this.renderErrors()}
           <div className="entire-form-wrapper">
@@ -192,7 +197,7 @@ class SessionForm extends React.Component {
           </div>
 
           <div className="column-img">
-            <div className="img-container"><img src="assets/signup_illustration.png"/></div>
+            <div className="img-container"><img src={window.signupIllustration}/></div>
           </div>
 
         </div>
