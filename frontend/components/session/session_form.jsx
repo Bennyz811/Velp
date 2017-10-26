@@ -4,8 +4,9 @@ import {Link, withRouter} from 'react-router-dom';
 class SessionForm extends React.Component {
   constructor(props){
     super(props);
-    this.state = {email: "", password: "", firstName: "", last_name: "", zip_code: ""};
+    this.state = {email: "", password: "", firstName: "", lastName: "", zipCode: "", birthday: ""};
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoLogin = this.demoLogin.bind(this);
   }
 
   componentWillReceiveProps(nextProps){
@@ -22,15 +23,20 @@ class SessionForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    const user = Object.assign({}, this.state)
+    const user = {}
+    user.first_name = this.state.firstName
+    user.email = this.state.email
+    user.last_name = this.state.lastName
+    user.password = this.state.password
+    user.zip_code = this.state.zipCode
+    user.birthday = this.state.birthday
     this.props.actionForm(user);
   }
 
-  demoLogin(){
+  demoLogin(e){
     e.preventDefault();
-    return(e) => {
-      this.props.login({username:'guest', password:"123456"});
-    }
+    let user = {email: "demo@demo.com", password: "pokerchan"};
+    this.props.actionForm(user);
   }
 
   navLink(){
@@ -59,9 +65,14 @@ class SessionForm extends React.Component {
     let lastNameInput;
     let zipCodeInput;
     let birthday;
+    let signUpTopHalf;
+    let miniLogin;
+    let miniSignup;
+    let demoLoginButton;
+    let logInTopHalf;
     if (this.props.formType === 'signup') {
       firstNameInput = (
-        <label>
+        <label className="input-field">
           <input
             type="text"
             value={this.state.firstName}
@@ -70,7 +81,7 @@ class SessionForm extends React.Component {
         </label>
       )
       lastNameInput = (
-        <label>
+        <label className="input-field">
           <input
             type="text"
             value={this.state.lastName}
@@ -79,7 +90,7 @@ class SessionForm extends React.Component {
         </label>
       )
       zipCodeInput = (
-        <label>
+        <label className="input-field">
           <input
             type="text"
             value={this.state.zipCode}
@@ -88,51 +99,104 @@ class SessionForm extends React.Component {
         </label>
       )
       birthday = (
-        <label>Birthday
+        <label className="input-field">Birthday
           <input
             type="date"
             value={this.state.birthday}
             onChange={this.update('birthday')} />
         </label>
       )
+      signUpTopHalf = (
+        <div>
+          <h1>Sign Up for VELP</h1>
+          <h3>Connect with great local businesses</h3>
+          <p>By signing up, you agree to VELP's Terms of Service and Privacy Policy</p>
+          <div className='fb-link'>
+            <Link to='/'>Sign Up with Facebook</Link>
+          </div>
+          <p>Don't worry, we never post without your permission</p>
+        </div>
+      )
+      miniLogin = (
+        <div>
+          <small>Already on Velp? <Link to='/login'>Log in</Link></small>
+        </div>
+      )
+    } else {
+      demoLoginButton = (
+        <button className="demo-login" onClick={this.demoLogin}>Demo</button>
+      )
+      logInTopHalf = (
+        <div>
+          <h1>Log In to Velp</h1>
+          <h3>New to Velp?<Link to='/signup'>Sign up</Link></h3>
+          <p>By logging in, you agree to Velp's Terms of Service and Privacy Policy.</p>
+        </div>
+      )
+      miniSignup = (
+        <div>
+          <small>New to Velp? <Link to='/signup'>Sign Up</Link></small>
+        </div>
+      )
     }
 
+    // let demoLoginButton;
+    // if (this.props.formType === 'login') {
+    //   demoLoginButton = <button onClick={this.demoLogin}>Demo</button>
+    // }
+
     return(
-      <div className="main-header">
+      <div className="main-session-wrap">
 
-        <form onSubmit={this.handleSubmit}>
           <div className="wrap-header"><h1 className="logo-head">VELP</h1></div>
-          <div className="login-signup-container">
-            <div className="login-signup-form">
-              {this.renderErrors()}
-              {firstNameInput}
-              {lastNameInput}
-              <label>
-                <input
-                  type="email"
-                  value={this.state.email}
-                  onChange={this.update('email')}
-                  placeholder="Email" />
-              </label>
 
-              <br/>
+          {this.renderErrors()}
+          <div className="entire-form-wrapper">
+          <div className="column-container">
+            <form onSubmit={this.handleSubmit}>
+              <div className="login-signup-container">
+                <div className="login-signup-form">
+                  {signUpTopHalf}
+                  {logInTopHalf}
+                  {demoLoginButton}
+                  {firstNameInput}
+                  {lastNameInput}
+                  <label className="input-field">
+                    <input
+                      type="email"
+                      value={this.state.email}
+                      onChange={this.update('email')}
+                      placeholder="Email" />
+                  </label>
 
-              <label>
-                <input
-                  type="password"
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                  placeholder="Password"/>
-              </label>
-              {zipCodeInput}
-              {birthday}
-              <br/>
-              <input className="red-button" type='submit' value={text} />
-            </div>
+                  <br/>
+
+                  <label className="input-field">
+                    <input
+                      type="password"
+                      value={this.state.password}
+                      onChange={this.update('password')}
+                      placeholder="Password"/>
+                  </label>
+                  {zipCodeInput}
+                  {birthday}
+                  <br/>
+                  <input className="red-button" type='submit' value={text} />
+                  <br/>
+                  {miniSignup}
+                  {miniLogin}
+                </div>
+              </div>
+
+            </form>
           </div>
 
-        </form>
-        <div className="img-container"><img src="signup_illustration.jpg"/></div>
+          <div className="column-img">
+            <div className="img-container"><img src="assets/signup_illustration.png"/></div>
+          </div>
+
+        </div>
+
       </div>
     )
   }

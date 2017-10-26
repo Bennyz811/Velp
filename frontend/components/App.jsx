@@ -11,17 +11,12 @@ import {
 } from 'react-router-dom';
 
 const App = () => (
-    <div>
-      <GreetingContainer/>
-      <Link to='/' className="logo-nav-link">
-      </Link>
 
     <Switch>
       <AuthRoute path='/login' component={SessionFormContainer}/>
       <AuthRoute path='/signup' component={SessionFormContainer}/>
+      <Route path='/' component={GreetingContainer} />
     </Switch>
-
-  </div>
 )
 
 export default App;
