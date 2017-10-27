@@ -1,7 +1,16 @@
 import {connect} from 'react';
-import BusinessIndex from './business_index';
-import {fetchAllBusiness, deleteBusiness} from '../../actions/business_actions';
+import IndexItem from './business_index';
 
-const mapStateToProps = state => ({
-  
-})
+const BusinessIndex = ({businesses}) => (
+  <div>
+    {
+      businesses.map(business => (
+        <IndexItem
+          key={business.id}
+          business={business} />
+      )
+    )}
+  </div>
+)
+
+export default BusinessIndex;

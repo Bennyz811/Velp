@@ -1,0 +1,65 @@
+
+.splash-image {
+  // height: 570px;
+  background:
+  linear-gradient(
+    rgba(0, 0, 0, .4),
+    rgba(0, 0, 0, .4)
+    ),
+    image_url("tacos.jpg");
+  // background-size: cover;
+  // background-position: center center;
+  // position: relative;
+  // background-position: 50%;
+  padding-top: 30px;
+  height: 570px;
+  background-color: #333;
+  background-size: cover;
+  background-position: 50%;
+  align-items: center;
+}
+
+.main-header-nav {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: black;
+  width: 410px;
+  display: flex;
+  float: right;
+  padding-top: 30px;
+}
+
+.main-header-nav .login-link{
+  padding: 9px;
+  padding-right: 24px;
+}
+
+.main-header-nav .signup-link{
+  border: 2px solid #fff;
+  border-radius: 4px;
+  padding: 7px 24px 8px;
+  background: transparent;
+}
+
+.center-nav {
+  position: relative;
+}
+
+.home-page-logo{
+  display: block;
+  width: 200px;
+  margin-left: 200px
+}
+
+.home-page-hero{
+  padding: 80px;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.logo-link{
+  align-items: center;
+}
