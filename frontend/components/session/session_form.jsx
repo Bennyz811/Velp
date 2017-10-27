@@ -112,7 +112,7 @@ class SessionForm extends React.Component {
               <h3>Connect with great local businesses</h3>
               <p>By signing up, you agree to VELP's Terms of Service and Privacy Policy</p>
               <div className='fb-link'>
-                <Link to='/'>Sign Up with Facebook</Link>
+                <Link to='/'>Back to home page</Link>
               </div>
               <p>Don't worry, we never post without your permission</p>
             </div>
