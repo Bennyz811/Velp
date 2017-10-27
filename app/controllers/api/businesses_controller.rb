@@ -18,6 +18,7 @@ class Api::BusinessesController < ApplicationController
       render :show
     else
       render json: @business.errors.full_messages, status: 422
+    end
   end
 
   def edit
