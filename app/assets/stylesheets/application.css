@@ -18,3 +18,8 @@ a, p, ol, ul, li, form, label, article,
 aside, figure, figcaption, footer, header, nav {
   font-family: sans-serif;
 }
+
+/*.wrap-footer {
+  width: 100%;
+  margin-top: 150px;
+}*/
