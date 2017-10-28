@@ -12,9 +12,10 @@
   padding-top: 30px;
 }
 
+
 .main-header-nav .login-link{
   padding: 9px;
-  padding-right: 24px;
+  align-items: center;
 }
 
 .main-header-nav .signup-link{
@@ -22,6 +23,15 @@
   border-radius: 4px;
   padding: 7px 24px 8px;
   background: transparent;
+}
+
+.signup-link:hover{
+  background: #fff;
+  color: #666;
+}
+
+.login-link:hover{
+  border-bottom: 2px solid #fff;
 }
 
 .center-nav {

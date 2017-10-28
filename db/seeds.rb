@@ -26,5 +26,16 @@ chikfila = {
   rating: 4,
   cost: 2
 }
+
+woorijip = {
+  biz_name: "Woorijip",
+  address: "12 w 32nd st",
+  phone: "212 244 1115",
+  neighborhood: "ktown",
+  category: "korean",
+  rating: 3,
+  cost: 1
+}
 Business.destroy_all
+Business.create(woorijip)
 Business.create(chikfila)

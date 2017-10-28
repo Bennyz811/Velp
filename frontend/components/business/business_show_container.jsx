@@ -1,5 +1,7 @@
 import {connect} from 'react-redux';
-import {fetchAllBusiness} from '../../actions/business/actions';
+import {withRouter} from 'react-router-dom';
+import {fetchBusiness} from '../../actions/business_actions';
+import {selectBusiness} from '../../reducers/selectors';
 // import businessesReducer from '../reducers/business_reducer';
 import businessShow from './business_show';
 
@@ -12,11 +14,13 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  fetchBusiness: id => dispatch(fetchBusiness(id));
-})
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchBusiness: id => dispatch(fetchBusiness(id))
+  }
+}
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(businessShow)
+)(businessShow));
