@@ -3,9 +3,12 @@ export const RECEIVE_BUSINESS = 'RECEIVE_BUSINESS';
 export const REMOVE_BUSINESS = 'REMOVE_BUSINESS';
 export const UPDATE_BUSINESS = 'UPDATE_BUSINESS';
 export const RECEIVE_BUSINESS_ERRORS = 'RECEIVE_BUSINESS_ERRORS';
+export const SEARCH_BUSINESSES = 'SEARCH_BUSINESSES';
+export const RECEIVE_SEARCH_BUSINESSES = 'RECEIVE_SEARCH_BUSINESSES'
 
 
 import * as bizAPIUtil from '../util/business_api_util';
+import * as searchAPIUtil from '../util/search_api_util';
 
 const receiveAllBusinesses = businesses => ({
   type: RECEIVE_ALL_BUSINESSES, businesses
@@ -21,6 +24,14 @@ const removeBusiness = businessId => ({
 
 const receiveBusinessErrors = errors => ({
   type: RECEIVE_BUSINESS_ERRORS, errors
+})
+
+const searchBusinesses = input => ({
+  type: SEARCH_BUSINESSES, input
+})
+
+const receiveSearchBusinesses = businesses => ({
+  type: RECEIVE_SEARCH_BUSINESSES, businesses
 })
 
 export const fetchAllBusiness = () => dispatch => (
@@ -41,4 +52,8 @@ export const updateBusiness = business => dispatch => (
 
 export const deleteBusiness = businessId => dispatch => (
   bizAPIUtil.deleteBusiness(businessId).then(business => dispatch(removeBusiness(businessId)))
+)
+
+export const fetchSearchBusinesses = input => dispatch => (
+  searchAPIUtil.filterBusiness(input).then(businesses => dispatch(searchBusinesses(businesses)))
 )

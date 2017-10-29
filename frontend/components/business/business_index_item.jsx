@@ -16,16 +16,20 @@ class IndexItem extends React.Component {
     const {biz_name, category, rating, neighborhood, address, phone} = this.props.business
     return(
       <div>
-        <div>
-          <Link to={`/businesses/${this.props.business.id}`}>{biz_name}</Link>
-          {category}
-          {rating}
-        </div>
-        <div>
-          {neighborhood}
-          {address}
-          {phone}
-        </div>
+        <ul>
+          <li className="reg-search-res">
+            <div>
+              <Link to={`/businesses/${this.props.business.id}`}>{biz_name}</Link>
+              {category}
+              {rating}
+            </div>
+            <div>
+              {neighborhood}
+              {address}
+              {phone}
+            </div>
+          </li>
+        </ul>
       </div>
     )
   }

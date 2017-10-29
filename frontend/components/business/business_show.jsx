@@ -5,10 +5,9 @@ import {ProtectedRoute} from '../../util/route_util';
 class businessShow extends React.Component {
   constructor(props){
     super(props);
-    // this.state = { images = [] };
   }
 
-  renderReviewButton(){
+  reviewButton(){
 
   }
 

@@ -27,6 +27,16 @@ chikfila = {
   cost: 2
 }
 
+kfc = {
+  biz_name: "kfc",
+  address: "kfc ave",
+  phone: "212-704-9920",
+  neighborhood: "Time square",
+  category: "Chicken",
+  rating: 4,
+  cost: 2
+}
+
 woorijip = {
   biz_name: "Woorijip",
   address: "12 w 32nd st",
@@ -36,6 +46,18 @@ woorijip = {
   rating: 3,
   cost: 1
 }
+
+picnicGarden = {
+  biz_name: "Picnic Garden",
+  address: "154-05 northern blvd",
+  phone: "718 886 5050",
+  neighborhood: "flushing",
+  category: "korean",
+  rating: 3,
+  cost: 1
+}
 Business.destroy_all
 Business.create(woorijip)
 Business.create(chikfila)
+Business.create(kfc)
+Business.create(picnicGarden)
