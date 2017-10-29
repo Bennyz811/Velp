@@ -108,18 +108,18 @@ class SessionForm extends React.Component {
           )
           signUpTopHalf = (
             <div>
-              <h1>Sign Up for VELP</h1>
-              <h3>Connect with great local businesses</h3>
-              <p>By signing up, you agree to VELP's Terms of Service and Privacy Policy</p>
-              <div className='fb-link'>
-                <Link to='/'>Back to home page</Link>
-              </div>
-              <p>Don't worry, we never post without your permission</p>
+              <h1 className="login-signup-header">Sign Up for Velp</h1>
+              <h3 className="login-signup-subheader">Connect with great local businesses</h3>
+              <p className="legal-copy">By signing up, you agree to Velp's Terms of Service and Privacy Policy</p>
+                <Link className="fb-link-text" to='/'>
+                  <div className='fb-link'>Back to home page</div>
+                </Link>
+              <p className="legal-copy">Don't worry, we never post without your permission</p>
             </div>
           )
           miniLogin = (
             <div>
-              <small>Already on Velp? <Link to='/login'>Log in</Link></small>
+              <small className="mini-login-signup">Already on Velp? <Link className="sub-signup-link" to='/login'>Log in</Link></small>
             </div>
           )
         } else {
@@ -128,14 +128,14 @@ class SessionForm extends React.Component {
           )
           logInTopHalf = (
             <div>
-              <h1>Log In to Velp</h1>
-              <h3>New to Velp?<Link to='/signup'>Sign up</Link></h3>
-              <p>By logging in, you agree to Velp's Terms of Service and Privacy Policy.</p>
+              <h2 className="login-signup-header">Log In to Velp</h2>
+              <h3 className="login-signup-subheader">New to Velp?<Link className="sub-signup-link" to='/signup'>Sign up</Link></h3>
+              <p className="legal-copy">By logging in, you agree to Velp's Terms of Service and Privacy Policy.</p>
             </div>
           )
           miniSignup = (
             <div>
-              <small>New to Velp? <Link to='/signup'>Sign Up</Link></small>
+              <small className="mini-login-signup">New to Velp? <Link className="sub-signup-link" to='/signup'>Sign Up</Link></small>
             </div>
           )
         }

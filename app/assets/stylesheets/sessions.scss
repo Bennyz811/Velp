@@ -14,7 +14,7 @@
   float: right;
   padding: 0 15px;
   box-sizing: border-box;
-  margin-top: 150px;
+  margin-top: 90px;
   max-width: 330px;
   margin-right: 90px;
 }
@@ -69,6 +69,8 @@
   background: #3b5998;
   border-radius: 3px;
   padding: 7px, 0;
+  margin-bottom: 12px;
+  height: 32px;
 }
 .fb-link{
   color: white;
@@ -81,7 +83,13 @@
   font-size: 14px;
   background: #3b5998;
   border-radius: 3px;
-  padding: 7px, 0;
+  // padding: 7px, 0;
+  margin-bottom: 10px;
+  height: 32px;
+}
+
+.fb-link-text{
+  margin-top: 20px;
 }
 
 .demo-login:hover {
@@ -126,4 +134,37 @@
   // max-width: 400px;
   display: inline-block;
   text-align: center;
+}
+
+.login-signup-header{
+  font-size: 22px;
+  color: #d32323;
+  font-weight: bold;
+}
+
+.login-signup-subheader{
+  font-weight: bold;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.sub-signup-link{
+  color: #0073bb;
+}
+
+.sub-signup-link:hover{
+  border-bottom: 1px solid #0073bb;
+}
+
+.legal-copy{
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.mini-login-signup{
+  color: #999;
+  font-weight: normal;
+  font-size: 12px;
+  float: right;
 }

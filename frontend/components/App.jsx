@@ -12,6 +12,7 @@ import SessionFormContainer from './session/session_form_container';
 import SplashContainer from './splash/splash_container';
 import Search from './business/search';
 import BusinessIndexContainer from './business/business_index_container';
+import Footer from './footer.jsx';
 
 const App = () => (
   <div>
@@ -22,10 +23,12 @@ const App = () => (
     </Switch>
 
     <Route path='/businesses' component={Search}/>
+    <Route path='/businesses' component={BusinessIndexContainer}/>
     <Route exact path='/' component={SplashContainer}/>
     <div className='wrap-footer'>
 
     </div>
+  <Footer/>
   </div>
 )
 
