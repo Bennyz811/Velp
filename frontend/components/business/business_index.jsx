@@ -2,10 +2,10 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import IndexItem from './business_index_item';
 
+
 class BusinessIndex extends React.Component {
   constructor(props){
     super(props);
-    this.state = this.props.businesses
   }
 
   componentDidMount(){
@@ -13,12 +13,14 @@ class BusinessIndex extends React.Component {
   }
 
   render(){
-    debugger
     return (
       <div>
+        <div className="main-nav-wrapper">
+          <Link to='/'><img className='main-nav-logo' src={window.velpLogo}/></Link>
+        </div>
         {
           this.props.businesses.map(business => (
-            <BusinessIndexItem
+            <IndexItem
               key={business.id}
               business={business} />
           ))

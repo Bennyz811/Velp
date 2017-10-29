@@ -10,7 +10,8 @@ import { AuthRoute } from '../util/route_util';
 import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session/session_form_container';
 import SplashContainer from './splash/splash_container';
-import BusinessIndex from './business/business_index';
+// import BusinessIndex from './business/business_index';
+import BusinessIndexContainer from './business/business_index_container';
 
 const App = () => (
   <div>
@@ -20,7 +21,7 @@ const App = () => (
       <Route path='/' component={GreetingContainer}/>
     </Switch>
 
-    <Route path='/businesses' component={BusinessIndex}/>
+    <Route path='/businesses' component={BusinessIndexContainer}/>
     <Route exact path='/' component={SplashContainer}/>
     <div className='wrap-footer'>
 

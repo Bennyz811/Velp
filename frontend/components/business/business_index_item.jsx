@@ -1,5 +1,5 @@
 import React from 'react';
-import {withRouter} from 'react-router-dom';
+import {withRouter, Link} from 'react-router-dom';
 // import BusinessShowContainer from './business_show_container';
 
 class IndexItem extends React.Component {
@@ -13,6 +13,21 @@ class IndexItem extends React.Component {
   }
 
   render(){
+    const {biz_name, category, rating, neighborhood, address, phone} = this.props.business
+    return(
+      <div>
+        <div>
+          <Link to={`/businesses/${this.props.business.id}`}>{biz_name}</Link>
+          {category}
+          {rating}
+        </div>
+        <div>
+          {neighborhood}
+          {address}
+          {phone}
+        </div>
+      </div>
+    )
   }
 }
 export default withRouter(IndexItem);

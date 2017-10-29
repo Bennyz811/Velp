@@ -1,7 +1,9 @@
 import merge from 'lodash/merge';
 import {RECEIVE_ALL_BUSINESSES, RECEIVE_BUSINESS, REMOVE_BUSINESS} from '../actions/business_actions';
+
 let _initialState = {};
-const businessesReducer = (state = {}, action) => {
+const businessesReducer = (state = _initialState, action) => {
+  // debugger
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_ALL_BUSINESSES:
@@ -14,7 +16,6 @@ const businessesReducer = (state = {}, action) => {
       return newState;
     default:
       return state;
-
   }
 }
 
