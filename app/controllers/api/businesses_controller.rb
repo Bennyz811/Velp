@@ -14,7 +14,7 @@ class Api::BusinessesController < ApplicationController
 
   def update
     @business = business.find(params[:id])
-    if business.update(bis_params)
+    if @business.update(biz_params)
       render :show
     else
       render json: @business.errors.full_messages, status: 422
