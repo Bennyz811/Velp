@@ -13,6 +13,7 @@ import SplashContainer from './splash/splash_container';
 import Search from './business/search';
 import BusinessIndexContainer from './business/business_index_container';
 import BusinessShowContainer from './business/business_show_container';
+import ReviewFormContainer from './review/review_form_container';
 import Footer from './footer.jsx';
 
 const App = () => (
@@ -26,6 +27,7 @@ const App = () => (
     <Route path='/businesses' component={Search}/>
     <Route exact path='/businesses' component={BusinessIndexContainer}/>
     <Route path='/businesses/:businessId' component={BusinessShowContainer}/>
+    <Route path='/:businessId/write_review' component={ReviewFormContainer}/>
     <Route exact path='/' component={SplashContainer}/>
     <Footer/>
   </div>
