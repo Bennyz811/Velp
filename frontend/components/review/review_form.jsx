@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import UniversalNav from '../business/universal_nav';
+import BusinessShow from '../business/business_show';
 
 class ReviewForm extends React.Component{
   constructor(props){
@@ -38,6 +39,9 @@ class ReviewForm extends React.Component{
     return (
       <div>
         <UniversalNav/>
+        <div>
+          
+        </div>
         <form onSubmit={this.handleSubmit}><h3>Write a Review</h3>
           <textarea
             className="review-text-area"

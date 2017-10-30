@@ -38,9 +38,6 @@ class BusinessShow extends React.Component {
                 <Link to='/upload_user_photos'>Add Photo</Link>
               </div>
             </div>
-            <div>
-
-            </div>
             <div className='map-box'>
               <span>{address}</span>
               <span>{phone}</span>
@@ -48,6 +45,9 @@ class BusinessShow extends React.Component {
             </div>
             <div className='hour-summary'>
               <span>{hours}</span>
+            </div>
+            <div>
+              <ReviewIndexItem />
             </div>
           </div>
         </div>
