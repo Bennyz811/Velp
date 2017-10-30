@@ -3,7 +3,6 @@ import {RECEIVE_ALL_BUSINESSES, RECEIVE_BUSINESS, REMOVE_BUSINESS} from '../acti
 
 let _initialState = {};
 const businessesReducer = (state = _initialState, action) => {
-  // debugger
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_ALL_BUSINESSES:

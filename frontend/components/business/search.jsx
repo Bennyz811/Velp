@@ -14,7 +14,7 @@ class Search extends React.Component{
   render(){
     return(
       <div>
-        <label>Find</label>
+
       </div>
     )
   }

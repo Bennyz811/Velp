@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import IndexItem from './business_index_item';
+import UniversalNav from './universal_nav';
 
 class BusinessIndex extends React.Component {
   constructor(props){
@@ -14,16 +15,19 @@ class BusinessIndex extends React.Component {
   render(){
     return (
       <div>
-        <div className="main-nav-wrapper">
-          <Link to='/'><img className='main-nav-logo' src={window.velpLogo}/></Link>
+        <UniversalNav />
+        <div className="result-col-alpha">
+          <div className="result-list">
+            {
+              this.props.businesses.map(business => (
+                <IndexItem
+                  className="result-list-ind"
+                  key={business.id}
+                  business={business} />
+              ))
+            }
+          </div>
         </div>
-        {
-          this.props.businesses.map(business => (
-            <IndexItem
-              key={business.id}
-              business={business} />
-          ))
-        }
       </div>
     )
   }

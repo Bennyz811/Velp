@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {ProtectedRoute} from '../../util/route_util';
+import UniversalNav from './universal_nav';
 
 class BusinessShow extends React.Component {
   constructor(props){
@@ -21,14 +22,19 @@ class BusinessShow extends React.Component {
       const {id, biz_name, address, phone, neighborhood, category, rating, cost, hours} = this.props.business;
       return (
         <div className="biz-index-item" onClick={this.handleClick}>
-          <div className="biz-index-info">
-            <div>
-              <span>{biz_name}</span>
-              <span>{category}</span>
-              <span>{cost}</span>
-              <span>{rating}</span>
-              <Link to='/write_review'>Write a Review</Link>
-              <Link to='/upload_user_photos'>Add Photo</Link>
+          <UniversalNav />
+          <div className="biz-content-container">
+            <div className="biz-page-header">
+              <div className="biz-page-header-left">
+                <h1>{biz_name}</h1>
+                <span>{category}</span>
+                <span>{cost}</span>
+                <span>{rating}</span>
+              </div>
+              <div className="biz-page-header-right">
+                <Link className="review-button" to='/write_review'>Write a Review</Link>
+                <Link to='/upload_user_photos'>Add Photo</Link>
+              </div>
             </div>
             <div className='map-box'>
               <span>{address}</span>
@@ -43,7 +49,10 @@ class BusinessShow extends React.Component {
       )
     } else {
       return (
-        <p>Loading...</p>
+        <div>
+          <UniversalNav/>
+          <p>Loading...</p>
+        </div>
       )
     }
   }

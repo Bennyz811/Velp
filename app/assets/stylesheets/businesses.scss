@@ -16,3 +16,57 @@
 .reg-search-res{
   border-bottom: 1px solid #e6e6e6;
 }
+
+.biz-content-container{
+  width: 960px;
+  margin: 0 auto;
+}
+
+.biz-page-header h1{
+  font-size: 36px;
+}
+
+.biz-page-header{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 13px;
+  position: relative;
+}
+
+.biz-page-header-left{
+  padding-right: 30px;
+}
+
+.biz-page-header-right{
+  text-align: right;
+  overflow: hidden;
+  padding-bottom: 1px;
+}
+
+.review-button{
+  box-sizing: border-box;
+  background: #d90007;
+  border-color: #8d0005;
+  background: linear-gradient(#d90007, #c91400);
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid;
+  font-weight: bold;
+  text-align: center;
+}
+
+.result-col-alpha{
+  float: left;
+  box-sizing: border-box;
+  width: 66.66667%;
+  position: relative;
+  padding: 0 15px;
+}
+
+.result-list-ind{
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 17px;
+}
