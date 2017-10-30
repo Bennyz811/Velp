@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
-
 class Splash extends React.Component{
   constructor(props){
     super(props);
@@ -19,8 +18,12 @@ class Splash extends React.Component{
                 <Link className='logo-link' to='/'><img src={window.velpLogo}/></Link>
               </div>
             </div>
-          </div>
         </div>
+        <div>
+          Recommended businesses
+
+        </div>
+      </div>
     )
   }
 }

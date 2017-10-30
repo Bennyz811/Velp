@@ -12,6 +12,7 @@ import SessionFormContainer from './session/session_form_container';
 import SplashContainer from './splash/splash_container';
 import Search from './business/search';
 import BusinessIndexContainer from './business/business_index_container';
+import BusinessShowContainer from './business/business_show_container';
 import Footer from './footer.jsx';
 
 const App = () => (
@@ -23,7 +24,8 @@ const App = () => (
     </Switch>
 
     <Route path='/businesses' component={Search}/>
-    <Route path='/businesses' component={BusinessIndexContainer}/>
+    <Route exact path='/businesses' component={BusinessIndexContainer}/>
+    <Route path='/businesses/:businessId' component={BusinessShowContainer}/>
     <Route exact path='/' component={SplashContainer}/>
     <Footer/>
   </div>

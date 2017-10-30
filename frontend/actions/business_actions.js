@@ -38,8 +38,8 @@ export const fetchAllBusiness = () => dispatch => (
   bizAPIUtil.fetchAllBusiness().then(businesses => dispatch(receiveAllBusinesses(businesses)))
 )
 
-export const fetchBusiness = business => dispatch => (
-  bizAPIUtil.fetchBusiness(business).then(business => dispatch(receiveBusiness(business)))
+export const fetchBusiness = bizId => dispatch => (
+  bizAPIUtil.fetchBusiness(bizId).then(business => dispatch(receiveBusiness(business)))
 )
 
 export const createBusiness = business => dispatch => (

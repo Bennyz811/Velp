@@ -2,6 +2,7 @@ export const RECEIVE_ALL_REVIEWS = 'RECEIVE_ALL_REVIEWS';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const REMOVE_REVIEW = 'REMOVE_REVIEW';
 export const UPDATE_REVIEW = 'UPDATE_REVIEW';
+// export const CREATE_REVIEW = 'CREATE_REVIEW';
 
 import * as ReviewAPIUtil from '../util/review_api_util';
 
