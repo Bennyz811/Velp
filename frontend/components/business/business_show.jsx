@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {ProtectedRoute} from '../../util/route_util';
 import UniversalNav from './universal_nav';
 import ReviewFormContainer from '../review/review_form_container';
+import ReviewIndexItem from '../review/review_index_item';
 
 class BusinessShow extends React.Component {
   constructor(props){
@@ -36,6 +37,9 @@ class BusinessShow extends React.Component {
                 <Link className="review-button" to={`/${this.props.business.id}/write_review`}>Write a Review</Link>
                 <Link to='/upload_user_photos'>Add Photo</Link>
               </div>
+            </div>
+            <div>
+
             </div>
             <div className='map-box'>
               <span>{address}</span>
