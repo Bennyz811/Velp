@@ -4,6 +4,7 @@ import Root from './components/root';
 import configureStore from './store/store.js';
 import {signup, login, logout} from './actions/session_actions.js';
 import {fetchAllBusiness, fetchBusiness, updateBusiness} from './actions/business_actions.js';
+import {fetchAllReviews} from './actions/review_actions';
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser){
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.fetchAllBusiness = fetchAllBusiness;
+  window.fetchAllReviews = fetchAllReviews;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 })

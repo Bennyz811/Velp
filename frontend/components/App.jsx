@@ -25,10 +25,7 @@ const App = () => (
     <Route path='/businesses' component={Search}/>
     <Route path='/businesses' component={BusinessIndexContainer}/>
     <Route exact path='/' component={SplashContainer}/>
-    <div className='wrap-footer'>
-
-    </div>
-  <Footer/>
+    <Footer/>
   </div>
 )
 

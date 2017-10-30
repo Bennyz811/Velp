@@ -13,15 +13,26 @@ class Api::ReviewsController < ApplicationController
   end
 
   def update
+    @review = Review.find(params[:id])
+    if @review.update(review_params)
+      render :show
+    else
+      render json: @review.errors.full_messages, status: 422
+    end
   end
 
   def index
+    @reviews = Review.all
   end
 
   def show
+    @review = Review.find(params[:id])
+    render :show
   end
 
   def destroy
+    review = review.find(params[:id])
+    review.destroy
   end
 
   def edit
@@ -30,6 +41,6 @@ class Api::ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:rating, :body, :user_id, :biz_id)
+    params.require(:review).permit(:rating, :body)
   end
 end

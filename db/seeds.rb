@@ -5,17 +5,28 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Business.destroy_all
+User.destroy_all
+Review.destroy_all
 
-demo = {
+demo = User.create!({
   email: "demo@demo.com",
   first_name: "Johnny",
   last_name: "Chan",
   password: "pokerchan",
   zip_code: 12345
+})
 
-}
-User.destroy_all
-User.create(demo)
+roger = User.create!({
+  email: "roger@roger.com",
+  first_name: "Roger",
+  last_name: "Federer",
+  password: "federer",
+  zip_code: 987876
+})
+
+# User.create!(demo)
+# User.create!(roger)
 
 chikfila = {
   biz_name: "Chik-fil-A",
@@ -37,7 +48,7 @@ kfc = {
   cost: 2
 }
 
-woorijip = {
+woorijip = Business.create!({
   biz_name: "Woorijip",
   address: "12 w 32nd st",
   phone: "212 244 1115",
@@ -45,9 +56,9 @@ woorijip = {
   category: "korean",
   rating: 3,
   cost: 1
-}
+})
 
-picnicGarden = {
+picnic_garden = Business.create!({
   biz_name: "Picnic Garden",
   address: "154-05 northern blvd",
   phone: "718 886 5050",
@@ -55,9 +66,25 @@ picnicGarden = {
   category: "korean",
   rating: 3,
   cost: 1
+})
+
+# Business.create!(woorijip)
+Business.create!(chikfila)
+Business.create!(kfc)
+# Business.create!(picnic_garden)
+
+picnic_garden_review = {
+  body: "very good stuff, stuff is so very good, good very stuff",
+  rating: 4,
+  user_id: demo.id,
+  biz_id: picnic_garden.id
 }
-Business.destroy_all
-Business.create(woorijip)
-Business.create(chikfila)
-Business.create(kfc)
-Business.create(picnicGarden)
+
+woorijip_review = {
+  body: "wow, korean, very korean",
+  rating: 4,
+  user_id: roger.id,
+  biz_id: woorijip.id
+}
+Review.create!(picnic_garden_review)
+Review.create!(woorijip_review)
