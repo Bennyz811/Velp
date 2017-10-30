@@ -9,7 +9,7 @@ class ReviewIndexItem extends React.Component{
   render(){
     return (
       <div>
-        REVIEWREVIEW
+        {this.props.review}
       </div>
     )
   }
