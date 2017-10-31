@@ -44,6 +44,7 @@ gem 'paperclip', '~> 5.0.0beta1'
 gem 'figaro'
 gem 'aws-sdk', '< 3.0'
 gem 'font-awesome-rails'
+gem 'bootstrap-sass', '~> 3.1.1.1'
 end
 
 group :development do
