@@ -14,7 +14,9 @@ class Search extends React.Component{
   render(){
     return(
       <div>
-        <input type="submit" value="search"/>
+        <div className='search-bar'>
+          <input type="submit" value="Find"/>
+        </div>
       </div>
     )
   }

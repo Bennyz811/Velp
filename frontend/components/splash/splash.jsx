@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
+import SearchContainer from '../business/search_container'
+
 class Splash extends React.Component{
   constructor(props){
     super(props);
@@ -16,6 +18,7 @@ class Splash extends React.Component{
             <div className="home-page-hero">
               <div className="home-page-logo">
                 <Link className='logo-link' to='/'><img src={window.velpLogo}/></Link>
+                <SearchContainer/>
               </div>
             </div>
         </div>

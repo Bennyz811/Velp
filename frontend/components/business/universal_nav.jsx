@@ -7,8 +7,10 @@ class UniversalNav extends React.Component{
     return(
       <div>
           <div className="main-nav-wrapper">
-            <SearchContainer />
-            <Link to='/'><img className='main-nav-logo' src={window.velpLogo}/></Link>
+            <div className="search-bar-nav">
+              <Link className="nav-home-link" to='/'><img className='main-nav-logo' src={window.velpLogo}/></Link>
+              <SearchContainer className="nav-search-bar"/>
+            </div>
           </div>
       </div>
     )
