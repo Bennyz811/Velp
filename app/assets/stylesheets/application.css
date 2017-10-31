@@ -43,3 +43,19 @@ aside, figure, figcaption, footer, header, nav {
   color: white;
   background-color: white;
 }
+
+.post-review-btn{
+  color: white;
+  border-color: #8d0005;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  background-color: #d90007;
+  background: linear-gradient(#d90007, #c91400);
+  font-size: 12px;
+  padding: 5px 8px;
+  border: 1px solid;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 3px;
+
+}

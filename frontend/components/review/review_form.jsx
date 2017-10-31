@@ -53,7 +53,7 @@ class ReviewForm extends React.Component{
             local businesses. Please don't review this business if
             you received a freebie for writing this review, or if you're
             connected in any way to the owner or employees." />
-          <input type='submit' value="Post Review"/>
+          <input className="post-review-btn" type='submit' value="Post Review"/>
         </form>
       </div>
     )
