@@ -8,21 +8,21 @@ class ReviewForm extends React.Component{
     super(props);
     this.state = this.props.review
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.navToBizShow = this.navToBizShow.bind(this);
   }
 
-  biz_show(){
-    const url = `/businesses/${this.props.match.businessId}`;
+  navToBizShow(){
+    const url = `/businesses/${this.props.match.params.businessId}`;
     this.props.history.push(url);
   }
 
-  handleSubmit(e){
-    e.preventDefault();
-    const businessId = parseInt(this.props.match.params.businessId);
-    const review = Object.assign({}, this.state, {
-      business_id: businessId
-    })
-    this.props.createReview({review});
-    this.biz_show();
+  handleSubmit(){
+    return(e) => {
+      e.preventDefault();
+      const review = Object.assign({}, this.state);
+      this.props.createReview({review});
+      this.navToBizShow();
+    }
   }
 
   update(field){
@@ -40,9 +40,9 @@ class ReviewForm extends React.Component{
       <div>
         <UniversalNav/>
         <div>
-          
+
         </div>
-        <form onSubmit={this.handleSubmit}><h3>Write a Review</h3>
+        <form onSubmit={this.handleSubmit()}><h3>Write a Review</h3>
           <textarea
             className="review-text-area"
             cols="30"
@@ -53,8 +53,8 @@ class ReviewForm extends React.Component{
             local businesses. Please don't review this business if
             you received a freebie for writing this review, or if you're
             connected in any way to the owner or employees." />
+          <input type='submit' value="Post Review"/>
         </form>
-        <input type='submit' value="Post Review"/>
       </div>
     )
   }

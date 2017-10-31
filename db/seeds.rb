@@ -86,5 +86,20 @@ woorijip_review = {
   user_id: roger.id,
   biz_id: woorijip.id
 }
+woorijip_review2 = {
+  body: "WOWOWOWOWOW MUC?H GOOD FOOD",
+  rating: 4,
+  user_id: roger.id,
+  biz_id: woorijip.id
+}
+woorijip_review3 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: roger.id,
+  biz_id: woorijip.id
+}
+
 Review.create!(picnic_garden_review)
 Review.create!(woorijip_review)
+Review.create!(woorijip_review2)
+Review.create!(woorijip_review3)

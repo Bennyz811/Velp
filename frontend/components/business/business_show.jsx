@@ -4,6 +4,7 @@ import {ProtectedRoute} from '../../util/route_util';
 import UniversalNav from './universal_nav';
 import ReviewFormContainer from '../review/review_form_container';
 import ReviewIndexItem from '../review/review_index_item';
+import ReviewIndexContainer from '../review/review_index_container';
 
 class BusinessShow extends React.Component {
   constructor(props){

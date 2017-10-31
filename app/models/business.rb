@@ -3,5 +3,6 @@ class Business < ApplicationRecord
             :cost, presence: true
 
   belongs_to :user, optional: true
-  has_many :reviews
+  has_many :reviews,
+  foreign_key: :biz_id
 end
