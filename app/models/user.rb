@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :reviews
 
   after_initialize :ensure_session_token
+  has_attached_file :image, default_url: "beer.jpg"
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
