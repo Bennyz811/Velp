@@ -8,12 +8,10 @@ class ReviewIndex extends React.Component {
   }
 
   componentDidMount(){
-    debugger
     this.props.fetchAllReviews();
   }
 
   render(){
-    debugger
     if (this.props.reviews.length){
       return (
         <div>

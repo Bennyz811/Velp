@@ -12,9 +12,33 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 html, body, div, span, h1, h2, h3, h4,
 a, p, ol, ul, li, form, label, article,
 aside, figure, figcaption, footer, header, nav {
   font-family: arial;
+}
+
+.review-button{
+  box-sizing: border-box;
+  background: #d90007;
+  border-color: #8d0005;
+  background: linear-gradient(#d90007, #c91400);
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid;
+  font-weight: bold;
+  text-align: center;
+  /*box-shadow: 0 1px 1px rgba(0,0,0,0.3);*/
+  padding: 8px 19px 9px;
+  border-radius: 3px;
+  font-family: arial;
+}
+
+.fa .fa-star {
+  color: white;
+  background-color: white;
 }

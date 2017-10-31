@@ -20,10 +20,14 @@
 .biz-content-container{
   width: 960px;
   margin: 0 auto;
+  padding-top: 15px;
 }
 
 .biz-page-header h1{
   font-size: 36px;
+  display: inline;
+  margin-bottom: 6px;
+  font-weight: bold;
 }
 
 .biz-page-header{
@@ -38,24 +42,14 @@
   padding-right: 30px;
 }
 
+.biz-page-header-left .rating{
+  float: left;
+}
+
 .biz-page-header-right{
   text-align: right;
   overflow: hidden;
   padding-bottom: 1px;
-}
-
-.review-button{
-  box-sizing: border-box;
-  background: #d90007;
-  border-color: #8d0005;
-  background: linear-gradient(#d90007, #c91400);
-  color: #fff;
-  display: inline-block;
-  vertical-align: middle;
-  cursor: pointer;
-  border: 1px solid;
-  font-weight: bold;
-  text-align: center;
 }
 
 .result-col-alpha{
@@ -69,4 +63,10 @@
 .result-list-ind{
   border-bottom: 1px solid #e6e6e6;
   padding-bottom: 17px;
+}
+
+.top-shelf {
+  background: #f5f5f5;
+  border-bottom: 1px solid #e6e6e6;
+  height: 510px;
 }

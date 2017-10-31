@@ -43,6 +43,7 @@ gem 'annotate'
 gem 'paperclip', '~> 5.0.0beta1'
 gem 'figaro'
 gem 'aws-sdk', '>= 2.0'
+gem 'font-awesome-rails'
 end
 
 group :development do
