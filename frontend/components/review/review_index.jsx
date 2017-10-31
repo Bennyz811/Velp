@@ -8,15 +8,29 @@ class ReviewIndex extends React.Component {
   }
 
   componentDidMount(){
+    debugger
     this.props.fetchAllReviews();
   }
 
   render(){
-    return (
-      <div>
-        REVIEWSSSSSSSSS
-      </div>
-    )
+    debugger
+    if (this.props.reviews.length){
+      return (
+        <div>
+          {
+            this.props.reviews.map(rev => (
+              <ReviewIndexItem
+                key={rev.id}
+                review={rev}/>
+            ))
+          }
+        </div>
+      )
+    } else {
+      return (
+        <p>Loading...</p>
+      )
+    }
   }
 }
 

@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {ProtectedRoute} from '../../util/route_util';
 import UniversalNav from './universal_nav';
 import ReviewFormContainer from '../review/review_form_container';
+
 import ReviewIndexItem from '../review/review_index_item';
 import ReviewIndexContainer from '../review/review_index_container';
 
@@ -10,17 +11,27 @@ class BusinessShow extends React.Component {
   constructor(props){
     super(props);
   }
+
   componentDidMount(){
     if (!(this.props.business)){
-      this.props.fetchBusiness(this.props.bizId);
+      this.props.fetchBusiness(this.props.bizId).then(business => {
+        return business.business.review_ids.forEach(id => (this.props.fetchReview(id)));
+      })
+    } else {
+      this.props.business.review_ids.forEach(id => (this.props.fetchReview(id)))
     }
   }
+
+  // componentWillReceiveProps(nextProps){
+  //   if (this.props.match.params.businessId)
+  // }
 
   reviewButton(){
 
   }
 
   render(){
+
     if (this.props.business){
       const {id, biz_name, address, phone, neighborhood, category, rating, cost, hours} = this.props.business;
       return (
@@ -29,7 +40,7 @@ class BusinessShow extends React.Component {
           <div className="biz-content-container">
             <div className="biz-page-header">
               <div className="biz-page-header-left">
-                <h1>{biz_name}</h1>
+                <Link to={`/businesses/${this.props.business.id}`}><h1>{biz_name}</h1></Link>
                 <span>{category}</span>
                 <span>{cost}</span>
                 <span>{rating}</span>
@@ -42,13 +53,12 @@ class BusinessShow extends React.Component {
             <div className='map-box'>
               <span>{address}</span>
               <span>{phone}</span>
-              <Link to={`/businesses/${id}/edit`}>Edit</Link>
             </div>
             <div className='hour-summary'>
               <span>{hours}</span>
             </div>
             <div>
-              <ReviewIndexItem />
+              <ReviewIndexContainer />
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 class Api::ReviewsController < ApplicationController
-  before_action :require_log_in
+  before_action :require_log_in, only: [:create, :update, :destroy]
   def new
   end
 

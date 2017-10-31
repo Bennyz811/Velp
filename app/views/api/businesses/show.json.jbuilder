@@ -5,6 +5,7 @@ json.partial! '/api/businesses/business', business: @business
 #   json.partial! 'api/businesses/business', business: @business
 # end
 
-json.reviews do
-  json.array! @business.reviews, :body, :rating, :created_at
-end
+
+
+
+# refactor so business show will pull reviews along with business
