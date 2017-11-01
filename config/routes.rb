@@ -5,7 +5,9 @@ namespace :api, defaults: {format: :json} do
   resources :users
   resource :session, only: [:create, :destroy]
   resources :reviews
-  resources :businesses
+  resources :businesses do
+    get "search", on: :collection
+  end
 end
 
 root to: 'static_pages#root'
