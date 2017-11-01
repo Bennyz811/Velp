@@ -1,6 +1,7 @@
 import React from 'react';
 import {withRouter, Link} from 'react-router-dom';
 // import BusinessShowContainer from './business_show_container';
+import BusinessMap from '../business_map/business_map';
 
 class IndexItem extends React.Component {
   constructor(props){
@@ -16,6 +17,8 @@ class IndexItem extends React.Component {
     const {biz_name, category, rating, neighborhood, address, phone} = this.props.business
     return(
       <div>
+
+        <div className="search-container">
         <ul>
           <li className="reg-search-res">
             <div>
@@ -30,6 +33,8 @@ class IndexItem extends React.Component {
             </div>
           </li>
         </ul>
+      </div>
+
       </div>
     )
   }
