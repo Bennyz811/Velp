@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import {ProtectedRoute} from '../../util/route_util';
 import UniversalNav from './universal_nav';
 import ReviewFormContainer from '../review/review_form_container';
-
 import ReviewIndexItem from '../review/review_index_item';
 import ReviewIndexContainer from '../review/review_index_container';
 
@@ -50,10 +49,14 @@ class BusinessShow extends React.Component {
                 </div>
               </div>
               <div className="biz-page-header-right">
-                <Link className="review-button" to={`/${this.props.business.id}/write_review`}>
-                  <i className="fa fa-star" aria-hidden="true"></i>
-                  Write a Review
+
+                <div className="review-button">
+                  <Link to={`/${this.props.business.id}/write_review`}>
+                    <i className="fa fa-star" aria-hidden="true"></i>
+                    Write a Review
                   </Link>
+                </div>
+
                 <Link to='/upload_user_photos'>Add Photo</Link>
               </div>
             </div>

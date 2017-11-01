@@ -47,17 +47,17 @@ class SessionForm extends React.Component {
         }
       }
 
-      renderErrors(){
-        return(
-          <ul className="ul-errors">
-            {
-              this.props.errors.map( (error, idx) => (
-                <li key={`${idx}`}>{error}</li>
-              ))
-            }
-          </ul>
-        );
-      }
+  renderErrors(){
+    return(
+      <ul className="ul-errors">
+        {
+          this.props.errors.map( (error, idx) => (
+            <li key={`${idx}`}>{error}</li>
+          ))
+        }
+      </ul>
+    );
+  }
 
       render(){
         const text = this.props.formType === 'login' ? 'Log In' : 'Sign Up';
