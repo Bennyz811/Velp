@@ -9,7 +9,7 @@ class BusinessMap extends React.Component{
 
   componentDidMount(){
     const mapOptions = {
-      center: {lat: 40.7128, lng: 74.0060},
+      center: {lat: 40.7209, lng: -73.9980},
       zoom: 13
     }
 
