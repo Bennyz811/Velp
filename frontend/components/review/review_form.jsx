@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import UniversalNav from '../business/universal_nav';
+import {signup} from '../../actions/session_actions';
 // import BusinessShow from '../business/business_show';
 
 class ReviewForm extends React.Component{
@@ -17,17 +18,10 @@ class ReviewForm extends React.Component{
   }
 
   handleSubmit(e){
-    // return(e) => {
-    //   e.preventDefault();
-    //   const review = Object.assign({}, this.state);
-    //   this.props.createReview({review});
-    //   this.navToBizShow();
-    // }
     e.preventDefault();
     const bizId = parseInt(this.props.match.params.businessId);
     const review = Object.assign({}, this.state, {biz_id: bizId})
-    this.props.createReview({review});
-    this.navToBizShow();
+    this.props.action(review).then( () => this.navToBizShow());
   }
 
   update(field){
@@ -36,12 +30,21 @@ class ReviewForm extends React.Component{
     })
   }
 
-  renderRating(){
-
-  }
-
   render() {
     const text = this.props.formType === 'write_review' ? "Post Review" : "Update Post";
+    let signUpFirst;
+    let signedIn;
+
+    if (this.props.currentUser === null && this.props.formType === 'write_review'){
+      signUpFirst = (
+        <Link className="post-review-btn" to='/signup'>Sign Up First</Link>
+      )
+    } else {
+      signedIn = (
+        <input className="post-review-btn" type='submit' value={text}/>
+      )
+    }
+
     return (
       <div>
         <UniversalNav/>
@@ -51,11 +54,12 @@ class ReviewForm extends React.Component{
         <form onSubmit={this.handleSubmit}>
           <h3>Write a Review</h3>
 
-        <input
-          type="number"
-          value={this.state.rating}
-          onChange={this.update('rating')}
-          />
+          <input
+            type="number"
+            value={this.state.rating}
+            onChange={this.update('rating')}
+            />
+
           <textarea
             className="review-text-area"
             cols="30"
@@ -65,9 +69,10 @@ class ReviewForm extends React.Component{
             placeholder="Your review helps others learn about great
             local businesses. Please don't review this business if
             you received a freebie for writing this review, or if you're
-            connected in any way to the owner or employees." />
-
-          <input className="post-review-btn" type='submit' value={text}/>
+            connected in any way to the owner or employees."
+            />
+          {signedIn}
+          {signUpFirst}
         </form>
 
       </div>
