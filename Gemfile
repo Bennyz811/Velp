@@ -33,6 +33,10 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 gem 'rails_12factor'
+gem 'paperclip', '~> 5.0.0beta1'
+gem 'figaro'
+gem 'aws-sdk', '< 3.0'
+gem 'bootstrap-sass', '~> 3.1.1.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -42,10 +46,6 @@ gem 'capybara', '~> 2.13'
 gem 'selenium-webdriver'
 gem 'pry-rails'
 gem 'annotate'
-gem 'paperclip', '~> 5.0.0beta1'
-gem 'figaro'
-gem 'aws-sdk', '< 3.0'
-gem 'bootstrap-sass', '~> 3.1.1.1'
 end
 
 group :development do
