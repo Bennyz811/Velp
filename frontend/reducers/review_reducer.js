@@ -1,5 +1,6 @@
 import merge from 'lodash/merge';
 import {RECEIVE_ALL_REVIEWS, RECEIVE_REVIEW, REMOVE_REVIEW, UPDATE_REVIEW} from '../actions/review_actions';
+import {RECEIVE_BUSINESS} from '../actions/business_actions';
 
 let _initialState = {};
 const reviewReducer = (state = _initialState, action) => {
