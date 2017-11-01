@@ -24,6 +24,10 @@ class ReviewForm extends React.Component{
     this.props.action(review).then( () => this.navToBizShow());
   }
 
+  // componentWillReceiveProps(newProps){
+  //   this.setState(newProps.review)
+  // }
+
   update(field){
     return (e) => this.setState({
       [field]: e.currentTarget.value

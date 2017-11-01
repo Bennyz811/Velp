@@ -1,5 +1,5 @@
 import merge from 'lodash/merge';
-import {SEARCH_BUSINESSES} from '../business_actions';
+import {SEARCH_BUSINESSES} from '../actions/business_actions';
 
 const _initialState = {input: null};
 

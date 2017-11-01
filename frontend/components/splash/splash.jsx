@@ -18,7 +18,7 @@ class Splash extends React.Component{
             <div className="home-page-hero">
               <div className="home-page-logo">
                 <Link className='logo-link' to='/'><img src={window.velpLogo}/></Link>
-                <SearchContainer/>
+                <SearchContainer className="search-bar-homepage"/>
               </div>
             </div>
         </div>
