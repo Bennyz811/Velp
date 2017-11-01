@@ -13,13 +13,7 @@ class BusinessShow extends React.Component {
   }
 
   componentDidMount(){
-    if (!(this.props.business)){
-      this.props.fetchBusiness(this.props.bizId).then(business => {
-        return business.business.review_ids.forEach(id => (this.props.fetchReview(id)));
-      })
-    } else {
-      this.props.business.review_ids.forEach(id => (this.props.fetchReview(id)))
-    }
+    this.props.fetchBusiness(this.props.bizId)
   }
 
   // componentWillReceiveProps(nextProps){
@@ -32,7 +26,7 @@ class BusinessShow extends React.Component {
 
   render(){
 
-    if (this.props.business){
+    if (this.props.business && this.props.business.review_ids){
       const {id, biz_name, address, phone, neighborhood, category, rating, cost, hours} = this.props.business;
       return (
         <div className="biz-index-item" onClick={this.handleClick}>

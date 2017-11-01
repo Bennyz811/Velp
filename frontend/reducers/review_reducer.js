@@ -14,6 +14,8 @@ const reviewReducer = (state = _initialState, action) => {
       let newState = merge({}, state);
       delete newState[action.reviewId];
       return newState;
+    case RECEIVE_BUSINESS:
+      return merge({}, state, action.business.reviews)
     default:
       return state;
 

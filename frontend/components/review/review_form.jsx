@@ -17,7 +17,6 @@ class ReviewForm extends React.Component{
   }
 
   handleSubmit(e){
-    // debugger
     // return(e) => {
     //   e.preventDefault();
     //   const review = Object.assign({}, this.state);
