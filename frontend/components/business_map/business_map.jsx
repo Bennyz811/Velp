@@ -18,7 +18,7 @@ class BusinessMap extends React.Component{
 
   render(){
     return (
-      <div ref={map => this.mapNode = map}>
+      <div className="biz-map" ref={map => this.mapNode = map}>
 
       </div>
     )
