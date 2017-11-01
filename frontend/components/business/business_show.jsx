@@ -5,6 +5,7 @@ import UniversalNav from './universal_nav';
 import ReviewFormContainer from '../review/review_form_container';
 import ReviewIndexItem from '../review/review_index_item';
 import ReviewIndexContainer from '../review/review_index_container';
+import BusinessMap from '../business_map/business_map'
 
 class BusinessShow extends React.Component {
   constructor(props){
@@ -68,6 +69,8 @@ class BusinessShow extends React.Component {
               <span>{hours}</span>
             </div>
           </div>
+
+          <BusinessMap />
         </div>
         <div className="bottom-layout">
           <ReviewIndexContainer />

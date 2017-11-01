@@ -2,9 +2,11 @@
 <html>
   <head>
     <title>Velp</title>
-    <%= csrf_meta_tags %>
+
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key={AIzaSyBrhc7zY678jmUvp4wEPN5HmiGFoCcdFvc}" %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= csrf_meta_tags %>
     <%= javascript_include_tag 'application' %>
     <script>
     window.velpLogo = "<%= image_url('velp-logo.png') %>"

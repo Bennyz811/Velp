@@ -11,6 +11,7 @@ import GreetingContainer from './greeting/greeting_container';
 import SessionFormContainer from './session/session_form_container';
 import SplashContainer from './splash/splash_container';
 import Search from './business/search';
+import SearchContainer from './business/search_container';
 import BusinessIndexContainer from './business/business_index_container';
 import BusinessShowContainer from './business/business_show_container';
 import ReviewFormContainer from './review/review_form_container';
