@@ -57,3 +57,7 @@ export const deleteBusiness = businessId => dispatch => (
 export const fetchSearchBusinesses = input => dispatch => (
   searchAPIUtil.filterBusiness(input).then(businesses => dispatch(searchBusinesses(businesses)))
 )
+
+export const searchForBusinesses = query => dispatch => (
+  bizAPIUtil.searchBusinesses(query).then(businesses => dispatch(searchBusinesses(businesses)))
+)

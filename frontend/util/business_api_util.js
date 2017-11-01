@@ -34,3 +34,11 @@ export const deleteBusiness = businessId => {
     url: `/api/businesses/${businessId}`
   })
 };
+
+export const searchBusinesses = query => {
+  return $.ajax({
+    method: 'get',
+    url: '/businesses/search',
+    data: {query}
+  })
+}

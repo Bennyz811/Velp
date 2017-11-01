@@ -43,6 +43,19 @@ class Api::BusinessesController < ApplicationController
     @businesses = Business.all
   end
 
+  def search
+    if params[:query].present?
+      @businesses = Business.where('biz_name ~ ?', params[:query])
+    else
+      @businesses = Business.none
+    end
+
+    respond_to do |format|
+      format.html {render :search}
+      format.json {render :search}
+    end
+  end
+
   private
   def biz_params
     params.require(:business).permit(:biz_name, :address, :cost, :category, :phone, :neighborhood)

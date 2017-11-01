@@ -14,7 +14,7 @@ class Search extends React.Component{
   }
 
   componentDidMount(){
-    this.props.fetchSearchBusinesses(this.state.searchTerm);
+    this.props.searchForBusinesses(this.state.searchTerm);
   }
 
   update(field){
@@ -30,7 +30,7 @@ class Search extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     const searchInput = Object.assign({}, this.state)
-    this.props.fetchSearchBusinesses(searchInput)
+    this.props.searchForBusinesses(searchInput)
   }
 
   matches() {
