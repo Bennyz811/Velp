@@ -15,6 +15,7 @@ demo = User.create!({
   last_name: "Chan",
   password: "pokerchan",
   zip_code: 12345
+  # File.open("assets/images/johnnychan.jpg"),
 })
 
 roger = User.create!({

@@ -60,18 +60,20 @@ class Search extends React.Component{
         <form onSubmit={this.handleSubmit}>
           <div className="search-bar-container">
             <div className='search-bar'>
-              <div>
+              <div className="psuedo-input psuedo-find">
                 <span className="psuedo-text">Find</span>
                 <input
                   onChange={this.handleInput}
                   value={this.state.searchTerm}
                   placeholder="Burgers, Sushi, Human, Dogs and Cats"/>
               </div>
-              <div>
+              <div className="psuedo-input psuedo-near">
                 <span className="psuedo-text">Near</span>
-                <p> New York, NY</p>
+                <span> New York, NY</span>
+                <div className="submit-btn">
+                  <input type='submit' value='submit' />
+                </div>
               </div>
-              <input type='submit' value='submit' />
             </div>
           </div>
         </form>
