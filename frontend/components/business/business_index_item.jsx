@@ -14,7 +14,7 @@ class IndexItem extends React.Component {
   }
 
   render(){
-    const {biz_name, category, rating, neighborhood, address, phone} = this.props.business
+    const {biz_name, category, rating, neighborhood, address, phone, image_content_type} = this.props.business
     let ratingStar;
     if (!this.props.business.rating){
       ratingStar = (

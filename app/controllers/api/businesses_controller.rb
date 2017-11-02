@@ -58,6 +58,6 @@ class Api::BusinessesController < ApplicationController
 
   private
   def biz_params
-    params.require(:business).permit(:biz_name, :address, :cost, :category, :phone, :neighborhood, :image)
+    params.require(:business).permit(:biz_name.downcase, :address, :cost, :category, :phone, :neighborhood, :image)
   end
 end

@@ -65,7 +65,7 @@ class Search extends React.Component{
                 <input
                   onChange={this.handleInput}
                   value={this.state.searchTerm}
-                  placeholder="Burgers, Sushi, Human, Dogs and Cats"/>
+                  placeholder="Restaurant Name"/>
               </div>
               <div className="psuedo-input psuedo-near">
                 <span className="psuedo-text">Near</span>

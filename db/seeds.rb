@@ -46,7 +46,9 @@ kfc = {
   neighborhood: "Time square",
   category: "Chicken",
   rating: 4,
-  cost: 2
+  cost: 2,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
 }
 
 woorijip = Business.create!({
