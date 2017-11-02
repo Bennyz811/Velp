@@ -74,6 +74,9 @@ picnic_garden = Business.create!({
 # Business.create!(woorijip)
 Business.create!(chikfila)
 Business.create!(kfc)
+# kfc = Business.new(kfc)
+# kfc.image = File.open("app/assets/images/meal.jpg")
+# kfc.save!
 # Business.create!(picnic_garden)
 
 picnic_garden_review = {

@@ -6,6 +6,7 @@ import BusinessMap from '../business_map/business_map';
 class IndexItem extends React.Component {
   constructor(props){
     super(props);
+    // debugger
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -14,7 +15,7 @@ class IndexItem extends React.Component {
   }
 
   render(){
-    const {biz_name, category, rating, neighborhood, address, phone, image_content_type} = this.props.business
+    const {biz_name, category, rating, neighborhood, address, phone, image_url} = this.props.business
     let ratingStar;
     if (!this.props.business.rating){
       ratingStar = (
@@ -52,6 +53,7 @@ class IndexItem extends React.Component {
           <li className="reg-search-res">
             <div>
               <Link to={`/businesses/${this.props.business.id}`}>{biz_name}</Link>
+              <img src={image_url}/>
               {ratingStar}
               {category}
               {rating}
