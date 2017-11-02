@@ -4,35 +4,48 @@
   border-spacing: 18px 0;
   vertical-align: baseline;
   display: block;
-  width: 100px;
-  height: 36px;
-
+  width: 960px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  // margin-top: 10px;
 }
-
-.nav-search-bar {
-  width: 36px;
-  box-sizing: border-box;
-  border-radius: 4px 0 0 4px;
-  // position: relative;
-  padding: 8px 12px;
-  height: 36px;
-
-}
-
+//
+// .nav-search-bar {
+//   width: 36px;
+//   box-sizing: border-box;
+//   border-radius: 4px 0 0 4px;
+//   // position: relative;
+//   padding: 8px 12px;
+//   height: 36px;
+//
+// }
+//
 .main-nav-logo{
-  width: 50px;
-  height: 50px;
+  width: 90px;
+  height: 100%;
   display: block;
+  // margin-bottom: 5px;
 }
+.uni-logo{
+  margin-bottom: 5px;
+}
+//
+// .nav-home-link{
+//   // background-size: 80px 40px;
+//   margin-left: 9px;
+//   margin-right: 9px;
+// }
+//
 
-.nav-home-link{
-  // background-size: 80px 40px;
-  margin-left: 9px;
-  margin-right: 9px;
+.uni-arrange-container{
+  display: flex;
+  height: 100%;
+  // text-align: center;
+  // table-layout: auto;
+  // min-width: 100%;
 }
 
 .uni-search-container{
-  width: 960px;
-  margin: 0 auto;
-  padding: 0 15px;
+  height: 100%;
 }

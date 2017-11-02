@@ -56,7 +56,7 @@ class Search extends React.Component{
 
   render(){
     return(
-      <div>
+      <div className="search-form-container">
         <form onSubmit={this.handleSubmit}>
           <div className="search-bar-container">
             <div className='search-bar'>
@@ -69,10 +69,10 @@ class Search extends React.Component{
               </div>
               <div className="psuedo-input psuedo-near">
                 <span className="psuedo-text">Near</span>
-                <span> New York, NY</span>
-                <div className="submit-btn">
-                  <input type='submit' value='submit' />
-                </div>
+                <input placeholder="New York, NY" />
+              </div>
+              <div className="submit-btn">
+                <input type='submit' value='submit' />
               </div>
             </div>
           </div>
