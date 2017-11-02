@@ -1,4 +1,5 @@
 import React from 'react';
+import {Route} from 'react-router-dom'
 import BusinessMap from '../business_map/business_map';
 import IndexItem from './business_index_item';
 import BusinessIndex from './business_index';
@@ -54,28 +55,25 @@ class Search extends React.Component{
   // }
 
   render(){
-    debugger
     return(
       <div>
-        <form className='search-bar' onSubmit={this.handleSubmit}>
-          <span className="psuedo-text">Find</span>
-          <input
-            onChange={this.handleInput}
-            value={this.state.searchTerm}
-            placeholder="Burgers, Sushi, Human, Dogs and Cats"/>
-
-          <input type='submit' value='submit' />
-
-        <ul>
-          {
-            this.props.search.input.map(biz => (
-              <IndexItem
-                className="result-list-ind"
-                key={biz.id}
-                business={biz} />
-            ))
-          }
-        </ul>
+        <form onSubmit={this.handleSubmit}>
+          <div className="search-bar-container">
+            <div className='search-bar'>
+              <div>
+                <span className="psuedo-text">Find</span>
+                <input
+                  onChange={this.handleInput}
+                  value={this.state.searchTerm}
+                  placeholder="Burgers, Sushi, Human, Dogs and Cats"/>
+              </div>
+              <div>
+                <span className="psuedo-text">Near</span>
+                <p> New York, NY</p>
+              </div>
+              <input type='submit' value='submit' />
+            </div>
+          </div>
         </form>
       </div>
     )
@@ -84,3 +82,14 @@ class Search extends React.Component{
 }
 
 export default Search;
+
+// <ul>
+//   {
+//     this.props.search.input.map(biz => (
+//       <IndexItem
+//         className="result-list-ind"
+//         key={biz.id}
+//         business={biz} />
+//     ))
+//   }
+// </ul>

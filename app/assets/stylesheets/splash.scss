@@ -50,3 +50,28 @@
   margin: 0 auto;
   margin-top: 45px;
 }
+
+h2{
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 21px;
+  line-height: 1.28571em;
+  color: #d32323;
+  text-align: center;
+}
+
+.home-main-container{
+  // display: block;
+  margin: 0 auto;
+  padding: 15px;
+  align-items: center;
+}
+
+.home-rec-container{
+  padding-top: 72px;
+  border-bottom: 1px solid #e6e6e6;
+  width: 960px;
+  vertical-align: baseline;
+  display: block;
+  margin: 0 auto;
+}

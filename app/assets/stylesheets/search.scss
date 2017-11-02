@@ -4,7 +4,12 @@
   background: #fff;
   width: 480px;
   height: 63px;
+  margin: 0 auto;
 }
+
+// .search-bar-homepage-container{
+//   margin: 0 auto;
+// }
 
 .search-bar {
   display: block;
@@ -14,4 +19,9 @@
 
 .psuedo-text{
   margin-right: 20px;
+}
+
+.search-bar-container{
+  width: 600px;
+  justify-content: space-between;
 }

@@ -1,7 +1,7 @@
 import values from 'lodash/values';
 
 export const selectBusinessReviews = (state, biz) => {
-  return biz ? biz.review_ids.map(od => state.entities.review[id]) : [];
+  return biz ? biz.review_ids.map(id => state.entities.review[id]) : [];
 };
 
 export const asArray = ({ businesses }) => (
