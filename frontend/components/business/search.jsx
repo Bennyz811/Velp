@@ -1,6 +1,6 @@
 import React from 'react';
 import BusinessMap from '../business_map/business_map';
-import BusinessIndex from './business_index';
+import IndexItem from './business_index_item';
 
 class Search extends React.Component{
   constructor(props){
@@ -29,8 +29,7 @@ class Search extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    const searchInput = Object.assign({}, this.state)
-    this.props.searchForBusinesses(searchInput)
+    this.props.searchForBusinesses({searchTerm: e.currentTarget.value})
   }
 
   matches() {
@@ -49,6 +48,7 @@ class Search extends React.Component{
   }
 
   render(){
+    debugger
     return(
       <div>
         <form className='search-bar' onSubmit={this.handleSubmit}>
@@ -60,6 +60,16 @@ class Search extends React.Component{
 
           <input type='submit' value='submit' />
 
+        <ul>
+          {
+            this.props.businesses.map(biz => (
+              <IndexItem
+                className="result-list-ind"
+                key={biz.id}
+                business={biz} />
+            ))
+          }
+        </ul>
         </form>
       </div>
     )

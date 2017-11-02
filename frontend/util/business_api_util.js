@@ -38,7 +38,7 @@ export const deleteBusiness = businessId => {
 export const searchBusinesses = query => {
   return $.ajax({
     method: 'get',
-    url: '/businesses/search',
+    url: '/api/businesses/search',
     data: {query}
   })
 }
