@@ -15,6 +15,35 @@ class IndexItem extends React.Component {
 
   render(){
     const {biz_name, category, rating, neighborhood, address, phone} = this.props.business
+    let ratingStar;
+    if (!this.props.business.rating){
+      ratingStar = (
+        <div className="rating-star-0"></div>
+      )
+    } else {
+      if (ratingStar === 1){
+        ratingStar = (
+          <div className="rating-star-1"></div>
+        )
+      } else if (ratingStar === 2){
+        ratingStar = (
+          <div className="rating-star-2"></div>
+        )
+      } else if (ratingStar === 3){
+        ratingStar = (
+          <div className="rating-star-3"></div>
+        )
+      } else if (ratingStar === 4){
+        ratingStar = (
+          <div className="rating-star-4"></div>
+        )
+      } else if (ratingStar === 5){
+        ratingStar = (
+          <div className="rating-star-5"></div>
+        )
+      }
+    }
+
     return(
       <div>
 
@@ -23,6 +52,7 @@ class IndexItem extends React.Component {
           <li className="reg-search-res">
             <div>
               <Link to={`/businesses/${this.props.business.id}`}>{biz_name}</Link>
+              {ratingStar}
               {category}
               {rating}
             </div>

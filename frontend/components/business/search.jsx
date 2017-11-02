@@ -1,6 +1,7 @@
 import React from 'react';
 import BusinessMap from '../business_map/business_map';
 import IndexItem from './business_index_item';
+import BusinessIndex from './business_index';
 
 class Search extends React.Component{
   constructor(props){
@@ -11,11 +12,12 @@ class Search extends React.Component{
     }
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.navToBizIndex = this.navToBizIndex.bind(this);
   }
 
-  componentDidMount(){
-    this.props.searchForBusinesses(this.state.searchTerm);
-  }
+  // componentDidMount(){
+  //   this.props.searchForBusinesses(this.state.searchTerm);
+  // }
 
   update(field){
     return (e) => {
@@ -27,25 +29,29 @@ class Search extends React.Component{
     this.setState({ searchTerm: e.currentTarget.value});
   }
 
+  navToBizIndex(){
+    this.props.history.push(`/businesses/search`)
+  }
+
   handleSubmit(e){
     e.preventDefault();
-    this.props.searchForBusinesses({searchTerm: e.currentTarget.value})
+    this.props.searchForBusinesses({searchTerm: this.state.searchTerm}).then( () => this.navToBizIndex())
   }
-
-  matches() {
-    const matches = [];
-    const input = this.state.searchTerm;
-    if (input.length === 0){
-      return this.props.business.category;
-    }
-    let cat = this.props.business.category
-    let sub = cat.slice(0, input.length)
-    if (sub.toLowercase() === input.toLowercase()){
-      matches.push(cat)
-    }
-
-    return matches;
-  }
+  //
+  // matches() {
+  //   const matches = [];
+  //   const input = this.state.searchTerm;
+  //   if (input.length === 0){
+  //     return this.props.business.category;
+  //   }
+  //   let cat = this.props.business.category
+  //   let sub = cat.slice(0, input.length)
+  //   if (sub.toLowercase() === input.toLowercase()){
+  //     matches.push(cat)
+  //   }
+  //
+  //   return matches;
+  // }
 
   render(){
     debugger
@@ -62,7 +68,7 @@ class Search extends React.Component{
 
         <ul>
           {
-            this.props.businesses.map(biz => (
+            this.props.search.input.map(biz => (
               <IndexItem
                 className="result-list-ind"
                 key={biz.id}

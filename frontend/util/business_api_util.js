@@ -39,6 +39,6 @@ export const searchBusinesses = query => {
   return $.ajax({
     method: 'get',
     url: '/api/businesses/search',
-    data: {query}
+    data: {query: query.searchTerm}
   })
 }

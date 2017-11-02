@@ -5,7 +5,7 @@ import {fetchSearchBusinesses, searchForBusinesses} from '../../actions/business
 
 const mapStateToProps = state => {
   return {
-    businesses: Object.values(state.entities.businesses)
+    search: state.entities.search
   }
 }
 
