@@ -1,6 +1,7 @@
-.search-container{
-
-}
+// .result-list{
+//   border-top: 1px solid #e6e6e6;
+//   padding-top: 17px;
+// }
 
 .result-col-beta {
   float: left;
@@ -16,12 +17,17 @@
   width: 66.66667%;
   position: relative;
   padding: 0 15px;
-  min-height: 1px;
+  min-height: 645px;
+  display: flex;
 }
 
 .result-list-ind{
   border-bottom: 1px solid #e6e6e6;
   padding-bottom: 17px;
+  width: 100%;
+}
+.result-super-container{
+  align-items: center;
 }
 
 .result-container{
@@ -30,10 +36,19 @@
   padding: 0 15px;
   padding-top: 15px;
   padding-bottom: 36px;
+  height: 100%;
+  display: flex;
 }
 
 .biz-idx-map{
   position: relative;
   border: 1px solid #ccc;
   overflow: hidden;
+}
+
+.result-list{
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }

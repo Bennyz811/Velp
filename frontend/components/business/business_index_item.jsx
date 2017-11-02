@@ -15,11 +15,11 @@ class IndexItem extends React.Component {
   }
 
   render(){
-    const {biz_name, category, rating, neighborhood, address, phone, image_url} = this.props.business
+    const {biz_name, category, rating, cost, neighborhood, address, phone, image_url} = this.props.business
     let ratingStar;
     if (!this.props.business.rating){
       ratingStar = (
-        <div className="rating-star-0"></div>
+        <div className="rating-star-0"><img src={window.zeroStar}/></div>
       )
     } else {
       if (ratingStar === 1){
@@ -46,28 +46,29 @@ class IndexItem extends React.Component {
     }
 
     return(
-      <div>
-
-        <div className="search-container">
-        <ul>
-          <li className="reg-search-res">
-            <div>
-              <Link to={`/businesses/${this.props.business.id}`}>{biz_name}</Link>
-              <img src={image_url}/>
-              {ratingStar}
-              {category}
-              {rating}
+      <li className="search-container">
+        <div className="biz-listing-large">
+          <div className="biz-listing-left-container">
+            <div className="biz-media-block">
+              <div className="media-avatar">
+                <img className="biz-pic" src={image_url}/>
+              </div>
+              <div className="media-story">
+                <Link className="search-res-title" to={`/businesses/${this.props.business.id}`}>{biz_name}</Link>
+                <div className="search-res-rating">{ratingStar}</div>
+                <div className="search-res-cat">{cost} {category}</div>
+              </div>
             </div>
+          </div>
+          <div className="biz-listing-right-container">
             <div>
               {neighborhood}
               {address}
               {phone}
             </div>
-          </li>
-        </ul>
-      </div>
-
-      </div>
+          </div>
+        </div>
+      </li>
     )
   }
 }

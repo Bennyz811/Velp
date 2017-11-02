@@ -1,0 +1,41 @@
+.biz-pic{
+  width: 90px;
+  height: 90px;
+  border-radius: 3px;
+}
+
+[class*=rating-star]{
+  height: 10px;
+  width: 120px;
+}
+
+.search-container{
+  border-top: 1px solid #e6e6e6;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.biz-listing-left-container{
+  float: left;
+  padding: 0 15px;
+  min-height: 1px;
+  box-sizing: border-box;
+}
+
+.biz-media-block{
+  position: relative;
+  display: flex;
+}
+
+.search-res-title{
+  font-weight: normal;
+  margin-bottom: 6px;
+}
+
+.search-res-rating{
+  margin: 6px 0;
+}
+
+.search-res-cat{
+
+}

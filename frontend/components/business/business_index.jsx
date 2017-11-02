@@ -17,26 +17,30 @@ class BusinessIndex extends React.Component {
     return (
       <div>
         <UniversalNav />
-        <div className="result-container">
+        <div className="result-super-container">
+          <div className="result-container">
 
-        <div className="result-col-alpha">
-          <div className="result-list">
-            {
-              this.props.businesses.map(business => (
-                <IndexItem
-                  className="result-list-ind"
-                  key={business.id}
-                  business={business} />
-              ))
-            }
-          </div>
-        </div>
+            <div className="result-col-alpha">
+              <div className="result-list">
+                <ul className="result-list-ul">
+                  {
+                    this.props.businesses.map(business => (
+                      <IndexItem
+                        className="result-list-ind"
+                        key={business.id}
+                        business={business} />
+                    ))
+                  }
+                </ul>
+              </div>
+            </div>
 
-        <div className="result-col-beta">
-          <div>
-            <BusinessMap className="biz-idx-map"/>
+            <div className="result-col-beta">
+              <div>
+                <BusinessMap className="biz-idx-map"/>
+              </div>
+            </div>
           </div>
-        </div>
 
       </div>
       </div>
