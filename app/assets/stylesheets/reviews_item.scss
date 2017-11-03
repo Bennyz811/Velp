@@ -1,0 +1,58 @@
+// Place all the styles related to the reviews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.review-text-area{
+  border: 1px solid #999;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.rev-user-pic{
+  width: 60px;
+  height: 60px;
+  border-radius: 3px;
+}
+
+.rev-sidebar{
+  float: left;
+  padding: 0;
+  width: 37.5%;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.rev-wrapper{
+  float: left;
+  padding: 0 15px;
+  width: 62.5%;
+  box-sizing: border-box;
+  min-height: 156px;
+  margin-left: 30px;
+}
+
+.rev-content{
+  padding: 0 12px 6px 0;
+  min-height: 156px;
+  margin-left: 20px;
+}
+
+.rev-reviews{
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 23px;
+}
+
+.rev-rating{
+  margin-bottom: 18px;
+}
+
+.rev-user-name{
+  color: #0073bb;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+// .media-story{
+//   float: left;
+// }

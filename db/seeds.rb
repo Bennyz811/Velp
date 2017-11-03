@@ -14,8 +14,9 @@ demo = User.create!({
   first_name: "Johnny",
   last_name: "Chan",
   password: "pokerchan",
-  zip_code: 12345
-  # File.open("assets/images/johnnychan.jpg"),
+  zip_code: 12345,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
 })
 
 roger = User.create!({
@@ -23,11 +24,155 @@ roger = User.create!({
   first_name: "Roger",
   last_name: "Federer",
   password: "federer",
-  zip_code: 987876
+  zip_code: 987876,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
 })
 
+jon_stewart = User.create!({
+  email: "jon@jon.com",
+  first_name: "Jon",
+  last_name: "Stewart",
+  password: "jonstew",
+  zip_code: 98776,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+  })
+
+stephen_colbert = User.create!({
+  email: "stephen@stephen.com",
+  first_name: "stephen",
+  last_name: "Colbert",
+  password: "stepcol",
+  zip_code: 23421,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+  })
+
+rafael_nadal = User.create!({
+  email: "rafa@rafa.com",
+  first_name: "Rafa",
+  last_name: "Nadal",
+  password: "rafanadal",
+  zip_code: 86548,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+  })
+
+daniel_negraneu = User.create!({
+  email: "dan@dan.com",
+  first_name: "Daniel",
+  last_name: "Negraneu",
+  password: "danneg",
+  zip_code: 87654,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+  })
+
+phily_ivey = User.create!({
+  email: "phil@phil.com",
+  first_name: "Phil",
+  last_name: "Ivey",
+  password: "philphil",
+  zip_code: 45678,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+  })
+
+walter_white = User.create!({
+  email: "walter@walter.com",
+  first_name: "Walter",
+  last_name: "White",
+  password: "walterblue",
+  zip_code: 38906,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+  })
+
+doug_polk = User.create!({
+  email: "doug@doug.com",
+  first_name: "Doug",
+  last_name: "Polk",
+  password: "dougpolk",
+  zip_code: 987654,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+  })
+
+richard_hendricks = User.create!({
+  email: "richard@rich.com",
+  first_name: "Richard",
+  last_name: "Hendricks",
+  password: "richardrich",
+  zip_code: 134511,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+  })
+
+dinesh = User.create!({
+  email: "dinesh@dinesh.com",
+  first_name: "Dinesh",
+  last_name: "Chugtai",
+  password: "dineshdin",
+  zip_code: 98138,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+  })
+
+gilfoyle = User.create!({
+  email: "gil@gil.com",
+  first_name: "Bertram",
+  last_name: "Gilfoyle",
+  password: "gilgilgil",
+  zip_code: 98765,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+  })
+
+claire = User.create!({
+  email: "claire@claire.com",
+  first_name: "Claire",
+  last_name: "Underwood",
+  password: "underwood",
+  zip_code: 87953,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+  })
+
+gavin = User.create!({
+  email: "gavin@gavin.com",
+  first_name: "Gavin",
+  last_name: "Belson",
+  password: "gavingavin",
+  zip_code: 130091,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+  })
+
+erlich = User.create!({
+  email: "erlich@erlich.com",
+  first_name: "Erlich",
+  last_name: "Bachman",
+  password: "erlichas",
+  zip_code: 325225,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+  })
 # User.create!(demo)
 # User.create!(roger)
+# User.create!(jon_stewart)
+# User.create!(stephen_colbert)
+# User.create!(rafael_nadal)
+# User.create!(walter_white)
+# User.create!(phily_ivey)
+# User.create!(daniel_negraneu)
+# User.create!(gavin)
+# User.create!(erlich)
+# User.create!(richard_hendricks)
+# User.create!(dinesh)
+# User.create!(gilfoyle)
+# User.create!(doug_polk)
+# User.create!(claire)
 
 chikfila = {
   biz_name: "Chik-fil-A",
@@ -36,7 +181,9 @@ chikfila = {
   neighborhood: "Time square",
   category: "Chicken",
   rating: 4,
-  cost: 2
+  cost: 2,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
 }
 
 kfc = {
@@ -58,7 +205,9 @@ woorijip = Business.create!({
   neighborhood: "ktown",
   category: "korean",
   rating: 3,
-  cost: 1
+  cost: 1,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
 })
 
 picnic_garden = Business.create!({
@@ -68,16 +217,249 @@ picnic_garden = Business.create!({
   neighborhood: "flushing",
   category: "korean",
   rating: 3,
-  cost: 1
+  cost: 1,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+sophies = Business.create!({
+  biz_name: "Sophie's Cuban",
+  address: "21 w 45th st New York, NY",
+  phone: "212 302 1211",
+  neighborhood: "Midtown West",
+  category: "cuban",
+  rating: 4,
+  cost: 2,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+gong_cha = Business.create!({
+  biz_name: "Gong Cha",
+  address: "75 W 38th St New York, NY",
+  phone: "718 886 5050",
+  neighborhood: "Midtown West",
+  category: "boba",
+  rating: 3,
+  cost: 2,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+perse = Business.create!({
+  biz_name: "per se",
+  address: "10 Columbus Cir New York, NY",
+  phone: "718 886 5050",
+  neighborhood: "Hell's Kitchen",
+  category: "French",
+  rating: 4,
+  cost: 4,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+upstate = Business.create!({
+  biz_name: "Upstate",
+  address: "95 1st Ave New York, NY 10003",
+  phone: "718 886 5050",
+  neighborhood: "Midtown West",
+  category: "Seafood",
+  rating: 4,
+  cost: 2,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+icecream = Business.create!({
+  biz_name: "Ample Hill Creamery",
+  address: "623 Vanderbilt Ave
+Brooklyn, NY",
+  phone: "718 886 5050",
+  neighborhood: "Prospect Heights",
+  category: "ice cream",
+  rating: 4,
+  cost: 2,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+van_leeu = Business.create!({
+  biz_name: "Van Leeuwen",
+  address: "172 Ludlow St
+New York, NY",
+  phone: "718 886 5050",
+  neighborhood: "Lower East Side",
+  category: "ice cream",
+  rating: 4,
+  cost: 2,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+momofuku = Business.create!({
+  biz_name: "Momofuku",
+  address: "171 1st Ave
+New York, NY",
+  phone: "718 886 5050",
+  neighborhood: "East Village",
+  category: "Ramen",
+  rating: 4,
+  cost: 2,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+jajaja = Business.create!({
+  biz_name: "Jajaja",
+  address: "162 E Broadway
+New York, NY",
+  phone: "718 886 5050",
+  neighborhood: "Lower East Side",
+  category: "Vegan",
+  rating: 4,
+  cost: 2,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+blossom = Business.create!({
+  biz_name: "Blossom",
+  address: "187 9th Ave
+New York, NY ",
+  phone: "718 886 5050",
+  neighborhood: "Chelsea",
+  category: "Vegan",
+  rating: 4,
+  cost: 3,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+dirt_candy = Business.create!({
+  biz_name: "Dirt Candy",
+  address: "154 E 79th St
+New York, NY ",
+  phone: "718 886 5050",
+  neighborhood: "Upper East Side",
+  category: "Vegan",
+  rating: 4,
+  cost: 3,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+han = Business.create!({
+  biz_name: "Han Dynasty",
+  address: "90 3rd Ave
+New York, NY ",
+  phone: "718 886 5050",
+  neighborhood: "East Village",
+  category: "Chinese",
+  rating: 4,
+  cost: 2,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+wah_fung = Business.create!({
+  biz_name: "Wah Fung",
+  address: "79 Chrystie St
+New York, NY",
+  phone: "718 886 5050",
+  neighborhood: "Lower East Side",
+  category: "Chinese",
+  rating: 5,
+  cost: 1,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+shake_shack = Business.create!({
+  biz_name: "Shake Shack",
+  address: "E 23rd St & Madison Ave
+New York, NY ",
+  phone: "718 886 5050",
+  neighborhood: "Flatiron",
+  category: "burgers",
+  rating: 4,
+  cost: 2,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+five_guys = Business.create!({
+  biz_name: "Five Guys",
+  address: "138 Montague St
+Brooklyn, NY ",
+  phone: "718 886 5050",
+  neighborhood: "Brooklyn Heights",
+  category: "Burgers",
+  rating: 4,
+  cost: 2,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+bowery_road = Business.create!({
+  biz_name: "Bowery Road",
+  address: "132 4th Ave
+New York, NY ",
+  phone: "718 886 5050",
+  neighborhood: "Union Square",
+  category: "American",
+  rating: 5,
+  cost: 3,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+sushi_jones = Business.create!({
+  biz_name: "Sushi on Jones",
+  address: "210 W 10th St
+New York, NY",
+  phone: "718 886 5050",
+  neighborhood: "West Village",
+  category: "Sushi",
+  rating: 5,
+  cost: 3,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
+})
+
+balthazar = Business.create!({
+  biz_name: "Balthazar",
+  address: "80 Spring St
+New York, NY ",
+  phone: "718 886 5050",
+  neighborhood: "Soho",
+  category: "French",
+  rating: 4,
+  cost: 3,
+  image: File.open("app/assets/images/meal.jpg"),
+  image_content_type: "image/jpeg"
 })
 
 # Business.create!(woorijip)
-Business.create!(chikfila)
-Business.create!(kfc)
+# Business.create!(picnic_garden)
+# Business.create!(chikfila)
+# Business.create!(sophies)
+# Business.create!(gong_cha)
+# Business.create!(perse)
+# Business.create!(upstate)
+# Business.create!(icecream)
+# Business.create!(van_leeu)
+# Business.create!(momofuku)
+# Business.create!(jajaja)
+# Business.create!(blossom)
+# Business.create!(dirt_candy)
+# Business.create!(han)
+# Business.create!(shake_shack)
+# Business.create!(bowery_road)
+# Business.create!(sushi_jones)
+# Business.create!(balthazar)
 # kfc = Business.new(kfc)
 # kfc.image = File.open("app/assets/images/meal.jpg")
 # kfc.save!
-# Business.create!(picnic_garden)
 
 picnic_garden_review = {
   body: "very good stuff, stuff is so very good, good very stuff",
@@ -95,17 +477,395 @@ woorijip_review = {
 woorijip_review2 = {
   body: "WOWOWOWOWOW MUC?H GOOD FOOD",
   rating: 4,
-  user_id: roger.id,
+  user_id: jon_stewart.id,
   biz_id: woorijip.id
 }
 woorijip_review3 = {
   body: "DELICIOUS",
   rating: 4,
+  user_id: dinesh.id,
+  biz_id: woorijip.id
+}
+sophies_review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: gavin.id,
+  biz_id: sophies.id
+}
+sophies_review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: phily_ivey.id,
+  biz_id: sophies.id
+}
+sophies_review3 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: walter_white.id,
+  biz_id: sophies.id
+}
+sophies_review4 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: doug_polk.id,
+  biz_id: sophies.id
+}
+gong_cha_review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: roger.id,
+  biz_id: gong_cha.id
+}
+gong_cha_review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: rafael_nadal.id,
+  biz_id: gong_cha.id
+}
+gong_cha_review3 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: erlich.id,
+  biz_id: gong_cha.id
+}
+gong_cha_review4 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: richard_hendricks.id,
+  biz_id: gong_cha.id
+}
+perse_review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: stephen_colbert.id,
+  biz_id: perse.id
+}
+perse_review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: jon_stewart.id,
+  biz_id: perse.id
+}
+perse_review3 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: dinesh.id,
+  biz_id: perse.id
+}
+perse_review4 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: claire.id,
+  biz_id: perse.id
+}
+upstate_review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: demo.id,
+  biz_id: woorijip.id
+}
+upstate_review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: gilfoyle.id,
+  biz_id: woorijip.id
+}
+upstate_review3 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: gavin.id,
+  biz_id: woorijip.id
+}
+upstate_review4 = {
+  body: "DELICIOUS",
+  rating: 4,
   user_id: roger.id,
   biz_id: woorijip.id
+}
+icecream_review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: roger.id,
+  biz_id: icecream.id
+}
+icecream_review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: dinesh.id,
+  biz_id: icecream.id
+}
+icecream_review3 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: rafael_nadal.id,
+  biz_id: icecream.id
+}
+icecream_review4 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: stephen_colbert.id,
+  biz_id: icecream.id
+}
+van_leeu_review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: roger.id,
+  biz_id: van_leeu.id
+}
+van_leeu_review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: claire.id,
+  biz_id: van_leeu.id
+}
+van_leeu_review3 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: walter_white.id,
+  biz_id: van_leeu.id
+}
+van_leeu_review4 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: daniel_negraneu.id,
+  biz_id: van_leeu.id
+}
+momofuku_review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: phily_ivey.id,
+  biz_id: momofuku.id
+}
+momofuku_review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: daniel_negraneu.id,
+  biz_id: momofuku.id
+}
+momofuku_review3 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: roger.id,
+  biz_id: momofuku.id
+}
+momofuku_review4 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: jon_stewart.id,
+  biz_id: momofuku.id
+}
+jajaja_Review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: roger.id,
+  biz_id: jajaja.id
+}
+jajaja_Review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: richard_hendricks.id,
+  biz_id: jajaja.id
+}
+blossom_review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: walter_white.id,
+  biz_id: blossom.id
+}
+blossom_review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: jon_stewart.id,
+  biz_id: blossom.id
+}
+dirt_candy_review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: rafael_nadal.id,
+  biz_id: dirt_candy.id
+}
+dirt_candy_review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: stephen_colbert.id,
+  biz_id: dirt_candy.id
+}
+dirt_candy_review3 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: jon_stewart.id,
+  biz_id: dirt_candy.id
+}
+han_review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: rafael_nadal.id,
+  biz_id: han.id
+}
+han_review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: daniel_negraneu.id,
+  biz_id: han.id
+}
+han_review3 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: gavin.id,
+  biz_id: han.id
+}
+wah_fung_review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: doug_polk.id,
+  biz_id: wah_fung.id
+}
+wah_fung_review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: dinesh.id,
+  biz_id: wah_fung.id
+}
+wah_fung_review3 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: claire.id,
+  biz_id: wah_fung.id
+}
+shake_shack_review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: demo.id,
+  biz_id: shake_shack.id
+}
+shake_shack_review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: phily_ivey.id,
+  biz_id: shake_shack.id
+}
+shake_shack_review3 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: daniel_negraneu.id,
+  biz_id: shake_shack.id
+}
+five_guys_review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: demo.id,
+  biz_id: five_guys.id
+}
+five_guys_review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: gilfoyle.id,
+  biz_id: five_guys.id
+}
+bowery_road_review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: richard_hendricks.id,
+  biz_id: bowery_road.id
+}
+bowery_road_review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: walter_white.id,
+  biz_id: bowery_road.id
+}
+bowery_road_review3 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: jon_stewart.id,
+  biz_id: bowery_road.id
+}
+sushi_jones_review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: gavin.id,
+  biz_id: sushi_jones.id
+}
+sushi_jones_review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: rafael_nadal.id,
+  biz_id: sushi_jones.id
+}
+balthazar_review = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: doug_polk.id,
+  biz_id: balthazar.id
+}
+balthazar_review2 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: jon_stewart.id,
+  biz_id: balthazar.id
+}
+balthazar_review3 = {
+  body: "DELICIOUS",
+  rating: 4,
+  user_id: erlich.id,
+  biz_id: balthazar.id
 }
 
 Review.create!(picnic_garden_review)
 Review.create!(woorijip_review)
 Review.create!(woorijip_review2)
 Review.create!(woorijip_review3)
+Review.create!(sophies_review)
+Review.create!(sophies_review2)
+Review.create!(sophies_review3)
+Review.create!(sophies_review4)
+Review.create!(gong_cha_review)
+Review.create!(gong_cha_review2)
+Review.create!(gong_cha_review3)
+Review.create!(gong_cha_review4)
+Review.create!(perse_review)
+Review.create!(perse_review2)
+Review.create!(perse_review3)
+Review.create!(perse_review4)
+Review.create!(upstate_review)
+Review.create!(upstate_review2)
+Review.create!(upstate_review3)
+Review.create!(upstate_review4)
+Review.create!(icecream_review)
+Review.create!(icecream_review2)
+Review.create!(icecream_review3)
+Review.create!(icecream_review4)
+Review.create!(van_leeu_review)
+Review.create!(van_leeu_review2)
+Review.create!(van_leeu_review3)
+Review.create!(van_leeu_review4)
+Review.create!(momofuku_review)
+Review.create!(momofuku_review2)
+Review.create!(momofuku_review3)
+Review.create!(momofuku_review4)
+Review.create!(jajaja_Review)
+Review.create!(jajaja_Review2)
+Review.create!(blossom_review)
+Review.create!(blossom_review2)
+Review.create!(dirt_candy_review)
+Review.create!(dirt_candy_review2)
+Review.create!(dirt_candy_review3)
+Review.create!(han_review)
+Review.create!(han_review2)
+Review.create!(han_review3)
+Review.create!(wah_fung_review)
+Review.create!(wah_fung_review2)
+Review.create!(wah_fung_review3)
+Review.create!(shake_shack_review)
+Review.create!(shake_shack_review2)
+Review.create!(shake_shack_review3)
+Review.create!(five_guys_review)
+Review.create!(five_guys_review2)
+Review.create!(bowery_road_review)
+Review.create!(bowery_road_review2)
+Review.create!(bowery_road_review3)
+Review.create!(sushi_jones_review)
+Review.create!(sushi_jones_review2)
+Review.create!(balthazar_review)
+Review.create!(balthazar_review3)
+Review.create!(balthazar_review2)

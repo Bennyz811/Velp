@@ -15,13 +15,17 @@ end
 #   json.rating review.rating
 # end
 json.reviews do
-  @business.reviews.each do |review|
+  reviews = @business.reviews.includes(:user)
+  reviews.each do |review|
     json.set! review.id do
       json.partial! '/api/reviews/review', review: review
+      json.firstName review.user.first_name
+      json.lastName review.user.last_name
+      json.imageUrl review.user.image.url
     end
   end
 end
 
 
-
+# fetch user that also belong to the reviews
 # refactor so business show will pull reviews along with business

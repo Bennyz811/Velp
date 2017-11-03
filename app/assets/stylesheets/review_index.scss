@@ -1,0 +1,32 @@
+.reviews-ind{
+  margin: 0;
+  padding: 18px 0;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 17px;
+}
+
+.rev-container{
+  display: flex;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 15px;
+  padding-top: 15px;
+  padding-bottom: 36px;
+  height: 100%;
+}
+
+.rev-super-container{
+  margin-top: 10px;
+  // width: 960px;
+}
+
+.rev-feed-header h2{
+  color: #d32323;
+  font-weight: bold;
+}
+
+.rev-feed-header{
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 23px;
+  display: flex;
+}
