@@ -7,6 +7,7 @@ import ReviewIndexItem from '../review/review_index_item';
 import ReviewIndexContainer from '../review/review_index_container';
 import BusinessMap from '../business_map/business_map'
 
+
 class BusinessShow extends React.Component {
   constructor(props){
     super(props);
@@ -20,11 +21,49 @@ class BusinessShow extends React.Component {
   //   if (this.props.match.params.businessId)
   // }
 
-  reviewButton(){
-
-  }
-
   render(){
+    let ratingStar;
+    if (this.props.business){
+      const ar = this.props.business.rating
+      if (ar === 0){
+        ratingStar = (
+          <div className="rating-star-0"><img src={window.zeroStar}/></div>
+        )
+      } else if (ar === 1){
+        ratingStar = (
+          <div className="rating-star-1"><img src={window.oneStar}/></div>
+        )
+      } else if (ar === 2){
+        ratingStar = (
+          <div className="rating-star-2"><img src={window.twoStar}/></div>
+        )
+      } else if (ar === 3){
+        ratingStar = (
+          <div className="rating-star-3"><img src={window.threeStar}/></div>
+        )
+      } else if (ar === 4){
+        ratingStar = (
+          <div className="rating-star-4"><img src={window.fourStar}/></div>
+        )
+      } else if (ar === 5){
+        ratingStar = (
+          <div className="rating-star-5"><img src={window.fiveStar}/></div>
+        )
+      }
+    }
+
+    let dollar;
+    if (this.props.business){
+      if (this.props.business.cost === 1){
+        dollar = <div>$</div>
+      } else if (this.props.business.cost === 2){
+        dollar = <div>$$</div>
+      } else if (this.props.business.cost === 3){
+        dollar = <div>$$$</div>
+      } else if (this.props.business.cost === 4){
+        dollar = <div>$$$$</div>
+      }
+    }
 
     if (this.props.business && this.props.business.review_ids){
       const {id, biz_name, address, phone, neighborhood, category, rating, cost, hours} = this.props.business;
@@ -34,14 +73,20 @@ class BusinessShow extends React.Component {
           <div className="top-shelf">
 
           <div className="biz-content-container">
+
             <div className="biz-page-header">
               <div className="biz-page-header-left">
-                <Link to={`/businesses/${this.props.business.id}`}><h1>{biz_name}</h1></Link>
-                <span>{category}</span>
-                <span>{cost}</span>
-                <div className="rating">
-                  <span>{rating}</span>
+                <div className="biz-show-title">
+                  <Link to={`/businesses/${this.props.business.id}`}><h1>{biz_name}</h1></Link>
                 </div>
+
+                <div className="biz-show-cost">
+                  <div className="rating">{ratingStar}</div>
+                <div className="biz-dol-cat">
+                  <span>{dollar}· {category}</span>
+                </div>
+              </div>
+
               </div>
               <div className="biz-page-header-right">
 
@@ -55,8 +100,10 @@ class BusinessShow extends React.Component {
                 <Link to='/upload_user_photos'>Add Photo</Link>
               </div>
             </div>
+
             <div className='map-box'>
-              <span>{address}</span>
+              <div className="mapbox-map"><BusinessMap /></div>
+              <address>{address}</address>
               <span>{phone}</span>
             </div>
             <div className='hour-summary'>
@@ -64,7 +111,6 @@ class BusinessShow extends React.Component {
             </div>
           </div>
 
-          <BusinessMap />
         </div>
         <div className="bottom-layout">
           <ReviewIndexContainer />

@@ -4,6 +4,7 @@ import IndexItem from './business_index_item';
 import UniversalNav from './universal_nav';
 import BusinessMap from '../business_map/business_map';
 import Footer from '../footer.jsx';
+
 class BusinessIndex extends React.Component {
   constructor(props){
     super(props);
