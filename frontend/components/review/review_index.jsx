@@ -15,7 +15,7 @@ class ReviewIndex extends React.Component {
       return (
         <div className="rev-super-container">
           <div className="rev-container">
-            <div className="rev-column-alpha">
+            <div className="rev-col-alpha">
               <div className="rev-feed">
                 <div className="rev-feed-header">
                   <h2>Recommended Reviews</h2>
@@ -32,7 +32,7 @@ class ReviewIndex extends React.Component {
                 </ul>
               </div>
             </div>
-            <div className="rev-column-beta">
+            <div className="rev-col-beta">
               <div className="bordered-rails">
                 <div className="hours-operation">
                   <h3>Hours</h3>

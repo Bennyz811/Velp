@@ -2,7 +2,6 @@ import React from 'react';
 import {withRouter, Link} from 'react-router-dom';
 
 const ReviewIndexItem = ({review}) => {
-  debugger
   let ratingStar;
   const ar = review.rating
   if (ar === 0){

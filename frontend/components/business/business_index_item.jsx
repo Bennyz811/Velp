@@ -6,7 +6,6 @@ import BusinessMap from '../business_map/business_map';
 class IndexItem extends React.Component {
   constructor(props){
     super(props);
-    // debugger
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -43,7 +42,7 @@ class IndexItem extends React.Component {
           <div className="rating-star-5"><img src={window.fiveStar}/></div>
         )
       }
-      
+
     let dollar;
     if (this.props.business.cost === 1){
       dollar = <div>$</div>

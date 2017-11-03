@@ -15,7 +15,7 @@ demo = User.create!({
   last_name: "Chan",
   password: "pokerchan",
   zip_code: 12345,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/johnnychan.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -25,7 +25,7 @@ roger = User.create!({
   last_name: "Federer",
   password: "federer",
   zip_code: 987876,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/roger.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -35,7 +35,7 @@ jon_stewart = User.create!({
   last_name: "Stewart",
   password: "jonstew",
   zip_code: 98776,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/jon.jpg"),
   image_content_type: "image/jpeg"
   })
 
@@ -45,7 +45,7 @@ stephen_colbert = User.create!({
   last_name: "Colbert",
   password: "stepcol",
   zip_code: 23421,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/stephen.jpg"),
   image_content_type: "image/jpeg"
   })
 
@@ -55,7 +55,7 @@ rafael_nadal = User.create!({
   last_name: "Nadal",
   password: "rafanadal",
   zip_code: 86548,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/rafa.jpg"),
   image_content_type: "image/jpeg"
   })
 
@@ -65,7 +65,7 @@ daniel_negraneu = User.create!({
   last_name: "Negraneu",
   password: "danneg",
   zip_code: 87654,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/daniel.jpg"),
   image_content_type: "image/jpeg"
   })
 
@@ -75,7 +75,7 @@ phily_ivey = User.create!({
   last_name: "Ivey",
   password: "philphil",
   zip_code: 45678,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/phil.jpg"),
   image_content_type: "image/jpeg"
   })
 
@@ -85,7 +85,7 @@ walter_white = User.create!({
   last_name: "White",
   password: "walterblue",
   zip_code: 38906,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/walter.jpg"),
   image_content_type: "image/jpeg"
   })
 
@@ -95,7 +95,7 @@ doug_polk = User.create!({
   last_name: "Polk",
   password: "dougpolk",
   zip_code: 987654,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/doug.jpg"),
   image_content_type: "image/jpeg"
   })
 
@@ -105,7 +105,7 @@ richard_hendricks = User.create!({
   last_name: "Hendricks",
   password: "richardrich",
   zip_code: 134511,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/richard.jpg"),
   image_content_type: "image/jpeg"
   })
 
@@ -115,7 +115,7 @@ dinesh = User.create!({
   last_name: "Chugtai",
   password: "dineshdin",
   zip_code: 98138,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/dinesh.jpg"),
   image_content_type: "image/jpeg"
   })
 
@@ -125,7 +125,7 @@ gilfoyle = User.create!({
   last_name: "Gilfoyle",
   password: "gilgilgil",
   zip_code: 98765,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/gilfoly.jpg"),
   image_content_type: "image/jpeg"
   })
 
@@ -135,7 +135,7 @@ claire = User.create!({
   last_name: "Underwood",
   password: "underwood",
   zip_code: 87953,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/claire.jpg"),
   image_content_type: "image/jpeg"
   })
 
@@ -145,7 +145,7 @@ gavin = User.create!({
   last_name: "Belson",
   password: "gavingavin",
   zip_code: 130091,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/gavin.jpg"),
   image_content_type: "image/jpeg"
   })
 
@@ -155,7 +155,7 @@ erlich = User.create!({
   last_name: "Bachman",
   password: "erlichas",
   zip_code: 325225,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/erlich.jpg"),
   image_content_type: "image/jpeg"
   })
 # User.create!(demo)
@@ -194,7 +194,7 @@ kfc = {
   category: "Chicken",
   rating: 4,
   cost: 2,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/kfc.jpg"),
   image_content_type: "image/jpeg"
 }
 
@@ -206,7 +206,7 @@ woorijip = Business.create!({
   category: "korean",
   rating: 3,
   cost: 1,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/woorijip.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -218,7 +218,7 @@ picnic_garden = Business.create!({
   category: "korean",
   rating: 3,
   cost: 1,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/picnic_garden.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -230,7 +230,7 @@ sophies = Business.create!({
   category: "cuban",
   rating: 4,
   cost: 2,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/sophies.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -242,7 +242,7 @@ gong_cha = Business.create!({
   category: "boba",
   rating: 3,
   cost: 2,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/gong_cha.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -254,7 +254,7 @@ perse = Business.create!({
   category: "French",
   rating: 4,
   cost: 4,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/perse2.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -266,7 +266,7 @@ upstate = Business.create!({
   category: "Seafood",
   rating: 4,
   cost: 2,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/upstate.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -279,7 +279,7 @@ Brooklyn, NY",
   category: "ice cream",
   rating: 4,
   cost: 2,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/icecream.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -292,7 +292,7 @@ New York, NY",
   category: "ice cream",
   rating: 4,
   cost: 2,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/van_leeu.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -305,7 +305,7 @@ New York, NY",
   category: "Ramen",
   rating: 4,
   cost: 2,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/momofuku.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -318,7 +318,7 @@ New York, NY",
   category: "Vegan",
   rating: 4,
   cost: 2,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/jajaja.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -331,7 +331,7 @@ New York, NY ",
   category: "Vegan",
   rating: 4,
   cost: 3,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/blossom.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -344,7 +344,7 @@ New York, NY ",
   category: "Vegan",
   rating: 4,
   cost: 3,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/dirt_candy.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -357,7 +357,7 @@ New York, NY ",
   category: "Chinese",
   rating: 4,
   cost: 2,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/han.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -370,7 +370,7 @@ New York, NY",
   category: "Chinese",
   rating: 5,
   cost: 1,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/wah-fung.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -383,7 +383,7 @@ New York, NY ",
   category: "burgers",
   rating: 4,
   cost: 2,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/shake-shack.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -396,7 +396,7 @@ Brooklyn, NY ",
   category: "Burgers",
   rating: 4,
   cost: 2,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/five-guys.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -409,7 +409,7 @@ New York, NY ",
   category: "American",
   rating: 5,
   cost: 3,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/bowery.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -422,7 +422,7 @@ New York, NY",
   category: "Sushi",
   rating: 5,
   cost: 3,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/sushi-jones.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -435,7 +435,7 @@ New York, NY ",
   category: "French",
   rating: 4,
   cost: 3,
-  image: File.open("app/assets/images/meal.jpg"),
+  image: File.open("app/assets/images/baltha.jpg"),
   image_content_type: "image/jpeg"
 })
 
@@ -469,7 +469,7 @@ picnic_garden_review = {
 }
 
 woorijip_review = {
-  body: "wow, korean, very korean",
+  body: "LOVE LOVE LOVE LOVE",
   rating: 4,
   user_id: roger.id,
   biz_id: woorijip.id
@@ -481,25 +481,37 @@ woorijip_review2 = {
   biz_id: woorijip.id
 }
 woorijip_review3 = {
-  body: "DELICIOUS",
+  body: "This place is so nice and so big,
+  I was able to bring in, not only my wife,
+  but also my girlfriend, my secretary, and my second cousin,
+  all with the same week and without any of them finding about each other!",
   rating: 4,
   user_id: dinesh.id,
   biz_id: woorijip.id
 }
 sophies_review = {
-  body: "DELICIOUS",
-  rating: 4,
+  body: "as a part time homeless guy i want to say DO NOT dumpster dive here!",
+  rating: 2,
   user_id: gavin.id,
   biz_id: sophies.id
 }
 sophies_review2 = {
-  body: "DELICIOUS",
+  body: "They didn’t allow any photography, but it was some of the most creative
+  (but still delicious) cuisine we’ve ever tasted. Much of it was deliberately
+  un-Instagrammable, even if someone tried to break the rules, as the food was often
+  tucked into nooks of custom-made tableware.",
   rating: 4,
   user_id: phily_ivey.id,
   biz_id: sophies.id
 }
 sophies_review3 = {
-  body: "DELICIOUS",
+  body: "This restaurant/experience will and should blow up over food
+  journalism, no doubt. I hope that there’s a Netflix special,
+  coffee table book, or Chef’s Table for Kahn and his team’s
+  breathtaking work. This is a one-in-a-lifetime meal that lasted 4 hours for me.
+  There is a bar set in the culinary world and Kahn has upped it to an untouchable
+  stratosphere. It was a joy to be greeted by Kahn before heading to the rooftop.
+  His vision is so strong and all the small details at this place are worth it.",
   rating: 4,
   user_id: walter_white.id,
   biz_id: sophies.id
@@ -565,7 +577,7 @@ upstate_review = {
   biz_id: woorijip.id
 }
 upstate_review2 = {
-  body: "DELICIOUS",
+  body: "My husband and I are seasoned foodies, having just returned from El Celler de Can Roca in Barcelona, so we are not easily (or often) floored by food. And while food is at the center of Vespertine, it is about so much more than that. It is about escape and surprise, sensation and suspension of disbelief, and most importantly, it is about obsession.",
   rating: 4,
   user_id: gilfoyle.id,
   biz_id: woorijip.id
@@ -583,7 +595,7 @@ upstate_review4 = {
   biz_id: woorijip.id
 }
 icecream_review = {
-  body: "DELICIOUS",
+  body: "My husband and I are seasoned foodies, having just returned from El Celler de Can Roca in Barcelona, so we are not easily (or often) floored by food. And while food is at the center of Vespertine, it is about so much more than that. It is about escape and surprise, sensation and suspension of disbelief, and most importantly, it is about obsession.",
   rating: 4,
   user_id: roger.id,
   biz_id: icecream.id
@@ -637,7 +649,11 @@ momofuku_review = {
   biz_id: momofuku.id
 }
 momofuku_review2 = {
-  body: "DELICIOUS",
+  body: "My husband and I are seasoned foodies, having just returned from
+   El Celler de Can Roca in Barcelona, so we are not easily (or often)
+   floored by food. And while food is at the center of Vespertine, it is about
+   so much more than that. It is about escape and surprise, sensation and
+   suspension of disbelief, and most importantly, it is about obsession.",
   rating: 4,
   user_id: daniel_negraneu.id,
   biz_id: momofuku.id
@@ -655,13 +671,17 @@ momofuku_review4 = {
   biz_id: momofuku.id
 }
 jajaja_Review = {
-  body: "DELICIOUS",
+  body: "MORE WINE",
   rating: 4,
   user_id: roger.id,
   biz_id: jajaja.id
 }
 jajaja_Review2 = {
-  body: "DELICIOUS",
+  body: "My husband and I are seasoned foodies, having just returned from
+  El Celler de Can Roca in Barcelona, so we are not easily (or often) floored
+  by food. And while food is at the center of Vespertine, it is about so much
+  more than that. It is about escape and surprise, sensation and suspension of
+  disbelief, and most importantly, it is about obsession.",
   rating: 4,
   user_id: richard_hendricks.id,
   biz_id: jajaja.id
@@ -673,7 +693,9 @@ blossom_review = {
   biz_id: blossom.id
 }
 blossom_review2 = {
-  body: "DELICIOUS",
+  body: "Blossom is an experience with architecture, space, time and food.
+  It the most unique, beautiful and delicious at the same time, the best
+  meal ever.",
   rating: 4,
   user_id: jon_stewart.id,
   biz_id: blossom.id
@@ -685,7 +707,16 @@ dirt_candy_review = {
   biz_id: dirt_candy.id
 }
 dirt_candy_review2 = {
-  body: "DELICIOUS",
+  body: "Great new place in the West Village. The service was excellent
+  and very friendly. This is a great place for a date or group of friends.
+  I loved the Ssam buns and a special toro appetizer, and we both loved our
+  fish coop and gochu ramyun. The wine and beer menu is also great. This is
+  an elegant but casual place and pricing is fair. I'll definitely be back.
+
+Also, I heard that maybe they originally didn't take reservations- which put
+me off for a while because I just can't be bothered to go wait around to get
+in somewhere. I re-checked, and it turns out you CAN get a reservation on Resy.
+ Loved this.",
   rating: 4,
   user_id: stephen_colbert.id,
   biz_id: dirt_candy.id
@@ -709,7 +740,7 @@ han_review2 = {
   biz_id: han.id
 }
 han_review3 = {
-  body: "DELICIOUS",
+  body: "EXXXXCELLENT EYE HOLES",
   rating: 4,
   user_id: gavin.id,
   biz_id: han.id
@@ -757,8 +788,8 @@ five_guys_review = {
   biz_id: five_guys.id
 }
 five_guys_review2 = {
-  body: "DELICIOUS",
-  rating: 4,
+  body: "MORE BUTTER",
+  rating: 1,
   user_id: gilfoyle.id,
   biz_id: five_guys.id
 }
