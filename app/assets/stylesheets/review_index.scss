@@ -30,3 +30,51 @@
   margin-bottom: 23px;
   display: flex;
 }
+
+.rev-column-beta{
+  border-left: 1px solid #ccc;
+  padding: 0 30px 0 0;
+  float: left;
+  box-sizing: border-box;
+  width: 33.33333%;
+  box-shadow: -1px 0 0 #e6e6e6;
+}
+
+.bordered-rails{
+  padding-left: 30px;
+}
+
+.bordered-rails h3{
+  color: #d32323;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.rev-column-alpha{
+  padding: 0 30px 0 0;
+  margin: 15px;
+}
+
+.more-biz-info li{
+  display: flex;
+  padding-bottom: 6px;
+}
+
+.more-biz-info span{
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.more-biz-info p{
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.simple-hour-op th{
+  float: left;
+  padding-right: 18px;
+}
+
+.simple-hour-op td{
+  float: right;
+}

@@ -70,48 +70,52 @@ class BusinessShow extends React.Component {
       return (
         <div className="biz-index-item" onClick={this.handleClick}>
           <UniversalNav />
-          <div className="top-shelf">
+          <div className="top-shelf-container">
+            <div className="top-shelf">
 
-          <div className="biz-content-container">
+              <div className="biz-content-container">
 
-            <div className="biz-page-header">
-              <div className="biz-page-header-left">
-                <div className="biz-show-title">
-                  <Link to={`/businesses/${this.props.business.id}`}><h1>{biz_name}</h1></Link>
+                <div className="biz-page-header">
+                  <div className="biz-page-header-left">
+                    <div className="biz-show-title">
+                      <Link to={`/businesses/${this.props.business.id}`}><h1>{biz_name}</h1></Link>
+                    </div>
+
+                    <div className="biz-show-cost">
+                      <div className="biz-show-rating">{ratingStar}</div>
+                      <div className="biz-dol-cat">
+                        <span className="biz-dollar">{dollar}</span>
+                        <span className="breaker-dot">·</span>
+                        <span className="biz-cat">{category}</span>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div className="biz-page-header-right">
+
+                    <div className="review-button">
+                      <Link to={`/${this.props.business.id}/write_review`}>
+                        <i className="fa fa-star" aria-hidden="true"></i>
+                        Write a Review
+                      </Link>
+                    </div>
+
+                    <Link to='/upload_user_photos'>Add Photo</Link>
+                  </div>
                 </div>
 
-                <div className="biz-show-cost">
-                  <div className="rating">{ratingStar}</div>
-                <div className="biz-dol-cat">
-                  <span>{dollar}· {category}</span>
+                <div className='map-box'>
+                  <div className="mapbox-map"><BusinessMap /></div>
+                  <address>{address}</address>
+                  <span>{phone}</span>
+                </div>
+                <div className='hour-summary'>
+                  <span>{hours}</span>
                 </div>
               </div>
 
-              </div>
-              <div className="biz-page-header-right">
-
-                <div className="review-button">
-                  <Link to={`/${this.props.business.id}/write_review`}>
-                    <i className="fa fa-star" aria-hidden="true"></i>
-                    Write a Review
-                  </Link>
-                </div>
-
-                <Link to='/upload_user_photos'>Add Photo</Link>
-              </div>
-            </div>
-
-            <div className='map-box'>
-              <div className="mapbox-map"><BusinessMap /></div>
-              <address>{address}</address>
-              <span>{phone}</span>
-            </div>
-            <div className='hour-summary'>
-              <span>{hours}</span>
             </div>
           </div>
-
-        </div>
         <div className="bottom-layout">
           <ReviewIndexContainer />
         </div>

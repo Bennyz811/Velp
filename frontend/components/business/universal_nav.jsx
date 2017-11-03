@@ -1,4 +1,5 @@
 import SearchContainer from './search_container';
+import GreetingContainer from '../greeting/greeting_container';
 import React from 'react';
 import {Link} from 'react-router-dom';
 

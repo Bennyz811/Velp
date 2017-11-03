@@ -67,9 +67,33 @@
 }
 
 .biz-show-cost{
-  display: flex;
+  // display: flex;
 }
 
 .biz-dol-cat{
   float: left;
+  display: flex;
+  margin-top: 9px;
+}
+
+.top-shelf-container{
+  overflow: hidden;
+  min-width: 990px;
+  padding-bottom: 24px;
+  margin-bottom: -18px;
+  z-index: 1;
+  // height: 1700px;
+}
+
+.biz-show-rating{
+  height: 22px;
+  margin-top: 5px;
+}
+
+[class*=rating-star]{
+  height: 22px;
+}
+.breaker-dot{
+  margin-left: 8px;
+  margin-right: 8px;
 }
