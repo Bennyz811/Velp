@@ -29,6 +29,7 @@ const ReviewIndexItem = ({review}) => {
         <div className="rating-star-5"><img src={window.fiveStar}/></div>
       )
     }
+    let date = review.created_at.slice(0,10)
   return (
       <li>
         <div className="rev-reviews">
@@ -45,7 +46,10 @@ const ReviewIndexItem = ({review}) => {
           </div>
           <div className="rev-wrapper">
             <div className="rev-content">
-              <div className="rev-rating">{ratingStar}</div>
+              <div className="rev-rating">
+                <div>{ratingStar}</div>
+                <span>{date}</span>
+              </div>
               {review.body}
             </div>
           </div>

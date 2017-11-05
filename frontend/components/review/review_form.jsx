@@ -10,6 +10,7 @@ class ReviewForm extends React.Component{
     this.state = this.props.review
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navToBizShow = this.navToBizShow.bind(this);
+    this.handleRating = this.handleRating.bind(this);
   }
 
   navToBizShow(){
@@ -27,6 +28,10 @@ class ReviewForm extends React.Component{
   // componentWillReceiveProps(newProps){
   //   this.setState(newProps.review)
   // }
+
+  handleRating(e){
+    this.setState({rating: e.target.value})
+  }
 
   update(field){
     return (e) => this.setState({
@@ -49,20 +54,29 @@ class ReviewForm extends React.Component{
       )
     }
 
+    let stars = [];
     return (
       <div>
         <UniversalNav/>
         <div>
 
         </div>
+        <h3>Write a Review</h3>
         <form onSubmit={this.handleSubmit}>
-          <h3>Write a Review</h3>
-
-          <input
-            type="number"
-            value={this.state.rating}
-            onChange={this.update('rating')}
-            />
+          <div className="stars-div">
+            <i className={`fa fa-star ${stars[1]}`}></i>
+            <i className={`fa fa-star ${stars[2]}`}></i>
+            <i className={`fa fa-star ${stars[3]}`}></i>
+            <i className={`fa fa-star ${stars[4]}`}></i>
+            <i className={`fa fa-star ${stars[5]}`}></i>
+          </div>
+          <div className="star-rating">
+                <input onChange={this.handleRating} type="radio" name="star" value="1"></input>
+                <input onChange={this.handleRating} type="radio" name="star" value="2"></input>
+                <input onChange={this.handleRating} type="radio" name="star" value="3"></input>
+                <input onChange={this.handleRating} type="radio" name="star" value="4"></input>
+                <input onChange={this.handleRating} type="radio" name="star" value="5"></input>
+          </div>
 
           <textarea
             className="review-text-area"

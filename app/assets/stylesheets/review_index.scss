@@ -79,3 +79,13 @@
 .simple-hour-op td{
   float: right;
 }
+
+.rev-rating{
+  display: flex;
+}
+
+.rev-rating span{
+  vertical-align: middle;
+  margin-left: 12px;
+  margin-top: 3px;
+}
