@@ -38,7 +38,7 @@ class BusinessIndex extends React.Component {
 
             <div className="result-col-beta">
               <div>
-                <BusinessMap className="biz-idx-map"/>
+                <BusinessMap/>
               </div>
             </div>
           </div>

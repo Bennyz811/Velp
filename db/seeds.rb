@@ -182,18 +182,24 @@ chikfila = {
   category: "Chicken",
   rating: 4,
   cost: 2,
+  lng: 40.751,
+  lat: -73.988,
+  lng: 40.751,
+  lat: -73.988,
   image: File.open("app/assets/images/meal.jpg"),
   image_content_type: "image/jpeg"
 }
 
 kfc = {
   biz_name: "kfc",
-  address: "kfc ave",
+  address: "761 7th ave",
   phone: "212-704-9920",
   neighborhood: "Time square",
   category: "Chicken",
   rating: 4,
   cost: 2,
+  lng: 40.751,
+  lat: -74.003,
   image: File.open("app/assets/images/kfc.jpg"),
   image_content_type: "image/jpeg"
 }
@@ -206,6 +212,8 @@ woorijip = Business.create!({
   category: "korean",
   rating: 3,
   cost: 1,
+  lng: 40.747351,
+  lat: -73.9887053,
   image: File.open("app/assets/images/woorijip.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -218,6 +226,8 @@ picnic_garden = Business.create!({
   category: "korean",
   rating: 3,
   cost: 1,
+  lng: 40.7648348,
+  lat: -73.8127505,
   image: File.open("app/assets/images/picnic_garden.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -230,6 +240,8 @@ sophies = Business.create!({
   category: "cuban",
   rating: 4,
   cost: 2,
+  lng: 40.728349,
+  lat: -74.01999,
   image: File.open("app/assets/images/sophies.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -242,6 +254,8 @@ gong_cha = Business.create!({
   category: "boba",
   rating: 3,
   cost: 2,
+  lng: 40.7283384,
+  lat: -74.0199929,
   image: File.open("app/assets/images/gong_cha.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -254,6 +268,8 @@ perse = Business.create!({
   category: "French",
   rating: 4,
   cost: 4,
+  lng: 40.7682269,
+  lat: -73.98504,
   image: File.open("app/assets/images/perse2.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -266,6 +282,8 @@ upstate = Business.create!({
   category: "Seafood",
   rating: 4,
   cost: 2,
+  lng: 40.7263542,
+  lat: -73.988742,
   image: File.open("app/assets/images/upstate.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -279,6 +297,8 @@ Brooklyn, NY",
   category: "ice cream",
   rating: 4,
   cost: 2,
+  lng: 40.7263489,
+  lat: -74.0215726,
   image: File.open("app/assets/images/icecream.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -292,6 +312,8 @@ New York, NY",
   category: "ice cream",
   rating: 4,
   cost: 2,
+  lng: 40.7263383,
+  lat: -74.0215,
   image: File.open("app/assets/images/van_leeu.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -305,6 +327,8 @@ New York, NY",
   category: "Ramen",
   rating: 4,
   cost: 2,
+  lng: 40.729233,
+  lat: -73.9866987,
   image: File.open("app/assets/images/momofuku.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -318,6 +342,8 @@ New York, NY",
   category: "Vegan",
   rating: 4,
   cost: 2,
+  lng: 40.7142229,
+  lat: -73.9925793,
   image: File.open("app/assets/images/jajaja.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -331,6 +357,8 @@ New York, NY ",
   category: "Vegan",
   rating: 4,
   cost: 3,
+  lng: 40.7142176,
+  lat: -74.0254099,
   image: File.open("app/assets/images/blossom.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -344,6 +372,8 @@ New York, NY ",
   category: "Vegan",
   rating: 4,
   cost: 3,
+  lng: 40.7179086,
+  lat: -73.9929057,
   image: File.open("app/assets/images/dirt_candy.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -357,6 +387,8 @@ New York, NY ",
   category: "Chinese",
   rating: 4,
   cost: 2,
+  lng: 40.7179072,
+  lat: -74.0082266,
   image: File.open("app/assets/images/han.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -370,6 +402,8 @@ New York, NY",
   category: "Chinese",
   rating: 5,
   cost: 1,
+  lng: 40.717339,
+  lat: -73.9967727,
   image: File.open("app/assets/images/wah-fung.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -383,6 +417,8 @@ New York, NY ",
   category: "burgers",
   rating: 4,
   cost: 2,
+  lng: 40.7408761,
+  lat: -73.9901701,
   image: File.open("app/assets/images/shake-shack.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -396,6 +432,8 @@ Brooklyn, NY ",
   category: "Burgers",
   rating: 4,
   cost: 2,
+  lng: 40.6944743,
+  lat: -73.9960248,
   image: File.open("app/assets/images/five-guys.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -409,6 +447,8 @@ New York, NY ",
   category: "American",
   rating: 5,
   cost: 3,
+  lng: 40.7332643,
+  lat: -73.9923977,
   image: File.open("app/assets/images/bowery.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -422,6 +462,8 @@ New York, NY",
   category: "Sushi",
   rating: 5,
   cost: 3,
+  lng: 40.7266766,
+  lat: -73.9942636,
   image: File.open("app/assets/images/sushi-jones.jpg"),
   image_content_type: "image/jpeg"
 })
@@ -435,6 +477,8 @@ New York, NY ",
   category: "French",
   rating: 4,
   cost: 3,
+  lng: 40.7226242,
+  lat: -74.0003601,
   image: File.open("app/assets/images/baltha.jpg"),
   image_content_type: "image/jpeg"
 })
