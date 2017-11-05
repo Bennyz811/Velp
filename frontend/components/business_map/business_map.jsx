@@ -13,7 +13,6 @@ class BusinessMap extends React.Component{
       center: {lat: 40.7209, lng: -73.9980},
       zoom: 13
     }
-    // debugger
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
     if (this.props.business){
@@ -26,7 +25,6 @@ class BusinessMap extends React.Component{
   }
 
   componentDidUpdate(){
-    debugger
     if (this.props.business){
       const targetBizId = Object.keys(this.props.businesses)[0];
       const targetBiz = this.props.businesses[targetBizId];
