@@ -88,6 +88,10 @@
   height: 32px;
 }
 
+.fb-link-text span{
+  vertical-align: -webkit-baseline-middle;
+}
+
 .fb-link-text{
   margin-top: 20px;
 }
@@ -167,4 +171,5 @@
   font-weight: normal;
   font-size: 12px;
   float: right;
+  margin-top: 10px;
 }

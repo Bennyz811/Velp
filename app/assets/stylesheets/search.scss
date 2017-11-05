@@ -72,5 +72,9 @@
   width: 960px;
 }
 .submit-btn{
-  border-radius: 3px;
+  border-radius: 0 4px 4px 0;
+  border: 0;
+  background: #d32323;
+  padding: 14px 20px 13px;
+  box-shadow: none;
 }
