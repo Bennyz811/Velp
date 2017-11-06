@@ -8,4 +8,15 @@ class Business < ApplicationRecord
   belongs_to :user, optional: true
   has_many :reviews,
   foreign_key: :biz_id
+
+  def self.in_bounds(bounds)
+    self.where("lat < ?", bounds[:northEast][:lat])
+    .where("lat > ?", bounds[:southWest][:lat])
+    .where("lat > ?", bounds[:southWest][:lng])
+    .where("lat < ?", bounds[:northEast][:lng])
+  end
+
+  def average_rating
+    reviews.average(:rating)
+  end
 end

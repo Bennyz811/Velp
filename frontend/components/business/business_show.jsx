@@ -105,7 +105,12 @@ class BusinessShow extends React.Component {
                 </div>
 
                 <div className='map-box'>
-                  <div className="mapbox-map"><BusinessMap /></div>
+                  <div className="mapbox-map"><BusinessMap
+                    businesses={businesses}
+                    businessId={businessId}
+                    fetchBusiness={fetchBusiness}
+                    />
+                  </div>
                   <address>{address}</address>
                   <span>{phone}</span>
                 </div>

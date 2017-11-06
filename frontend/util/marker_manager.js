@@ -16,7 +16,8 @@ class MarkerManager {
               .forEach(newBiz => this.createMarkerFromBiz(newBiz, this.handleClick))
 
     Object.keys(this.markers).filter(bizId => !bizObj[bizId])
-                             .ForEach(bizId => this.removeMarker(this.markers[bizId]))
+                             .forEach(bizId => this.removeMarker(this.markers[bizId]))
+    // console.log('time up to date');
   }
 
   createMarkerFromBiz(biz){

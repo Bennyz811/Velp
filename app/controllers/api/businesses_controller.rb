@@ -40,7 +40,7 @@ class Api::BusinessesController < ApplicationController
   end
 
   def index
-    @businesses = Business.all
+    @businesses = bounds ? Business.in_bounds(bounds) : Business.all
   end
 
   def search
@@ -56,10 +56,15 @@ class Api::BusinessesController < ApplicationController
     end
   end
 
+
   private
   def biz_params
     params.require(:business).permit(:biz_name.downcase,
       :address, :cost, :category, :phone,
-      :neighborhood, :image, :rating)
+      :neighborhood, :image, :rating, :lat, :lng)
+  end
+  
+  def bounds
+    params[:bounds]
   end
 end
