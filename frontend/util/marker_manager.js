@@ -8,15 +8,15 @@ class MarkerManager {
   }
 
   updateMarkers(businesses){
-    // debugger
-    const bizObj = {};
-    businesses.forEach(biz => bizObj[biz.id] = biz);
-
-    businesses.filter(biz => !this.markers[biz.id])
-              .forEach(newBiz => this.createMarkerFromBiz(newBiz, this.handleClick))
-
-    Object.keys(this.markers).filter(bizId => !bizObj[bizId])
-                             .forEach(bizId => this.removeMarker(this.markers[bizId]))
+  //   // debugger
+  //   const bizObj = {};
+  //   businesses.forEach(biz => bizObj[biz.id] = biz);
+  //
+  //   businesses.filter(biz => !this.markers[biz.id])
+  //             .forEach(newBiz => this.createMarkerFromBiz(newBiz, this.handleClick))
+  //
+  //   Object.keys(this.markers).filter(bizId => !bizObj[bizId])
+  //                            .forEach(bizId => this.removeMarker(this.markers[bizId]))
     // console.log('time up to date');
   }
 
