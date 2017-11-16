@@ -20,4 +20,4 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchAllReviews = fetchAllReviews;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
-})
+});

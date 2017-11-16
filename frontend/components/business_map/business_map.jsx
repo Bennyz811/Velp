@@ -12,15 +12,15 @@ class BusinessMap extends React.Component{
     const mapOptions = {
       center: {lat: 40.7209, lng: -73.9980},
       zoom: 13
-    }
+    };
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
     if (this.props.business){
-      this.props.fetchBusiness(this.props.businessId)
+      this.props.fetchBusiness(this.props.businessId);
     }else {
       this.registerListener();
       // debugger
-      this.MarkerManager.updateMarkers(this.props.businesses)
+      this.MarkerManager.updateMarkers(this.props.businesses);
     }
   }
 
@@ -35,7 +35,7 @@ class BusinessMap extends React.Component{
   }
 
   handleMarkerClick(business){
-    this.props.history.push(`businesses/${business.id}`)
+    this.props.history.push(`businesses/${business.id}`);
   }
 
   handleClick(coord){
@@ -57,7 +57,7 @@ class BusinessMap extends React.Component{
       //   southWest: {lat: south, lng: west}
       // };
       // this.props.updateFilter('bounds', bounds);
-    })
+    });
     google.maps.event.addListener(this.map, 'click', event => {
       const coords = getCoordsObj(event.latLng);
       this.handleClick(coords);

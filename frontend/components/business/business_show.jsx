@@ -5,7 +5,7 @@ import UniversalNav from './universal_nav';
 import ReviewFormContainer from '../review/review_form_container';
 import ReviewIndexItem from '../review/review_index_item';
 import ReviewIndexContainer from '../review/review_index_container';
-import BusinessMap from '../business_map/business_map'
+import BusinessMap from '../business_map/business_map';
 
 
 class BusinessShow extends React.Component {
@@ -14,7 +14,7 @@ class BusinessShow extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchBusiness(this.props.bizId)
+    this.props.fetchBusiness(this.props.bizId);
   }
 
   // componentWillReceiveProps(nextProps){
@@ -24,44 +24,44 @@ class BusinessShow extends React.Component {
   render(){
     let ratingStar;
     if (this.props.business){
-      const ar = this.props.business.rating
+      const ar = this.props.business.rating;
       if (ar === 0){
         ratingStar = (
           <div className="rating-star-0"><img src={window.zeroStar}/></div>
-        )
+        );
       } else if (ar === 1){
         ratingStar = (
           <div className="rating-star-1"><img src={window.oneStar}/></div>
-        )
+        );
       } else if (ar === 2){
         ratingStar = (
           <div className="rating-star-2"><img src={window.twoStar}/></div>
-        )
+        );
       } else if (ar === 3){
         ratingStar = (
           <div className="rating-star-3"><img src={window.threeStar}/></div>
-        )
+        );
       } else if (ar === 4){
         ratingStar = (
           <div className="rating-star-4"><img src={window.fourStar}/></div>
-        )
+        );
       } else if (ar === 5){
         ratingStar = (
           <div className="rating-star-5"><img src={window.fiveStar}/></div>
-        )
+        );
       }
     }
 
     let dollar;
     if (this.props.business){
       if (this.props.business.cost === 1){
-        dollar = <div>$</div>
+        dollar = <div>$</div>;
       } else if (this.props.business.cost === 2){
-        dollar = <div>$$</div>
+        dollar = <div>$$</div>;
       } else if (this.props.business.cost === 3){
-        dollar = <div>$$$</div>
+        dollar = <div>$$$</div>;
       } else if (this.props.business.cost === 4){
-        dollar = <div>$$$$</div>
+        dollar = <div>$$$$</div>;
       }
     }
 
@@ -123,14 +123,14 @@ class BusinessShow extends React.Component {
           <ReviewIndexContainer />
         </div>
         </div>
-      )
+      );
     } else {
       return (
         <div>
           <UniversalNav/>
           <p>Loading...</p>
         </div>
-      )
+      );
     }
   }
 }
