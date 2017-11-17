@@ -9,6 +9,10 @@ class Business < ApplicationRecord
   has_many :reviews,
   foreign_key: :biz_id
 
+  has_many :categories,
+  through: :business_categories,
+  source: :category
+  
   def self.in_bounds(bounds)
     self.where("lat < ?", bounds[:northEast][:lat])
     .where("lat > ?", bounds[:southWest][:lat])

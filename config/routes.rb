@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'categories/new'
+
+  get 'categories/create'
+
+  get 'categories/update'
+
+  get 'categories/destroy'
+
+  get 'categories/edit'
+
 namespace :api, defaults: {format: :json} do
 
   resources :users

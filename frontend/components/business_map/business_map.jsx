@@ -15,21 +15,20 @@ class BusinessMap extends React.Component{
     };
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
-    if (this.props.business){
-      this.props.fetchBusiness(this.props.businessId);
-    }else {
+    // if (this.props.business){
+      // this.props.fetchBusiness(this.props.businessId);
+    // }else {
       this.registerListener();
-      // debugger
-      this.MarkerManager.updateMarkers(this.props.businesses);
-    }
+      // this.MarkerManager.updateMarkers(this.props.businesses);
+    // }
   }
 
   componentDidUpdate(){
     if (this.props.business){
       const targetBizId = Object.keys(this.props.businesses)[0];
       const targetBiz = this.props.businesses[targetBizId];
-      // this.MarkerManager.updateMarkers([targetBiz])
-    } else {
+      this.MarkerManager.updateMarkers([targetBiz])
+    // } else {
       // this.MarkerManager.updateMarkers(this.props.businesses);
     }
   }
@@ -52,10 +51,10 @@ class BusinessMap extends React.Component{
     });
     google.maps.event.addListener(this.map, 'idle', ()=>{
       const { north, south, east, west } = this.map.getBounds().toJSON();
-      // const bounds = {
-      //   northEast: {lat: north, lng: east},
-      //   southWest: {lat: south, lng: west}
-      // };
+      const bounds = {
+        northEast: {lat: north, lng: east},
+        southWest: {lat: south, lng: west}
+      };
       // this.props.updateFilter('bounds', bounds);
     });
     google.maps.event.addListener(this.map, 'click', event => {
@@ -73,4 +72,4 @@ class BusinessMap extends React.Component{
   }
 }
 
-export default BusinessMap;
+export default withRouter(BusinessMap);

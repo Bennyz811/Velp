@@ -10,48 +10,48 @@ class IndexItem extends React.Component {
   }
 
   handleClick(){
-    this.props.history.push(`/businesses/${this.props.business.id}`)
+    this.props.history.push(`/businesses/${this.props.business.id}`);
   }
 
   render(){
-    const {biz_name, category, rating, cost, neighborhood, address, phone, image_url} = this.props.business
+    const {biz_name, category, rating, cost, neighborhood, address, phone, image_url} = this.props.business;
     let ratingStar;
-    const ar = this.props.business.rating
+    const ar = this.props.business.rating;
     if (ar === 0){
       ratingStar = (
         <div className="rating-star-0"><img src={window.zeroStar}/></div>
-      )
+      );
     } else if (ar === 1){
         ratingStar = (
           <div className="rating-star-1"><img src={window.oneStar}/></div>
-        )
+        );
       } else if (ar === 2){
         ratingStar = (
           <div className="rating-star-2"><img src={window.twoStar}/></div>
-        )
+        );
       } else if (ar === 3){
         ratingStar = (
           <div className="rating-star-3"><img src={window.threeStar}/></div>
-        )
+        );
       } else if (ar === 4){
         ratingStar = (
           <div className="rating-star-4"><img src={window.fourStar}/></div>
-        )
+        );
       } else if (ar === 5){
         ratingStar = (
           <div className="rating-star-5"><img src={window.fiveStar}/></div>
-        )
+        );
       }
 
     let dollar;
     if (this.props.business.cost === 1){
-      dollar = <div>$</div>
+      dollar = <div>$</div>;
     } else if (this.props.business.cost === 2){
-      dollar = <div>$$</div>
+      dollar = <div>$$</div>;
     } else if (this.props.business.cost === 3){
-      dollar = <div>$$$</div>
+      dollar = <div>$$$</div>;
     } else if (this.props.business.cost === 4){
-      dollar = <div>$$$$</div>
+      dollar = <div>$$$$</div>;
     }
 
     return(
@@ -76,7 +76,7 @@ class IndexItem extends React.Component {
           </div>
         </div>
       </li>
-    )
+    );
   }
 }
 export default withRouter(IndexItem);
