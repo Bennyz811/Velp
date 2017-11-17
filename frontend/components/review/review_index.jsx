@@ -109,13 +109,13 @@ class ReviewIndex extends React.Component {
             </div>
           </div>
         </div>
-      )
+      );
     } else {
       return (
         <p>Loading...</p>
-      )
+      );
     }
   }
 }
 
-export default ReviewIndex
+export default ReviewIndex;

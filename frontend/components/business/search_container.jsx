@@ -6,14 +6,14 @@ import {fetchSearchBusinesses, searchForBusinesses} from '../../actions/business
 const mapStateToProps = state => {
   return {
     search: state.entities.search
-  }
-}
+  };
+};
 
 const mapDispatchToProps = dispatch => {
   return {
     searchForBusinesses: query => dispatch(searchForBusinesses(query))
-  }
-}
+  };
+};
 
 
 export default withRouter(connect(
