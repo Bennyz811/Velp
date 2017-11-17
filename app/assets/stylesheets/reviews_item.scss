@@ -5,6 +5,9 @@
   border: 1px solid #999;
   box-sizing: border-box;
   border-radius: 3px;
+  width: 600px;
+  display: flex;
+  margin-bottom: 19px;
 }
 
 .rev-user-pic{
@@ -36,12 +39,6 @@
   margin-left: 20px;
 }
 
-.rev-reviews{
-  display: flex;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 23px;
-}
-
 .rev-rating{
   margin-bottom: 18px;
 }
@@ -53,6 +50,29 @@
   white-space: nowrap;
 }
 
-// .media-story{
-//   float: left;
-// }
+.review-form-container{
+  max-width: 690px;
+  margin: 0 auto;
+}
+
+.review-form-header{
+  padding-top: 24px;
+  padding-bottom: 14px;
+}
+
+.rev-form-form{
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 23px;
+}
+
+.stars-div i{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.star-rating input{
+  margin-left: 5px;
+  margin-right: 6px;
+  margin-bottom: 14px;
+}

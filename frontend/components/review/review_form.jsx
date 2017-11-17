@@ -58,41 +58,44 @@ class ReviewForm extends React.Component{
     return (
       <div>
         <UniversalNav/>
-        <div>
-
-        </div>
-        <h3>Write a Review</h3>
-        <form onSubmit={this.handleSubmit}>
-          <div className="stars-div">
-            <i className={`fa fa-star ${stars[1]}`}></i>
-            <i className={`fa fa-star ${stars[2]}`}></i>
-            <i className={`fa fa-star ${stars[3]}`}></i>
-            <i className={`fa fa-star ${stars[4]}`}></i>
-            <i className={`fa fa-star ${stars[5]}`}></i>
+        <div className="review-form-container">
+          <div className="review-form-header">
+            <h3>Write a Review</h3>
           </div>
-          <div className="star-rating">
-                <input onChange={this.handleRating} type="radio" name="star" value="1"></input>
-                <input onChange={this.handleRating} type="radio" name="star" value="2"></input>
-                <input onChange={this.handleRating} type="radio" name="star" value="3"></input>
-                <input onChange={this.handleRating} type="radio" name="star" value="4"></input>
-                <input onChange={this.handleRating} type="radio" name="star" value="5"></input>
+          <div className="review-form-form">
+            <form onSubmit={this.handleSubmit}>
+              <div className="stars-div">
+                <i className={`fa fa-star ${stars[1]}`}></i>
+                  <i className={`fa fa-star ${stars[2]}`}></i>
+                    <i className={`fa fa-star ${stars[3]}`}></i>
+                      <i className={`fa fa-star ${stars[4]}`}></i>
+                        <i className={`fa fa-star ${stars[5]}`}></i>
+                        </div>
+                        <div className="star-rating">
+                          <input onChange={this.handleRating} type="radio" name="star" value="1"></input>
+                            <input onChange={this.handleRating} type="radio" name="star" value="2"></input>
+                              <input onChange={this.handleRating} type="radio" name="star" value="3"></input>
+                                <input onChange={this.handleRating} type="radio" name="star" value="4"></input>
+                                  <input onChange={this.handleRating} type="radio" name="star" value="5"></input>
+                                  </div>
+
+                                  <textarea
+                                    className="review-text-area"
+                                    cols="30"
+                                    rows="10"
+                                    value={this.state.body}
+                                    onChange={this.update('body')}
+                                    placeholder="Your review helps others learn about great
+                                    local businesses. Please don't review this business if
+                                    you received a freebie for writing this review, or if you're
+                                    connected in any way to the owner or employees."
+                                    />
+                                    {signedIn}
+                                    {signUpFirst}
+                                  </form>
           </div>
 
-          <textarea
-            className="review-text-area"
-            cols="30"
-            rows="10"
-            value={this.state.body}
-            onChange={this.update('body')}
-            placeholder="Your review helps others learn about great
-            local businesses. Please don't review this business if
-            you received a freebie for writing this review, or if you're
-            connected in any way to the owner or employees."
-            />
-          {signedIn}
-          {signUpFirst}
-        </form>
-
+      </div>
       </div>
     )
   }

@@ -52,10 +52,11 @@ aside, figure, figcaption, footer, header, nav {
   background: linear-gradient(#d90007, #c91400);
   font-size: 12px;
   padding: 5px 8px;
-  border: 1px solid;
+  border: 1px solid #666;
   font-weight: bold;
   text-align: center;
   cursor: pointer;
   border-radius: 3px;
-
+  width: 156px;
+  height: 48px;
 }
