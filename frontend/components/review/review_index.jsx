@@ -37,50 +37,52 @@ class ReviewIndex extends React.Component {
                 <div className="hours-operation">
                   <h3>Hours</h3>
                   <div className="simple-hour-op">
-                    <tbody>
-                      <tr>
-                        <th scope="row">Mon</th>
-                        <td>
-                          <span>7:00 am</span> - <span>12:00 am</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Tue</th>
-                        <td>
-                          <span>7:00 am</span> - <span>12:00 am</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Wed</th>
-                        <td>
-                          <span>7:00 am</span> - <span>12:00 am</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Thu</th>
-                        <td>
-                          <span>7:00 am</span> - <span>12:00 am</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Fri</th>
-                        <td>
-                          <span>7:00 am</span> - <span>12:00 am</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Sat</th>
-                        <td>
-                          <span>7:00 am</span> - <span>12:00 am</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Sun</th>
-                        <td>
-                          <span>7:00 am</span> - <span>12:00 am</span>
-                        </td>
-                      </tr>
-                    </tbody>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Mon</th>
+                            <td>
+                              <span>7:00 am</span> - <span>12:00 am</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Tue</th>
+                                <td>
+                                  <span>7:00 am</span> - <span>12:00 am</span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">Wed</th>
+                                    <td>
+                                      <span>7:00 am</span> - <span>12:00 am</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">Thu</th>
+                                        <td>
+                                          <span>7:00 am</span> - <span>12:00 am</span>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th scope="row">Fri</th>
+                                            <td>
+                                              <span>7:00 am</span> - <span>12:00 am</span>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <th scope="row">Sat</th>
+                                                <td>
+                                                  <span>7:00 am</span> - <span>12:00 am</span>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <th scope="row">Sun</th>
+                                                    <td>
+                                                      <span>7:00 am</span> - <span>12:00 am</span>
+                                                      </td>
+                                                    </tr>
+                                                  </tbody>
+                    </table>
                   </div>
                 </div>
                 <div className="more-biz-info">
