@@ -10,6 +10,7 @@ class CategoryIndex extends React.Component {
   render(){
     return (
       <div>
+        <Link to="businesses/search"></Link>
       </div>
     );
   }

@@ -41,6 +41,9 @@ class Api::BusinessesController < ApplicationController
 
   def index
     @businesses = bounds ? Business.in_bounds(bounds) : Business.all
+    if params[:category]
+      @businesses = @businesses.join(:category).where("category.name = ?", params[:category])
+    end
     render :index
   end
 

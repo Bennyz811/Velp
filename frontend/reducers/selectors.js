@@ -7,3 +7,5 @@ export const selectBusinessReviews = (state, biz) => {
 export const asArray = ({ businesses }) => (
   Object.keys(businesses).map(id => businesses[id])
 );
+
+export const selectAllBiz = biz => values(biz);

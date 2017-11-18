@@ -22,7 +22,7 @@ class Search extends React.Component{
 
   update(field){
     return (e) => {
-      this.setState({ [field]: e.target.value })
+      this.setState({ [field]: e.currentTarget.value })
     };
   }
 
@@ -36,7 +36,7 @@ class Search extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.searchForBusinesses({searchTerm: this.state.searchTerm}).then( () => this.navToBizIndex())
+    this.props.updateFilter({searchTerm: this.state.searchTerm}).then( () => this.navToBizIndex())
   }
   //
   // matches() {
