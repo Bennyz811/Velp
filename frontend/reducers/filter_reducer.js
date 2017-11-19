@@ -9,7 +9,6 @@ const FilterReducer = (state = _initialState, action) => {
       newState = Object.assign({}, state, {bounds: action.bounds})
     default:
       return state;
-
   }
 }
 

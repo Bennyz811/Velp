@@ -9,7 +9,7 @@ const businessesReducer = (state = _initialState, action) => {
       return action.businesses;
     case RECEIVE_BUSINESS:
       // return merge({}, state, {[action.business.business.id]: action.business.business})
-      return merge({}, state, action.business)
+      return merge({}, state, action.business);
     case REMOVE_BUSINESS:
       let newState = merge({}, state);
       delete newState[action.businessId];
@@ -17,6 +17,6 @@ const businessesReducer = (state = _initialState, action) => {
     default:
       return state;
   }
-}
+};
 
 export default businessesReducer;

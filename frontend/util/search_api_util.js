@@ -3,5 +3,5 @@ export const filterBusiness = (searchInput) => {
     method: 'get',
     url: '/api/businesses',
     data: {searchInput}
-  })
-}
+  });
+};
