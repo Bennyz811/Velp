@@ -14,10 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.fetchAllBusiness = fetchAllBusiness;
-  window.fetchAllReviews = fetchAllReviews;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);
 });
