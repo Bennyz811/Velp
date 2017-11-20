@@ -13,7 +13,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     // searchForBusinesses: query => dispatch(searchForBusinesses(query))
-    updateFilter: (filters, value) => dispatch(updateFilter(filters, value))
+    updateFilter: (filters) => dispatch(updateFilter(filters))
   };
 };
 

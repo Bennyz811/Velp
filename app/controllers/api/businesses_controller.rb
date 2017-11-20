@@ -40,31 +40,33 @@ class Api::BusinessesController < ApplicationController
   end
 
   def index
-    @businesses = bounds ? Business.in_bounds(bounds) : Business.all
-    if params[:category]
-      @businesses = @businesses.join(:category).where("category.name = ?", params[:category])
-    end
+    # @businesses = bounds ? Business.in_bounds(bounds) : Business.all
+    # if params[:category]
+      # @businesses = @businesses.join(:category).where("category.name = ?", params[:category])
+    # end
+    @businesses = Business.where("category = :category", {category: params[:searchInput]})
     render :index
   end
 
   def search
-    if params[:searchInput].present?
-      @businesses = Business.where('category ~ ?', params[:searchInput])
-    else
-      @businesses = Business.none
-    end
+    # if params[:searchInput].present?
+      # @businesses = Business.where("category = :category", {category: params[:searchInput]})
+    # else
+    #   @businesses = Business.none
+    # end
 
     respond_to do |format|
       format.html {render :search}
       format.json {render :search}
     end
+
   end
 
 
   private
   def biz_params
     params.require(:business).permit(:biz_name.downcase,
-      :address, :cost, :category, :phone,
+      :address, :cost, :category.downcase, :phone,
       :neighborhood, :image, :rating, :lat, :lng)
   end
 

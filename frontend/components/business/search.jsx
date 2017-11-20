@@ -10,7 +10,7 @@ class Search extends React.Component{
     this.state = {
       searchTerm: '',
       suggestions: null
-    }
+    };
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.navToBizIndex = this.navToBizIndex.bind(this);
@@ -22,7 +22,7 @@ class Search extends React.Component{
 
   update(field){
     return (e) => {
-      this.setState({ [field]: e.currentTarget.value })
+      this.setState({ [field]: e.currentTarget.value });
     };
   }
 
@@ -31,28 +31,13 @@ class Search extends React.Component{
   }
 
   navToBizIndex(){
-    this.props.history.push(`/businesses/search`)
+    this.props.history.push('/businesses');
   }
 
   handleSubmit(e){
     e.preventDefault();
     this.props.updateFilter({searchTerm: this.state.searchTerm}).then( () => this.navToBizIndex())
   }
-  //
-  // matches() {
-  //   const matches = [];
-  //   const input = this.state.searchTerm;
-  //   if (input.length === 0){
-  //     return this.props.business.category;
-  //   }
-  //   let cat = this.props.business.category
-  //   let sub = cat.slice(0, input.length)
-  //   if (sub.toLowercase() === input.toLowercase()){
-  //     matches.push(cat)
-  //   }
-  //
-  //   return matches;
-  // }
 
   render(){
     return(
@@ -78,7 +63,7 @@ class Search extends React.Component{
           </div>
         </form>
       </div>
-    )
+    );
   }
 
 }

@@ -1,6 +1,7 @@
 import React from 'react';
-import {Link, withRouter} from 'react-router-dom';
-import SearchContainer from '../business/search_container'
+import {Link, withRouter, Route} from 'react-router-dom';
+import SearchContainer from '../business/search_container';
+import RecommendedContainer from '../business/business_recom_container';
 
 class Splash extends React.Component{
   constructor(props){
@@ -25,6 +26,7 @@ class Splash extends React.Component{
         <div className="home-main-container">
           <div className="home-rec-container">
             <Link to='/businesses'><h2>Velp New York</h2></Link>
+            <Route exact path="/" component={RecommendedContainer}/>
           </div>
         </div>
       </div>

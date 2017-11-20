@@ -17,6 +17,7 @@ import BusinessShowContainer from './business/business_show_container';
 import ReviewFormContainer from './review/review_form_container';
 import Footer from './footer.jsx';
 
+
 const App = () => (
   <div>
     <Switch>
@@ -32,6 +33,6 @@ const App = () => (
     <Route exact path='/' component={SplashContainer}/>
     <Footer/>
   </div>
-)
+);
 
 export default App;

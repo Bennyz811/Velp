@@ -8,4 +8,4 @@ export const asArray = ({ businesses }) => (
   Object.keys(businesses).map(id => businesses[id])
 );
 
-export const selectAllBiz = biz => values(biz);
+export const selectAllBiz = businesses => values(businesses);

@@ -10,17 +10,20 @@ import {selectAllBiz} from '../../reducers/selectors';
 //   };
 // };
 
-const mapStateToProps = ({filters, biz}) => {
+const mapStateToProps = (state, ownProps) => {
+  // category: filters.category,
+  const biz = selectAllBiz(state.entities.search.input).filter((biz) => {
+    return biz !== undefined;
+  });
   return {
-    categories: filters.categories,
-    businesses: selectAllBiz(biz)
-  }
-}
+    businesses: biz
+  };
+};
 
 const mapDispatchToProps = dispatch => ({
-  updateFilter: (filters, value) => dispatch(updateFilter(filters, value)),
-  fetchAllBusiness: () => dispatch(fetchAllBusiness())
-  // fetchBusiness: id => dispatch(fetchBusiness(id))
+  updateFilter: (filters) => dispatch(updateFilter(filters)),
+  fetchAllBusiness: () => dispatch(fetchAllBusiness()),
+  fetchBusiness: id => dispatch(fetchBusiness(id))
 });
 
 export default connect(

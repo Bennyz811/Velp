@@ -12,6 +12,7 @@ class BusinessIndex extends React.Component {
 
   componentDidMount(){
     this.props.fetchAllBusiness();
+    // this.props.updateFilter("category");
   }
 
   render(){
@@ -45,7 +46,7 @@ class BusinessIndex extends React.Component {
 
       </div>
       </div>
-    )
+    );
   }
 }
 export default BusinessIndex;
