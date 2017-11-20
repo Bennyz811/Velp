@@ -128,7 +128,7 @@ class BusinessShow extends React.Component {
       return (
         <div>
           <UniversalNav/>
-          <p>Loading...</p>
+          <p>Sorry, seems like there are no results are for your search</p>
         </div>
       );
     }

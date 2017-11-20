@@ -9,7 +9,6 @@ class Splash extends React.Component{
   }
 
   render(){
-        // let images = ['tacos.jpg', 'beer.jpg'];
         const classes = ["tacos", "beer", "girleed_cheese", "meal", "icecream", "perse2", "xian", "steak"];
         const rand = classes[Math.floor(Math.random() * classes.length)];
         // $('background').css({'background': 'image_url(images/' + rand + ')'});
@@ -30,7 +29,7 @@ class Splash extends React.Component{
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
