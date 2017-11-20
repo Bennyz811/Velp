@@ -4,15 +4,15 @@ import {selectAllBiz} from '../../reducers/selectors';
 import Recommended from './business_recom';
 
 const mapStateToProps = (state) => {
+
   return {
-    loggedIn: Boolean(state.session.currentUser),
     businesses: selectAllBiz(state.entities.businesses).slice(0,3)
   };
 };
 
 const mapDispatchToProps = (dispatch, {location}) => {
   return {
-    fetchAllBusiness: () => dispatch(fetchAllBusiness())
+    fetchBusiness: () => dispatch(fetchBusiness())
   };
 };
 

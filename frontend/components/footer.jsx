@@ -8,19 +8,19 @@ const footer = () => (
         <div className="arrange-about">
           <ul>
             <h1>About</h1>
-            <li>About Velp</li>
+            <li><a href="http://www.bennyzhao.me/"><span className="about-link">About Velp</span></a></li>
           </ul>
         </div>
         <div className="arrange-discover">
           <ul>
             <h1>Discover</h1>
-            <li>Benny Zhao</li>
+            <li><a href="http://www.bennyzhao.me/"><span className="about-link">Benny Zhao</span></a></li>
           </ul>
         </div>
         <div className="arrange-press">
           <ul>
             <h1>Press</h1>
-            <li>Press</li>
+            <li><a href="http://www.bennyzhao.me/"><span className="about-link">Press</span></a></li>
           </ul>
         </div>
       </div>
