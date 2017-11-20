@@ -4,9 +4,10 @@ import {fetchAllReviews} from '../../actions/review_actions';
 import ReviewIndex from './review_index';
 
 const mapStateToProps = (state, ownProps) => {
-  const businessId = ownProps.match.params.businessId
-  const biz = state.entities.businesses[businessId];
-  const reviewIds = biz.review_ids
+  // const businessId = ownProps.match.params.businessId
+  // const biz = state.entities.businesses[businessId];
+  const biz = state.entities.businesses.business;
+  const reviewIds = biz.review_ids;
   const reviews = [];
   reviewIds.forEach(id => {
     const review = state.entities.reviews[id];
@@ -16,12 +17,12 @@ const mapStateToProps = (state, ownProps) => {
   });
   return {
     reviews: reviews
-  }
-}
+  };
+};
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchAllReviews: () => dispatch(fetchAllReviews())
-})
+});
 
 export default withRouter(connect(
   mapStateToProps,

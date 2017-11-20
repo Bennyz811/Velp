@@ -8,19 +8,20 @@ import BusinessShow from './business_show';
 
 const mapStateToProps = (state, ownProps) => {
   const bizId = ownProps.match.params.businessId;
-  const business = state.entities.businesses[bizId];
+  const business = state.entities.businesses.business;
+  // const business = state.entities.businesses[bizId]
   return {
     bizId,
     business,
-  }
-}
+  };
+};
 
 const mapDispatchToProps = dispatch => {
   return {
     fetchBusiness: id => dispatch(fetchBusiness(id)),
     fetchReview: id => dispatch(fetchReview(id))
-  }
-}
+  };
+};
 
 export default withRouter(connect(
   mapStateToProps,

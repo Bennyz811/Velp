@@ -12,11 +12,11 @@ class Business < ApplicationRecord
   has_many :categories,
   through: :business_categories,
   source: :category
-  
+
   has_many :business_categories,
   inverse_of: :business,
   dependent: :destroy
-  
+
   def self.in_bounds(bounds)
     self.where("lat < ?", bounds[:northEast][:lat])
     .where("lat > ?", bounds[:southWest][:lat])

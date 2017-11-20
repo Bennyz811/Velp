@@ -27,7 +27,7 @@ class BusinessMap extends React.Component{
     if (this.props.business){
       const targetBizId = Object.keys(this.props.businesses)[0];
       const targetBiz = this.props.businesses[targetBizId];
-      this.MarkerManager.updateMarkers([targetBiz])
+      this.MarkerManager.updateMarkers([targetBiz]);
     // } else {
       // this.MarkerManager.updateMarkers(this.props.businesses);
     }
