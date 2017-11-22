@@ -14,9 +14,9 @@ class IndexItem extends React.Component {
   }
 
   render(){
-    const {biz_name, category, rating, cost, neighborhood, address, phone, image_url} = this.props.business;
+    const {biz_name, category, rating, cost, neighborhood, address, phone, image_url} = this.props.businesses;
     let ratingStar;
-    const ar = this.props.business.rating;
+    const ar = this.props.businesses.rating;
     if (ar === 0){
       ratingStar = (
         <div className="rating-star-0"><img src={window.zeroStar}/></div>
@@ -44,13 +44,13 @@ class IndexItem extends React.Component {
       }
 
     let dollar;
-    if (this.props.business.cost === 1){
+    if (this.props.businesses.cost === 1){
       dollar = <div>$</div>;
-    } else if (this.props.business.cost === 2){
+    } else if (this.props.businesses.cost === 2){
       dollar = <div>$$</div>;
-    } else if (this.props.business.cost === 3){
+    } else if (this.props.businesses.cost === 3){
       dollar = <div>$$$</div>;
-    } else if (this.props.business.cost === 4){
+    } else if (this.props.businesses.cost === 4){
       dollar = <div>$$$$</div>;
     }
 
@@ -63,7 +63,7 @@ class IndexItem extends React.Component {
                 <img className="biz-pic" src={image_url}/>
               </div>
               <div className="media-story">
-                <Link className="search-res-title" to={`/businesses/${this.props.business.id}`}>{biz_name}</Link>
+                <Link className="search-res-title" to={`/businesses/${this.props.businesses.id}`}>{biz_name}</Link>
                 <div className="search-res-rating">{ratingStar}</div>
                 <div className="search-res-cat">{dollar}· {category}</div>
               </div>

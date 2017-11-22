@@ -40,11 +40,11 @@ class Api::BusinessesController < ApplicationController
   end
 
   def index
-    # @businesses = bounds ? Business.in_bounds(bounds) : Business.all
-    # if params[:categories]
-    #   @businesses = @businesses.joins(:categories).where("categories.name = ?", params[:categories])
-    # end
-    @businesses = Business.where("category = :category", {category: params[:searchInput]})
+    @businesses = bounds ? Business.in_bounds(bounds) : Business.all
+    if params[:category]
+      @businesses = @businesses.joins(:category).where("categories.name = ?", params[:category])
+    end
+    # @businesses = Business.where("category = :category", {category: params[:searchInput]})
     render :index
   end
 
