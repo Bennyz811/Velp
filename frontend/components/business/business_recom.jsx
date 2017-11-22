@@ -8,7 +8,7 @@ class Recommended extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchBusiness();
+    this.props.fetchAllBusiness();
   }
 
   render(){

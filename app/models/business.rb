@@ -1,5 +1,5 @@
 class Business < ApplicationRecord
-  validates :biz_name, :address, :phone, :neighborhood, :category,
+  validates :biz_name, :address, :phone, :neighborhood,
             :cost, :rating, presence: true
 
   has_attached_file :image, default_url: "xian.jpg"

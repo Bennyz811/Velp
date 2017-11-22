@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171117004147) do
+ActiveRecord::Schema.define(version: 20171122030205) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20171117004147) do
     t.string "address", null: false
     t.string "phone"
     t.string "neighborhood"
-    t.string "category", null: false
     t.integer "rating", null: false
     t.integer "cost", null: false
     t.datetime "created_at", null: false
@@ -39,7 +38,6 @@ ActiveRecord::Schema.define(version: 20171117004147) do
     t.datetime "image_updated_at"
     t.float "lat"
     t.float "lng"
-    t.index ["category"], name: "index_businesses_on_category"
     t.index ["cost"], name: "index_businesses_on_cost"
     t.index ["rating"], name: "index_businesses_on_rating"
   end

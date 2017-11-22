@@ -15,12 +15,12 @@ class BusinessMap extends React.Component{
     };
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
-    // if (this.props.business){
-      // this.props.fetchBusiness(this.props.businessId);
-    // }else {
+    if (this.props.business){
+      this.props.fetchBusiness(this.props.businessId);
+    }else {
       this.registerListener();
       // this.MarkerManager.updateMarkers(this.props.businesses);
-    // }
+    }
   }
 
   componentDidUpdate(){

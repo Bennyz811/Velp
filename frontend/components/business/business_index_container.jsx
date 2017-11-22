@@ -11,8 +11,8 @@ import {selectAllBiz} from '../../reducers/selectors';
 // };
 
 const mapStateToProps = (state, ownProps) => {
-  const biz = selectAllBiz(state.entities.search.input).filter((biz) => {
-    return biz !== undefined;
+  const biz = selectAllBiz(state.entities.search.input).filter((b) => {
+    return b !== undefined;
   });
   return {
     businesses: biz

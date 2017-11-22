@@ -4,7 +4,6 @@ import {selectAllBiz} from '../../reducers/selectors';
 import Recommended from './business_recom';
 
 const mapStateToProps = (state) => {
-
   return {
     businesses: selectAllBiz(state.entities.businesses).slice(0,3)
   };
@@ -12,7 +11,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch, {location}) => {
   return {
-    fetchBusiness: () => dispatch(fetchBusiness())
+    fetchAllBusiness: () => dispatch(fetchAllBusiness())
   };
 };
 
