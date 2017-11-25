@@ -7,6 +7,7 @@ class IndexItem extends React.Component {
   constructor(props){
     super(props);
     this.handleClick = this.handleClick.bind(this);
+
   }
 
   handleClick(){
@@ -65,7 +66,7 @@ class IndexItem extends React.Component {
               <div className="media-story">
                 <Link className="search-res-title" to={`/businesses/${this.props.businesses.id}`}>{biz_name}</Link>
                 <div className="search-res-rating">{ratingStar}</div>
-                <div className="search-res-cat">{dollar}· {category}</div>
+                <div className="search-res-cat">{dollar} · {category}</div>
               </div>
             </div>
           </div>

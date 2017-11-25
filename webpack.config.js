@@ -1,6 +1,6 @@
 let path = require("path");
-
-var plugins = []; 
+let webpack = require("webpack");
+var plugins = [];
 var devPlugins = [];
 
 var prodPlugins = [

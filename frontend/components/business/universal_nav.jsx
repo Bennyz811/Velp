@@ -18,7 +18,7 @@ class UniversalNav extends React.Component{
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

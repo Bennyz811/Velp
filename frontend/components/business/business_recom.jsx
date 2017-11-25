@@ -13,13 +13,14 @@ class Recommended extends React.Component {
 
   render(){
     return (
-      <div>
-        {this.props.businesses.map( biz =>
-        <IndexItem
-          key={biz.id}
-          businesses={biz}
-          />
-        )}
+      <div className="recom-container">
+            {this.props.businesses.map( biz =>
+              <IndexItem
+                key={biz.id}
+                businesses={biz}
+                />
+
+            )}
       </div>
     );
   }

@@ -25,14 +25,14 @@ class BusinessIndex extends React.Component {
             <div className="result-col-alpha">
               <div className="result-list">
                 <ul className="result-list-ul">
-                  {
-                    this.props.businesses.map(business => (
-                      <IndexItem
-                        className="result-list-ind"
-                        key={business.id}
-                        business={business} />
-                    ))
-                  }
+                    {
+                      this.props.businesses.map(business => (
+                        <IndexItem
+                          className="result-list-ind"
+                          key={business.id}
+                          businesses={business} />
+                      ))
+                    }
                 </ul>
               </div>
             </div>
