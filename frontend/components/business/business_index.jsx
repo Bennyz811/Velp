@@ -38,13 +38,6 @@ class BusinessIndex extends React.Component {
             </div>
 
             <div className="result-col-beta">
-              <div>
-                {this.props.businesses.map(business => (
-                  <BusinessMap
-                    businessId={business.id}
-                    />
-                ))}
-              </div>
             </div>
           </div>
 
@@ -53,4 +46,11 @@ class BusinessIndex extends React.Component {
     );
   }
 }
+// <div>
+//   {this.props.businesses.map(business => (
+//     <BusinessMap
+//       businessId={business.id}
+//       />
+//   ))}
+// </div>
 export default BusinessIndex;

@@ -5,6 +5,6 @@ import FilterReducer from './filter_reducer';
 
 const UiReducer = combineReducers({
   filters: FilterReducer
-})
+});
 
 export default UiReducer;

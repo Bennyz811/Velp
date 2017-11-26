@@ -50,7 +50,7 @@ class Api::BusinessesController < ApplicationController
 
   def search
     # if params[:searchInput].present?
-      @businesses = Business.where("category = :category", {category: params[:searchInput]})
+      @businesses = Business.where("category = :category", {category: params[:query]})
     # else
     #   @businesses = Business.none
     # end
