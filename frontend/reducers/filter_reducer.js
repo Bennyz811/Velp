@@ -1,12 +1,12 @@
 import merge from 'lodash/merge';
 import {UPDATE_FILTER} from '../actions/filter_actions'
 
-let _initialState = {};
+let _initialState = Object.freeze({ bounds: {}});
 const FilterReducer = (state = _initialState, action) => {
-  let newState;
+  Object.freeze(state)
   switch (action.type) {
     case UPDATE_FILTER:
-      newState = Object.assign({}, state, {bounds: action.bounds})
+      return merge({}, state, {[action.filter]: action.value})
     default:
       return state;
   }

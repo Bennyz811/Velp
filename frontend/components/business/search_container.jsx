@@ -1,5 +1,5 @@
 import {connect} from 'react-redux';
-import {withRouter} from 'react-router-dom';
+import {withRouter} from 'react-router';
 import Search from './search';
 import {fetchSearchBusinesses, searchForBusinesses} from '../../actions/business_actions';
 import {updateFilter} from '../../actions/filter_actions.js';
@@ -13,7 +13,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     // searchForBusinesses: query => dispatch(searchForBusinesses(query))
-    updateFilter: (filters) => dispatch(updateFilter(filters))
+    updateFilter: (filters, value) => dispatch(updateFilter(filters, value))
   };
 };
 

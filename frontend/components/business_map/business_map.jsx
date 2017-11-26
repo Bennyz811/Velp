@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-router-dom';
+import ReactDOM from 'react-dom';
 import {withRouter} from 'react-router-dom';
 import MarkerManager from '../../util/marker_manager';
 
@@ -19,7 +19,7 @@ class BusinessMap extends React.Component{
       this.props.fetchBusiness(this.props.businessId);
     }else {
       this.registerListener();
-      // this.MarkerManager.updateMarkers(this.props.businesses);
+      this.MarkerManager.updateMarkers(this.props.businesses);
     }
   }
 
@@ -28,8 +28,8 @@ class BusinessMap extends React.Component{
       const targetBizId = Object.keys(this.props.businesses)[0];
       const targetBiz = this.props.businesses[targetBizId];
       this.MarkerManager.updateMarkers([targetBiz]);
-    // } else {
-      // this.MarkerManager.updateMarkers(this.props.businesses);
+    } else {
+      this.MarkerManager.updateMarkers(this.props.businesses);
     }
   }
 
@@ -55,7 +55,7 @@ class BusinessMap extends React.Component{
         northEast: {lat: north, lng: east},
         southWest: {lat: south, lng: west}
       };
-      // this.props.updateFilter('bounds', bounds);
+      this.props.updateFilter('bounds', bounds);
     });
     google.maps.event.addListener(this.map, 'click', event => {
       const coords = getCoordsObj(event.latLng);

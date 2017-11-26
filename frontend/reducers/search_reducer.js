@@ -3,6 +3,7 @@ import {SEARCH_BUSINESSES} from '../actions/business_actions';
 
 
 const _initialState = {input: []};
+
 const searchReducer = (state = _initialState, action) => {
   Object.freeze(state);
 

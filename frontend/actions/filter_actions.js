@@ -2,13 +2,14 @@ import {fetchAllBusiness, fetchSearchBusinesses} from './business_actions';
 
 export const UPDATE_FILTER = 'UPDATE_FILTER';
 
-export const changeFilter = (filters) => ({
+export const changeFilter = (filters, value) => ({
   type: UPDATE_FILTER,
-  filters
+  filters,
+  value
 });
 
-export const updateFilter = (filters) => (dispatch, getState) => {
-  dispatch(changeFilter(filters));
-  // return fetchAllBusiness(getState().filters)(dispatch);
-  return dispatch(fetchSearchBusinesses(filters.searchTerm));
+export const updateFilter = (filters, value) => (dispatch, getState) => {
+  dispatch(changeFilter(filters, value));
+  return fetchSearchBusinesses(getState().ui.filters)(dispatch);
+  // return dispatch(fetchAllBusiness(filters.searchTerm));
 };

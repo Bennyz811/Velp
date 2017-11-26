@@ -9,7 +9,7 @@ class Search extends React.Component{
     super(props);
     this.state = {
       searchTerm: '',
-      suggestions: null
+      bounds: ''
     };
     this.handleInput = this.handleInput.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -36,7 +36,7 @@ class Search extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.updateFilter({searchTerm: this.state.searchTerm}).then( () => this.navToBizIndex())
+    this.props.updateFilter('categories', {searchTerm: this.state.searchTerm}).then( () => this.navToBizIndex())
   }
 
   render(){

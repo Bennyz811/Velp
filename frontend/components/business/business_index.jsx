@@ -11,7 +11,7 @@ class BusinessIndex extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchAllBusiness();
+    // this.props.fetchAllBusiness();
     // this.props.updateFilter("category");
   }
 
@@ -39,7 +39,11 @@ class BusinessIndex extends React.Component {
 
             <div className="result-col-beta">
               <div>
-                <BusinessMap/>
+                {this.props.businesses.map(business => (
+                  <BusinessMap
+                    businessId={business.id}
+                    />
+                ))}
               </div>
             </div>
           </div>
