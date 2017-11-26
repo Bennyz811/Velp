@@ -9,11 +9,13 @@ const searchReducer = (state = _initialState, action) => {
 
   switch (action.type) {
     case SEARCH_BUSINESSES:
-      return merge({}, state, {input: action.input})
+    // debugger
+      // return merge({}, state, {input: action.input})
+      return {input: action.input};
     default:
       return state;
 
   }
-}
+};
 
 export default searchReducer;
