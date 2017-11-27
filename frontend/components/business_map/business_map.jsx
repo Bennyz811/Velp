@@ -19,7 +19,7 @@ class BusinessMap extends React.Component{
       this.props.fetchBusiness(this.props.businessId);
     }else {
       this.registerListener();
-      this.MarkerManager.updateMarkers(this.props.businesses);
+      // this.MarkerManager.updateMarkers(this.props.businesses);
     }
   }
 
