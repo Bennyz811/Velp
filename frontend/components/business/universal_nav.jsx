@@ -9,11 +9,13 @@ class UniversalNav extends React.Component{
       <div className="main-nav-wrapper">
         <div className="uni-search-container">
           <div className="search-bar-nav">
-            <div className="uni-arrange-container">
+            <div className="uni-arr-container">
               <div className="uni-logo">
                 <Link className="nav-home-link" to='/'><img className='main-nav-logo' src={window.velpLogo}/></Link>
               </div>
-              <SearchContainer className="nav-search-bar"/>
+              <div className="nav-search-bar">
+                <SearchContainer />
+              </div>
             </div>
           </div>
         </div>
