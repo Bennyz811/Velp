@@ -57,23 +57,18 @@ class RecomItem extends React.Component {
 
     return(
       <li id="myLI" className="recom-list">
-        <div className="biz-listing-large">
-          <div className="biz-listing-left-container">
-            <div className="biz-media-block">
-              <div className="media-avatar">
-                <img className="biz-pic" src={image_url}/>
+        <div className="recom-listing-large">
+          <div className="recom-listing-left-container">
+            <div className="recom-media-block">
+              <div className="recom-media-avatar">
+                <img className="recom-pic" src={image_url}/>
               </div>
-              <div className="media-story">
-                <Link className="search-res-title" to={`/businesses/${this.props.businesses.id}`}>{biz_name}</Link>
-                <div className="search-res-rating">{ratingStar}</div>
-                <div className="search-res-cat">{dollar} · {category}</div>
+              <div className="recom-media-story">
+                <Link className="recom-item-title search-res-title" to={`/businesses/${this.props.businesses.id}`}>{biz_name}</Link>
+                <div className=" recom-item-rating search-res-rating">{ratingStar}</div>
+                <div className=" recom-item-cat search-res-cat">{dollar} · {category}</div>
               </div>
             </div>
-          </div>
-          <div className="biz-listing-right-container">
-              <span className="search-res-neigh">{neighborhood}</span>
-              <address className="search-res-addr">{address}</address>
-              <span>{phone}</span>
           </div>
         </div>
       </li>

@@ -1,8 +1,38 @@
 .recom-container{
   display: flex;
   list-style: none;
+  border-bottom: none;
+  margin-top: 30px;
+}
+
+
+.recom-pic{
+  height: 180px;
+  width: 300px;
+  border-radius: 4px;
+}
+
+.recom-media-block{
+  display: block;
 }
 
 .recom-list{
-  background: red;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+.recom-listing-large{
+  border-radius: 1px solid #ccc;
+}
+
+.recom-media-story{
+  margin-top: 10px;
+}
+
+.recom-item-title{
+  font-weight:700;
+  font-size: 20px;
 }
