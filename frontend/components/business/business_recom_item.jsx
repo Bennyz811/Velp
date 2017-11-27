@@ -3,7 +3,7 @@ import {withRouter, Link} from 'react-router-dom';
 // import BusinessShowContainer from './business_show_container';
 import BusinessMap from '../business_map/business_map';
 
-class IndexItem extends React.Component {
+class RecomItem extends React.Component {
   constructor(props){
     super(props);
     this.handleClick = this.handleClick.bind(this);
@@ -56,7 +56,7 @@ class IndexItem extends React.Component {
     }
 
     return(
-      <li id="myLI" className="search-container">
+      <li id="myLI" className="recom-list">
         <div className="biz-listing-large">
           <div className="biz-listing-left-container">
             <div className="biz-media-block">
@@ -80,4 +80,4 @@ class IndexItem extends React.Component {
     );
   }
 }
-export default withRouter(IndexItem);
+export default withRouter(RecomItem);

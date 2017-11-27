@@ -23,13 +23,13 @@ class SessionForm extends React.Component {
 
   handleSubmit(e){
     e.preventDefault();
-    const user = {}
-    user.first_name = this.state.firstName
-    user.email = this.state.email
-    user.last_name = this.state.lastName
-    user.password = this.state.password
-    user.zip_code = this.state.zipCode
-    user.birthday = this.state.birthday
+    const user = {};
+    user.first_name = this.state.firstName;
+    user.email = this.state.email;
+    user.last_name = this.state.lastName;
+    user.password = this.state.password;
+    user.zip_code = this.state.zipCode;
+    user.birthday = this.state.birthday;
     this.props.actionForm(user);
   }
 

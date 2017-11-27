@@ -4,19 +4,21 @@ class MarkerManager {
     this.map = map;
     this.handleClick = handleClick;
     this.markers = {};
-    this.createMarkerFromBiz = this.createMarkerFromBiz.bind(this);
+    // this.createMarkerFromBiz = this.createMarkerFromBiz.bind(this);
   }
 
   updateMarkers(businesses){
-    // const bizObj = {};
-    // businesses.forEach(biz => bizObj[biz.id] = biz);
-    //
-    // businesses.filter(biz => !this.markers[biz.id])
-    //           .forEach(newBiz => this.createMarkerFromBiz(newBiz, this.handleClick))
-    //
-    // Object.keys(this.markers).filter(bizId => !bizObj[bizId])
-    //                          .forEach(bizId => this.removeMarker(this.markers[bizId]))
-    // console.log('time up to date');
+    const bizObj = {};
+    businesses.forEach(biz => bizObj[biz.id] = biz);
+
+    businesses
+    .filter(biz => !this.markers[biz.id])
+    .forEach(newBiz => this.createMarkerFromBiz(newBiz, this.handleClick))
+
+    Object.keys(this.markers)
+    .filter(bizId => !bizObj[bizId])
+    .forEach(bizId => this.removeMarker(this.markers[bizId]))
+    console.log('time up to date');
   }
 
   createMarkerFromBiz(biz){

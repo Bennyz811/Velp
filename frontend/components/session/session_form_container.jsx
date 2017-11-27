@@ -6,8 +6,8 @@ const mapStateToProps = state => {
   return {
     loggedIn: Boolean(state.session.currentUser),
     errors: state.errors.session
-  }
-}
+  };
+};
 
 const mapDispatchToProps = (dispatch, {location}) => {
   const formType = location.pathname.slice(1);
@@ -15,8 +15,8 @@ const mapDispatchToProps = (dispatch, {location}) => {
   return {
     actionForm: user => dispatch(actionForm(user)),
     formType
-  }
-}
+  };
+};
 
 export default connect(
   mapStateToProps,

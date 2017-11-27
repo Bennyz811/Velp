@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import IndexItem from './business_index_item';
+import RecomItem from './business_recom_item';
 
 class Recommended extends React.Component {
   constructor(props){
@@ -13,14 +14,13 @@ class Recommended extends React.Component {
 
   render(){
     return (
-      <div className="recom-container">
-            {this.props.businesses.map( biz =>
-              <IndexItem
-                key={biz.id}
-                businesses={biz}
-                />
-
-            )}
+      <div id="recom" className="recom-container">
+          {this.props.businesses.map( biz =>
+            <RecomItem
+              key={biz.id}
+              businesses={biz}
+              />
+          )}
       </div>
     );
   }
