@@ -46,12 +46,13 @@
   text-align: right;
   overflow: hidden;
   padding-bottom: 1px;
+  margin-left: 200px;
 }
 
 .top-shelf {
   background: #f5f5f5;
   border-bottom: 1px solid #e6e6e6;
-  height: 510px;
+  height: 400px;
 }
 
 .mapbox-map{
@@ -82,7 +83,7 @@
   padding-bottom: 24px;
   margin-bottom: -18px;
   z-index: 1;
-  // height: 1700px;
+  height: 510px;
 }
 
 .biz-show-rating{
