@@ -8,7 +8,7 @@ const footer = () => (
         <div className="arrange-about">
           <ul>
             <h1>About</h1>
-            <li><a href="http://www.bennyzhao.me/"><span className="about-link">About Velp</span></a></li>
+            <li><a href="https://github.com/Bennyz811/Velp"><span className="about-link">About Velp</span></a></li>
           </ul>
         </div>
         <div className="arrange-discover">
@@ -20,7 +20,7 @@ const footer = () => (
         <div className="arrange-press">
           <ul>
             <h1>Press</h1>
-            <li><a href="http://www.bennyzhao.me/"><span className="about-link">Press</span></a></li>
+            <li><a href="https://www.linkedin.com/in/bennyz811/"><span className="about-link">Press</span></a></li>
           </ul>
         </div>
       </div>
