@@ -9,7 +9,6 @@ const searchReducer = (state = _initialState, action) => {
 
   switch (action.type) {
     case SEARCH_BUSINESSES:
-    // debugger
       // return merge({}, state, {input: action.input})
       return {input: action.input};
     default:
