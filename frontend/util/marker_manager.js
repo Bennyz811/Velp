@@ -1,4 +1,4 @@
-
+/* global google:false */
 class MarkerManager {
   constructor(map, handleClick){
     this.map = map;
@@ -9,26 +9,23 @@ class MarkerManager {
 
   updateMarkers(businesses){
     const bizObj = {};
-    businesses.forEach(biz => bizObj[biz.id] = biz);
+    businesses.forEach(biz => (bizObj[biz.id] = biz));
+    businesses.filter(biz => !this.markers[biz.id])
+    .forEach(newBiz => this.createMarkerFromBiz(newBiz));
 
-    businesses
-    .filter(biz => !this.markers[biz.id])
-    .forEach(newBiz => this.createMarkerFromBiz(newBiz, this.handleClick))
-
-    Object.keys(this.markers)
-    .filter(bizId => !bizObj[bizId])
-    .forEach(bizId => this.removeMarker(this.markers[bizId]))
+    Object.keys(this.markers).filter(bizId => !bizObj[bizId])
+    .forEach(bizId => this.removeMarker(this.markers[bizId]));
     console.log('time up to date');
   }
 
   createMarkerFromBiz(biz){
-    const pos = new google.maps.LatLng(biz.lat, biz.lng);
+    const pos = {lat: biz.lat, lng: biz.lng};
+    // const pos = new google.maps.LatLng(biz.lat, biz.lng);
     const marker = new google.maps.Marker({
       pos,
       map: this.map,
       bizId: biz.id
     });
-
     marker.addListener('click', () => this.handleClick(biz));
     this.markers[marker.bizId] = marker;
   }

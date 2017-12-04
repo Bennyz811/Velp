@@ -1,7 +1,18 @@
+/* global google:false */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {withRouter} from 'react-router-dom';
 import MarkerManager from '../../util/marker_manager';
+
+const mapOptions = {
+  center: {lat: 40.7209, lng: -73.9980},
+  zoom: 13
+};
+
+const getCoordsObj = latLng => ({
+  lat: latLng.lat(),
+  lng: latLng.lng()
+});
 
 class BusinessMap extends React.Component{
   constructor(props){
@@ -9,29 +20,26 @@ class BusinessMap extends React.Component{
   }
 
   componentDidMount(){
-    const mapOptions = {
-      center: {lat: 40.7209, lng: -73.9980},
-      zoom: 13
-    };
-    this.map = new google.maps.Map(this.mapNode, mapOptions);
-    this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
+    const map = this.refs.map;
+    this.map = new google.maps.Map(map, mapOptions);
+    this.MarkerManager = new MarkerManager(this.map);
     if (this.props.business){
       this.props.fetchBusiness(this.props.businessId);
     }else {
       this.registerListener();
-      // this.MarkerManager.updateMarkers(this.props.businesses);
-    }
-  }
-
-  componentDidUpdate(){
-    if (this.props.business){
-      const targetBizId = Object.keys(this.props.businesses)[0];
-      const targetBiz = this.props.businesses[targetBizId];
-      this.MarkerManager.updateMarkers([targetBiz]);
-    } else {
       this.MarkerManager.updateMarkers(this.props.businesses);
     }
   }
+
+  // componentDidUpdate(){
+  //   if (this.props.business){
+  //     const targetBizId = Object.keys(this.props.businesses)[0];
+  //     const targetBiz = this.props.businesses[targetBizId];
+  //     this.MarkerManager.updateMarkers(this.props.business);
+  //   } else {
+  //     this.MarkerManager.updateMarkers(this.props.businesses);
+  //   }
+  // }
 
   handleMarkerClick(business){
     this.props.history.push(`businesses/${business.id}`);
@@ -45,10 +53,6 @@ class BusinessMap extends React.Component{
   }
 
   registerListener(){
-    const getCoordsObj = latLng => ({
-      lat: latLng.lat(),
-      lng: latLng.lng()
-    });
     google.maps.event.addListener(this.map, 'idle', ()=>{
       const { north, south, east, west } = this.map.getBounds().toJSON();
       const bounds = {
@@ -60,15 +64,15 @@ class BusinessMap extends React.Component{
     google.maps.event.addListener(this.map, 'click', event => {
       const coords = getCoordsObj(event.latLng);
       this.handleClick(coords);
-    })
+    });
   }
 
   render(){
     return (
-      <div className="biz-map" ref={map => this.mapNode = map}>
+      <div className="biz-map" ref="map">
         Map
       </div>
-    )
+    );
   }
 }
 

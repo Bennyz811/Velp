@@ -41,7 +41,6 @@ class BusinessIndex extends React.Component {
               <div>
                   <BusinessMap
                     businesses={this.props.businesses}
-                    businessId={this.props.businesses.id}
                     />
               </div>
             </div>
