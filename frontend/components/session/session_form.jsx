@@ -119,7 +119,7 @@ class SessionForm extends React.Component {
           )
           miniLogin = (
             <div>
-              <small className="mini-login-signup">Already on Velp? <Link className="sub-signup-link" to='/login'>Log in</Link></small>
+              <small className="mini-login-signup">Already on Velp?&nbsp;<Link className="sub-signup-link" to='/login'>Log in</Link></small>
             </div>
           )
         } else {
@@ -129,7 +129,7 @@ class SessionForm extends React.Component {
           logInTopHalf = (
             <div>
               <h2 className="login-signup-header">Log In to Velp</h2>
-              <h3 className="login-signup-subheader">New to Velp?<Link className="sub-signup-link" to='/signup'>Sign up</Link></h3>
+              <h3 className="login-signup-subheader">New to Velp?&nbsp;<Link className="sub-signup-link" to='/signup'>Sign up</Link></h3>
               <p className="legal-copy">By logging in, you agree to Velp's Terms of Service and Privacy Policy.</p>
             </div>
           )
