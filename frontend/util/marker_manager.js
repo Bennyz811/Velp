@@ -11,11 +11,15 @@ class MarkerManager {
     const bizObj = {};
     businesses.forEach(biz => (bizObj[biz.id] = biz));
     businesses.filter(biz => !this.markers[biz.id])
-    .forEach(newBiz => this.createMarkerFromBiz(newBiz));
+    .forEach(newBiz => {
+      this.createMarkerFromBiz(newBiz);});
 
     Object.keys(this.markers).filter(bizId => !bizObj[bizId])
     .forEach(bizId => this.removeMarker(this.markers[bizId]));
-    // console.log('time up to date');
+    // businesses.forEach(biz => {
+    //   this.createMarkerFromBiz(biz);
+    // })
+    console.log('time up to date');
   }
 
   createMarkerFromBiz(biz){
@@ -28,7 +32,7 @@ class MarkerManager {
     });
     marker.addListener('click', () => this.handleClick(biz));
     this.markers[marker.bizId] = marker;
-    // console.log("hoihihih");
+    console.log("hoihihih");
   }
 
   removeMarker(marker){

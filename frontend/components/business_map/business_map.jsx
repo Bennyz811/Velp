@@ -1,4 +1,3 @@
-/* global google:false */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {withRouter} from 'react-router-dom';
@@ -31,7 +30,7 @@ class BusinessMap extends React.Component{
     }
     // console.log("hihohihohoihihiihoioi");
   }
-
+  //
   // componentDidUpdate(){
   //   if (this.props.business){
   //     const targetBizId = Object.keys(this.props.businesses)[0];
