@@ -16,9 +16,9 @@ class Search extends React.Component{
     this.navToBizIndex = this.navToBizIndex.bind(this);
   }
 
-  componentDidMount(){
-    this.setState();
-  }
+  // componentDidMount(){
+  //   this.setState();
+  // }
 
   update(field){
     return (e) => {

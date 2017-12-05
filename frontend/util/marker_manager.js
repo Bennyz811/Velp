@@ -15,7 +15,7 @@ class MarkerManager {
 
     Object.keys(this.markers).filter(bizId => !bizObj[bizId])
     .forEach(bizId => this.removeMarker(this.markers[bizId]));
-    console.log('time up to date');
+    // console.log('time up to date');
   }
 
   createMarkerFromBiz(biz){
@@ -28,6 +28,7 @@ class MarkerManager {
     });
     marker.addListener('click', () => this.handleClick(biz));
     this.markers[marker.bizId] = marker;
+    // console.log("hoihihih");
   }
 
   removeMarker(marker){
