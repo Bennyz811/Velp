@@ -23,13 +23,13 @@ class MarkerManager {
   }
 
   createMarkerFromBiz(biz){
-    const pos = {lat: biz.lat, lng: biz.lng};
-    // const pos = new google.maps.LatLng(biz.lat, biz.lng);
+    // const pos = {lat: biz.lat, lng: biz.lng};
+    const pos = new google.maps.LatLng(biz.lat, biz.lng);
     const marker = new google.maps.Marker({
-      pos,
-      map: this.map,
-      bizId: biz.id
+      position: pos,
+      map: this.map
     });
+    // marker.setMap(this.map);
     marker.addListener('click', () => this.handleClick(biz));
     this.markers[marker.bizId] = marker;
     console.log("hoihihih");
