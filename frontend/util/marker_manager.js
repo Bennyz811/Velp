@@ -19,7 +19,6 @@ class MarkerManager {
     // businesses.forEach(biz => {
     //   this.createMarkerFromBiz(biz);
     // })
-    console.log('time up to date');
   }
 
   createMarkerFromBiz(biz){
@@ -32,7 +31,6 @@ class MarkerManager {
     // marker.setMap(this.map);
     marker.addListener('click', () => this.handleClick(biz));
     this.markers[marker.bizId] = marker;
-    console.log("hoihihih");
   }
 
   removeMarker(marker){

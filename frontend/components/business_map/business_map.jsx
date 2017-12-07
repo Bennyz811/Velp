@@ -6,7 +6,7 @@ import MarkerManager from '../../util/marker_manager';
 
 const mapOptions = {
   center: {lat: 40.7209, lng: -73.9980},
-  zoom: 13
+  zoom: 11
 };
 
 const getCoordsObj = latLng => ({
@@ -29,18 +29,17 @@ class BusinessMap extends React.Component{
       this.registerListener();
       this.MarkerManager.updateMarkers(this.props.businesses);
     }
-    // console.log("hihohihohoihihiihoioi");
   }
-  //
-  // componentDidUpdate(){
-  //   if (this.props.business){
-  //     const targetBizId = Object.keys(this.props.businesses)[0];
-  //     const targetBiz = this.props.businesses[targetBizId];
-  //     this.MarkerManager.updateMarkers(this.props.business);
-  //   } else {
-  //     this.MarkerManager.updateMarkers(this.props.businesses);
-  //   }
-  // }
+
+  componentDidUpdate(){
+    if (this.props.business){
+      const targetBizId = Object.keys(this.props.business)[0];
+      const targetBiz = this.props.business[targetBizId];
+      this.MarkerManager.updateMarkers([targetBiz]);
+    } else {
+      this.MarkerManager.updateMarkers(this.props.businesses);
+    }
+  }
 
   handleMarkerClick(business){
     this.props.history.push(`businesses/${business.id}`);
