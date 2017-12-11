@@ -7,17 +7,17 @@ const sessionLinks = () => (
     <br/>
     <Link className="signup-link" to="/signup">Sign Up</Link>
   </nav>
-)
+);
 
 const personalGreeting = (currentUser, logout) => (
   <hgroup className="header-group">
-    <h2 className="header-name">{currentUser.email}</h2>
-    <button onClick={logout}>Log out</button>
+    <h2 className="header-name"><img src={currentUser.image_url}/></h2>
+    <button onClick={logout}>&nbsp; Log out</button>
   </hgroup>
-)
+);
 
 const Greeting = ({ currentUser, logout }) => (
   currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
-)
+);
 
 export default Greeting;
