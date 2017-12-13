@@ -9,6 +9,13 @@
 .header-group button{
   font-size: 16px;
   color: #fff;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
+.header-group button:hover{
+  cursor: pointer;
+  border-bottom: 2px solid #fff;
 }
 
 .header-group img{
