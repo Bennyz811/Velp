@@ -3,4 +3,5 @@
 
 Velp is a full-stack web appilcation inspired by Yelp. It is powered by Ruby of Rails backend, a PostgrSQL datqabse and React.js frontend utilizing Redux. 
 
+## Features
 ![](https://github.com/Bennyz811/Velp/blob/master/Screen%20Shot%202018-01-03%20at%202.45.33%20PM.png)
