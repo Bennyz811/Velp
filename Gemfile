@@ -35,7 +35,7 @@ gem 'jquery-rails'
 gem 'rails_12factor'
 gem 'paperclip', '~> 5.0.0'
 gem 'figaro'
-gem 'aws-sdk', '~> 3.0'
+gem 'aws-sdk', '< 3.0'
 gem 'bootstrap-sass', '~> 3.1.1.1'
 
 group :development, :test do
