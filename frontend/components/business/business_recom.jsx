@@ -5,7 +5,7 @@ import RecomItem from './business_recom_item';
 
 class Recommended extends React.Component {
   constructor(props){
-    super(props)
+    super(props);
   }
 
   componentDidMount(){
