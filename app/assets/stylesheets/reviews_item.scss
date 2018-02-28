@@ -30,9 +30,9 @@
   padding: 0 15px;
   width: 62.5%;
   box-sizing: border-box;
-  min-height: 156px;
   margin-left: 36px;
   margin-top: -30px;
+  margin-bottom: 30px;
 }
 
 .rev-content{
@@ -78,4 +78,9 @@
   margin-right: 6px;
   margin-bottom: 14px;
   cursor: pointer;
+}
+
+
+.review-list {
+  // border-bottom: 1px solid #ccc;
 }

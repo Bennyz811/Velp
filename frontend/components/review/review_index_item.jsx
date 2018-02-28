@@ -31,7 +31,7 @@ const ReviewIndexItem = ({review}) => {
     }
     let date = review.created_at.slice(0,10)
   return (
-      <li>
+      <li className="review-list">
         <div className="rev-reviews">
           <div className="rev-sidebar">
             <div className="media-avatar">
