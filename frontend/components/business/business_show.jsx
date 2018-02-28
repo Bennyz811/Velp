@@ -100,7 +100,7 @@ class BusinessShow extends React.Component {
                       </Link>
                     </div>
 
-                    <Link to='/upload_user_photos'>Add Photo</Link>
+                    {/* <Link to='/upload_user_photos'>Add Photo</Link> */}
                   </div>
                 </div>
 
