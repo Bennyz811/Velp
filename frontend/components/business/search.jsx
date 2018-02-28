@@ -37,9 +37,9 @@ class Search extends React.Component{
   handleSubmit(e){
     e.preventDefault();
     this.props.updateFilter('categories', {searchTerm: this.state.searchTerm}).then( () => this.navToBizIndex());
-    if (this.state.searchTerm === ""){
+    // if (this.state.searchTerm === ""){
       
-    }
+    // }
   }
 
   render(){

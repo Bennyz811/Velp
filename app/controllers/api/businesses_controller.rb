@@ -49,11 +49,11 @@ class Api::BusinessesController < ApplicationController
   end
 
   def search
-    # if params[:searchInput].present?
+    if params[:query].present?
       @businesses = Business.where("category ILIKE :category", {category: params[:query]})
-    # else
-    #   @businesses = Business.none
-    # end
+    else
+      @businesses = Business.all
+    end
 
     respond_to do |format|
       format.html {render :search}
