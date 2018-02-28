@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route} from 'react-router-dom'
+import {Route} from 'react-router-dom';
 import BusinessMap from '../business_map/business_map';
 import IndexItem from './business_index_item';
 import BusinessIndex from './business_index';
@@ -16,9 +16,9 @@ class Search extends React.Component{
     this.navToBizIndex = this.navToBizIndex.bind(this);
   }
 
-  // componentDidMount(){
-  //   this.setState();
-  // }
+  componentDidMount(){
+    window.scrollTo(0,0);
+  }
 
   update(field){
     return (e) => {
@@ -36,7 +36,10 @@ class Search extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.updateFilter('categories', {searchTerm: this.state.searchTerm}).then( () => this.navToBizIndex())
+    this.props.updateFilter('categories', {searchTerm: this.state.searchTerm}).then( () => this.navToBizIndex());
+    if (this.state.searchTerm === ""){
+      
+    }
   }
 
   render(){
