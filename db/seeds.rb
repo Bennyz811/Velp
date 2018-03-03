@@ -942,3 +942,44 @@ Review.create!(sushi_jones_review2)
 Review.create!(balthazar_review)
 Review.create!(balthazar_review3)
 Review.create!(balthazar_review2)
+
+  30.times {
+    Business.create!(
+      biz_name: [
+        "#{Faker::RickAndMorty.character}'s #{["Hole", "Place", "Restaurant", "House", "Garden", "Lab", "Plate"].sample}", 
+        "#{Faker::Friends.character}'s #{["Hole", "Place", "Restaurant", "House", "Garden", "Lab", "Plate"].sample}",
+        "#{Faker::GameOfThrones.character}'s #{["Hole", "Place", "Restaurant", "House", "Garden", "Lab", "Plate"].sample}",
+        "#{Faker::Simpsons.character}'s #{["Hole", "Place", "Restaurant", "House", "Garden", "Lab", "Plate"].sample}"
+      ].sample,
+      address: Faker::Address.unique.street_address,
+      phone: "212-#{rand(101..999)}-#{rand(0001..9999)}",
+      neighborhood: Faker::Address.community,
+      category: ["Chicken", "Korean", "Italian", "Pizza", "French", "Cuban", "Vegan", "Cafe"].sample,
+      rating: [2, 2.5, 3, 3.5, 4, 4.5, 5].sample,
+      cost: [2,3,4].sample,
+      lat: Faker::Address.latitude,
+      lng: Faker::Address.longitude,
+      image: File.open("app/assets/images/meal.jpg"),
+      image_content_type: "image/jpeg"
+    )
+  }
+
+  30.times {
+    User.create!(
+      email: Faker::Internet.unique.email,
+      first_name: Faker::Name.unique.first_name,
+      last_name: Faker::Name.unique.last_name,
+      password: Faker::Internet.password(6, 8),
+      zip_code: Faker::Address.zip,
+      image: File.open("app/assets/images/johnnychan.jpg"),
+      image_content_type: "image/jpeg"
+    )
+  }
+  30.times {
+    Review.create!(
+      body: Faker::Lorem.sentence(rand(3...10)),
+      rating: [2,3,4].sample,
+      user_id: User.all.sample.id,
+      biz_id: Business.all.sample.id
+    )
+  }
