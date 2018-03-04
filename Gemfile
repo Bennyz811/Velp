@@ -46,7 +46,7 @@ gem 'capybara', '~> 2.13'
 gem 'selenium-webdriver'
 gem 'pry-rails'
 gem 'annotate'
-gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
+gem 'faker', :git => 'git://github.com/stympy/faker.git'
 end
 
 group :development do
