@@ -34,6 +34,7 @@ class BusinessIndex extends React.Component {
                       ))
                     }
                 </ul>
+                {!this.props.businesses.length && <p className="error-msg">Sorry! There are no results matching your search. Please try another term.</p>}
               </div>
             </div>
 

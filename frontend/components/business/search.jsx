@@ -36,51 +36,32 @@ class Search extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.updateFilter('categories', {searchTerm: this.state.searchTerm}).then( () => this.navToBizIndex());
-    // if (this.state.searchTerm === ""){
-      
-    // }
+    this.props.updateFilter('categories', {searchTerm: this.state.searchTerm})
+      .then( () => this.navToBizIndex());
   }
 
   render(){
-    return(
-      <div className="search-form-container">
+    return <div className="search-form-container">
         <form onSubmit={this.handleSubmit}>
           <div className="search-bar-container">
-            <div className='search-bar'>
+            <div className="search-bar">
               <div className="psuedo-input psuedo-find">
                 <span className="psuedo-text">Find</span>
-                <input
-                  onChange={this.handleInput}
-                  value={this.state.searchTerm}
-                  className="find-placeholder"
-                  placeholder="Korean, Cuban, Ramen, Vegan"/>
+                <input onChange={this.handleInput} value={this.state.searchTerm} className="find-placeholder" placeholder="Korean, Cuban, Ramen, Vegan" />
               </div>
               <div className="psuedo-input psuedo-near">
                 <span className="psuedo-text">Near</span>
                 <input placeholder="New York, NY" />
               </div>
               <div className="submit-btn">
-                <input type='submit' value='submit' />
+                <input type="submit" value="submit" />
               </div>
             </div>
           </div>
         </form>
-      </div>
-    );
+      </div>;
   }
 
 }
 
 export default Search;
-
-// <ul>
-//   {
-//     this.props.search.input.map(biz => (
-//       <IndexItem
-//         className="result-list-ind"
-//         key={biz.id}
-//         business={biz} />
-//     ))
-//   }
-// </ul>
