@@ -46,8 +46,11 @@ gem 'capybara', '~> 2.13'
 gem 'selenium-webdriver'
 gem 'pry-rails'
 gem 'annotate'
-gem 'faker', '~> 1.8.7'
 end
+
+group :test do 
+  gem 'faker', '~> 1.8.7'
+end 
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
