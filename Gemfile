@@ -46,7 +46,7 @@ gem 'capybara', '~> 2.13'
 gem 'selenium-webdriver'
 gem 'pry-rails'
 gem 'annotate'
-gem 'faker'
+gem 'faker', '~> 1.8.7'
 end
 
 group :development do
