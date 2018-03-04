@@ -943,7 +943,7 @@ Review.create!(balthazar_review)
 Review.create!(balthazar_review3)
 Review.create!(balthazar_review2)
 
-  30.times {
+  100.times {
     Business.create!(
       biz_name: [
         "#{Faker::RickAndMorty.character}'s #{["Hole", "Place", "Restaurant", "House", "Garden", "Lab", "Plate"].sample}", 
@@ -954,7 +954,7 @@ Review.create!(balthazar_review2)
       address: Faker::Address.unique.street_address,
       phone: "212-#{rand(101..999)}-#{rand(0001..9999)}",
       neighborhood: Faker::Address.community,
-      category: ["Chicken", "Korean", "Italian", "Pizza", "French", "Cuban", "Vegan", "Cafe"].sample,
+      category: ["Chicken", "Korean", "Italian", "Pizza", "French", "Cuban", "Vegan", "Cafe", "Ramen"].sample,
       rating: [2, 2.5, 3, 3.5, 4, 4.5, 5].sample,
       cost: [2,3,4].sample,
       lat: Faker::Address.latitude,
@@ -964,7 +964,7 @@ Review.create!(balthazar_review2)
     )
   }
 
-  30.times {
+  100.times {
     User.create!(
       email: Faker::Internet.unique.email,
       first_name: Faker::Name.unique.first_name,
@@ -975,7 +975,7 @@ Review.create!(balthazar_review2)
       image_content_type: "image/jpeg"
     )
   }
-  30.times {
+  100.times {
     Review.create!(
       body: Faker::Lorem.sentence(rand(3...10)),
       rating: [2,3,4].sample,
