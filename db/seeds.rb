@@ -943,6 +943,7 @@ Review.create!(balthazar_review)
 Review.create!(balthazar_review3)
 Review.create!(balthazar_review2)
 
+require 'faker'
   100.times {
     Business.create!(
       biz_name: [
