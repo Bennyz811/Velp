@@ -976,16 +976,8 @@ require 'faker'
       image_content_type: "image/jpeg"
     )
   }
-  100.times {
-    Review.create!(
-      body: Faker::Lorem.sentence(rand(3...10)),
-      rating: [2,3,4].sample,
-      user_id: User.all.sample.id,
-      biz_id: Business.all.sample.id
-    )
-  }
 
-  100.times {
+  70.times {
     Business.order(:id).all.each do |biz|
       Review.create!(
         body: Faker::Lorem.sentence(rand(3...10)),
