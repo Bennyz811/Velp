@@ -945,7 +945,9 @@ Review.create!(balthazar_review2)
 
 require 'faker'
   100.times {
-    food_pic = ["apple-pie", "chinese-chicken", "dumplings", "garlic-bread", "juicy-burger", "milkshake", "noodles", "nutella-banana", "peacan-pie", "pizza-bread", "pizza-bread2", "sandwich", "stew"].sample
+    food_pic = ["apple-pie", "chinese-chicken", "dumplings", "garlic-bread", 
+    "juicy-burger", "milkshake", "noodles", "nutella-banana", "peacan-pie", 
+    "pizza-bread", "pizza-bread2", "sandwich", "stew"].sample
     Business.create!(
       biz_name: [
         "#{Faker::RickAndMorty.character}'s #{["Hole", "Place", "Restaurant", "House", "Garden", "Lab", "Plate"].sample}", 
@@ -959,15 +961,17 @@ require 'faker'
       category: ["Chicken", "Korean", "Italian", "Pizza", "French", "Cuban", "Vegan", "Cafe", "Ramen"].sample,
       rating: [2, 2.5, 3, 3.5, 4, 4.5, 5].sample,
       cost: [2,3,4].sample,
-      lat: Faker::Address.latitude,
-      lng: Faker::Address.longitude,
+      lat: rand(40.7..40.9),
+      lng: rand(-74.9..-73.0),
       image: File.open("app/assets/images/food/#{food_pic}.jpg"),
       image_content_type: "image/jpeg"
     )
   }
 
   100.times {
-    avatar = ["johnnychan", "gavin", "gilfoly", "doug", "daniel", "dinesh", "claire", "erlich", "phil", "rafa", "roger", "richard", "stephen", "walter"].sample
+    avatar = ["johnnychan", "gavin", "gilfoly", "doug", "daniel", 
+    "dinesh", "claire", "erlich", "phil", "rafa", "roger", "richard", 
+    "stephen", "walter"].sample
     User.create!(
       email: Faker::Internet.unique.email,
       first_name: Faker::Name.unique.first_name,
