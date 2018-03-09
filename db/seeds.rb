@@ -945,7 +945,7 @@ Review.create!(balthazar_review2)
 
 require 'faker'
   100.times {
-    food_pic = ["apple-pie", "chinese-chicken", "dumplings", "garlic-bread", "juicy-burger", "milkshake", "noodles", "nutella-banana", "preacan-pie", "pizza-bread", "pizza-bread2", "sandwich", "stew"].sample
+    food_pic = ["apple-pie", "chinese-chicken", "dumplings", "garlic-bread", "juicy-burger", "milkshake", "noodles", "nutella-banana", "peacan-pie", "pizza-bread", "pizza-bread2", "sandwich", "stew"].sample
     Business.create!(
       biz_name: [
         "#{Faker::RickAndMorty.character}'s #{["Hole", "Place", "Restaurant", "House", "Garden", "Lab", "Plate"].sample}", 
