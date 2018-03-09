@@ -945,6 +945,7 @@ Review.create!(balthazar_review2)
 
 require 'faker'
   100.times {
+    food_pic = ["apple-pie", "chinese-chicken", "dumplings", "garlic-bread", "juicy-burger", "milkshake", "noodles", "nutella-banana", "preacan-pie", "pizza-bread", "pizza-bread2", "sandwich", "stew"].sample
     Business.create!(
       biz_name: [
         "#{Faker::RickAndMorty.character}'s #{["Hole", "Place", "Restaurant", "House", "Garden", "Lab", "Plate"].sample}", 
@@ -960,19 +961,20 @@ require 'faker'
       cost: [2,3,4].sample,
       lat: Faker::Address.latitude,
       lng: Faker::Address.longitude,
-      image: File.open("app/assets/images/meal.jpg"),
+      image: File.open("app/assets/images/food/#{food_pic}.jpg"),
       image_content_type: "image/jpeg"
     )
   }
 
   100.times {
+    avatar = ["johnnychan", "gavin", "gilfoly", "doug", "daniel", "dinesh", "claire", "erlich", "phil", "rafa", "roger", "richard", "stephen", "walter"].sample
     User.create!(
       email: Faker::Internet.unique.email,
       first_name: Faker::Name.unique.first_name,
       last_name: Faker::Name.unique.last_name,
       password: Faker::Internet.password(6, 8),
       zip_code: Faker::Address.zip,
-      image: File.open("app/assets/images/johnnychan.jpg"),
+      image: File.open("app/assets/images/#{avatar}.jpg"),
       image_content_type: "image/jpeg"
     )
   }
@@ -980,7 +982,7 @@ require 'faker'
   70.times {
     Business.order(:id).all.each do |biz|
       Review.create!(
-        body: Faker::Lorem.sentence(rand(3...10)),
+        body: Faker::Lorem.sentence(rand(4...10)),
         rating: [2,3,4].sample,
         user_id: User.all.sample.id,
         biz_id: biz.id
