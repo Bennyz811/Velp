@@ -47,6 +47,7 @@ gem 'capybara', '~> 2.13'
 gem 'selenium-webdriver'
 gem 'pry-rails'
 gem 'annotate'
+gem 'will_paginate', '~> 3.1.0'
 end
 
 group :development do
