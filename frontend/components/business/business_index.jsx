@@ -39,7 +39,7 @@ class BusinessIndex extends React.Component {
             </div>
 
             <div className="result-col-beta">
-              <div>
+              <div className="map-container">
                   <BusinessMap
                     businesses={this.props.businesses}
                     />
