@@ -962,7 +962,7 @@ require 'faker'
       rating: [2, 2.5, 3, 3.5, 4, 4.5, 5].sample,
       cost: [2,3,4].sample,
       lat: rand(40.7..40.9),
-      lng: rand(-74.9..-73.0),
+      lng: rand(-74.0..-73.9),
       image: File.open("app/assets/images/food/#{food_pic}.jpg"),
       image_content_type: "image/jpeg"
     )
