@@ -31,12 +31,12 @@ class Search extends React.Component{
   }
 
   navToBizIndex(){
-    this.props.history.push('/businesses');
+    this.props.history.push('/businesses/');
   }
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.updateFilter('categories', {searchTerm: this.state.searchTerm})
+    this.props.updateFilter('categories', {searchTerm: this.state.searchTerm.replace(/ /g, '')})
       .then( () => this.navToBizIndex());
   }
 
