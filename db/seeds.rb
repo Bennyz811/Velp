@@ -958,7 +958,7 @@ require 'faker'
       address: Faker::Address.unique.street_address,
       phone: "212-#{rand(101..999)}-#{rand(0001..9999)}",
       neighborhood: Faker::Address.community,
-      category: ["Chicken", "Korean", "Italian", "Pizza", "French", "Cuban", "Vegan", "Cafe", "Ramen"].sample,
+      category: ["Chicken", "Korean", "Italian", "Pizza", "French", "Cuban", "Vegan", "Cafe", "Ramen", "Sushi"].sample,
       rating: [2, 2.5, 3, 3.5, 4, 4.5, 5].sample,
       cost: [2,3,4].sample,
       lat: rand(40.7..40.9),
