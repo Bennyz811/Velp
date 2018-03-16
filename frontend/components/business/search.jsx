@@ -45,7 +45,7 @@ class Search extends React.Component{
         <form onSubmit={this.handleSubmit}>
           <div className="search-bar-container">
             <div className="search-bar">
-              <div className="psuedo-input psuedo-find">
+              <div className="psuedo-input psuedo-find input-form">
                 <span className="psuedo-text">Find</span>
                 <input onChange={this.handleInput} value={this.state.searchTerm} className="find-placeholder" placeholder="Korean, Cuban, Ramen, Vegan" />
               </div>
