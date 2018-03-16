@@ -139,12 +139,6 @@ class SessionForm extends React.Component {
             </div>
           )
         }
-        // let img = document.images[0];
-        // let dwnload = new Image();
-        // dwnload.onload = function(){
-        //   image.src = this.src;
-        // }
-        // dwnload.src = "velp_logo.jpg";
 
         return(
           <div className="main-session-wrap">

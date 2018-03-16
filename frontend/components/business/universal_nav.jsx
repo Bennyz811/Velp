@@ -1,5 +1,6 @@
 import SearchContainer from './search_container';
 import GreetingContainer from '../greeting/greeting_container';
+import { Greeting } from '../greeting/greeting';
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {AuthRoute} from '../../util/route_util';
@@ -18,6 +19,7 @@ class UniversalNav extends React.Component{
               </div>
               <div className="nav-search-bar">
                 <SearchContainer />
+                {Greeting}
               </div>
             </div>
           </div>

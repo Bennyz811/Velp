@@ -54,7 +54,10 @@ class Search extends React.Component{
                 <input placeholder="New York, NY" />
               </div>
               <div className="submit-btn">
-                <input type="submit" value="submit" />
+                <span>
+                  <i className="fa fa-search" />
+                </span>
+                <input type="submit" value="" />
               </div>
             </div>
           </div>
