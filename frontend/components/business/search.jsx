@@ -35,8 +35,9 @@ class Search extends React.Component{
   }
 
   handleSubmit(e){
+    let query = this.state.searchTerm;
     e.preventDefault();
-    this.props.updateFilter('categories', {searchTerm: this.state.searchTerm.replace(/ /g, '')})
+    this.props.updateFilter('categories', {searchTerm: query === "" ? query : query.replace(/\s/g, '')})
       .then( () => this.navToBizIndex());
   }
 
@@ -53,12 +54,11 @@ class Search extends React.Component{
                 <span className="psuedo-text">Near</span>
                 <input placeholder="New York, NY" />
               </div>
-              <div className="submit-btn">
+              <button className="submit-btn" onClick={this.handleSubmit}>
                 <span>
                   <i className="fa fa-search" />
                 </span>
-                <input type="submit" value="" />
-              </div>
+              </button>
             </div>
           </div>
         </form>
