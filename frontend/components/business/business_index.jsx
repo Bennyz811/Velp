@@ -15,6 +15,7 @@ class BusinessIndex extends React.Component {
   componentDidMount(){
     // this.props.fetchAllBusiness();
     // this.props.updateFilter("category");
+    window.addEventListener('scroll', this.handleScroll);
   }
 
   handleScroll(){
