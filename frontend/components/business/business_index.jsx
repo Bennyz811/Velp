@@ -10,6 +10,10 @@ class BusinessIndex extends React.Component {
   constructor(props){
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
+    this.state = {
+      page: 1,
+      perPage: 5,
+    };
   }
 
   componentDidMount(){

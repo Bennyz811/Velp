@@ -24,7 +24,7 @@ class BusinessMap extends React.Component{
     this.map = new google.maps.Map(map, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
     if (this.props.business){
-      this.props.fetchBusiness(this.props.businessId);
+      // this.props.fetchBusiness(this.props.businessId);
       this.MarkerManager.createMarkerFromBiz(this.props.business);
     }else {
       this.registerListener();
