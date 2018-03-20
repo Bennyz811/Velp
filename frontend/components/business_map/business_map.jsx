@@ -25,6 +25,7 @@ class BusinessMap extends React.Component{
     this.MarkerManager = new MarkerManager(this.map);
     if (this.props.business){
       this.props.fetchBusiness(this.props.businessId);
+      this.MarkerManager.createMarkerFromBiz(this.props.business);
     }else {
       this.registerListener();
       this.MarkerManager.updateMarkers(this.props.businesses);
