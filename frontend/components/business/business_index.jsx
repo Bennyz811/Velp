@@ -4,21 +4,21 @@ import IndexItem from './business_index_item';
 import UniversalNav from './universal_nav';
 import BusinessMap from '../business_map/business_map';
 import Footer from '../footer.jsx';
-import InfiniteScroll from 'react-infinite-scroller';
+import queryString from 'query-string';
+
 
 class BusinessIndex extends React.Component {
   constructor(props){
     super(props);
     this.handleScroll = this.handleScroll.bind(this);
-    this.state = {
-      page: 1,
-      perPage: 5,
-    };
   }
-
+  
   componentDidMount(){
-    // this.props.fetchAllBusiness();
-    // this.props.updateFilter("category");
+    // const params = queryString.parseUrl(this.props.query.searchTerm);
+    // console.log(params.url);
+    // debugger
+    // this.props.searchForBusinesses({searchTerm: this.props.query.searchTerm});
+    // this.props.updateFilter(params);
     window.addEventListener('scroll', this.handleScroll);
   }
 

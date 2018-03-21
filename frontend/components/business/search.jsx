@@ -1,8 +1,8 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import BusinessMap from '../business_map/business_map';
-import IndexItem from './business_index_item';
-import BusinessIndex from './business_index';
+// import BusinessMap from '../business_map/business_map';
+// import IndexItem from './business_index_item';
+// import BusinessIndex from './business_index';
 
 class Search extends React.Component{
   constructor(props){
@@ -31,7 +31,7 @@ class Search extends React.Component{
   }
 
   navToBizIndex(){
-    this.props.history.push('/businesses/');
+    this.props.history.push('/businesses/search');
   }
 
   handleSubmit(e){

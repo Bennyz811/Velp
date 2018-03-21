@@ -16,17 +16,21 @@ const mapStateToProps = (state, ownProps) => {
   //   return b !== undefined;
   // });
   return {
-    businesses: state.entities.search.input
+    businesses: state.entities.search.input,
+    query: state.ui.filters.categories,
   };
 };
 
-// const mapDispatchToProps = dispatch => ({
-//   updateFilter: (filters, value) => dispatch(updateFilter(filters, value)),
-//   fetchAllBusiness: () => dispatch(fetchAllBusiness()),
-//   fetchBusiness: id => dispatch(fetchBusiness(id))
-// });
+const mapDispatchToProps = (dispatch) => {
+  // updateFilter: (filters, value) => dispatch(updateFilter(filters, value)),
+  // fetchAllBusiness: () => dispatch(fetchAllBusiness()),
+  // fetchBusiness: id => dispatch(fetchBusiness(id))
+  return {
+    searchForBusinesses: (query) => dispatch(searchForBusinesses(query))
+  };
+};
 
 export default connect(
-  mapStateToProps
-  // mapDispatchToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(BusinessIndex);

@@ -11,10 +11,11 @@ class IndexItem extends React.Component {
   }
 
   handleClick(){
-    this.props.history.push(`/businesses/${this.props.business.id}`);
+    // this.props.history.push(`/businesses/${this.props.business.id}`);
   }
 
   render(){
+    console.log("asdfsadgs")
     const {biz_name, category, rating, cost, neighborhood, address, phone, image_url} = this.props.businesses;
     let ratingStar;
     const ar = this.props.businesses.rating;
@@ -64,7 +65,7 @@ class IndexItem extends React.Component {
                 <img className="biz-pic" src={image_url}/>
               </div>
               <div className="media-story">
-                <Link className="search-res-title" to={`/businesses/${this.props.businesses.id}`}>{biz_name}</Link>
+                <Link className="search-res-title" to={`/businesses/search/${this.props.businesses.id}`}>{biz_name}</Link>
                 <div className="search-res-rating">{ratingStar}</div>
                 <div className="search-res-cat">{dollar} · {category}</div>
               </div>

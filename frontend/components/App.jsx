@@ -26,13 +26,13 @@ const App = () => (
       <Route path='/' component={GreetingContainer}/>
     </Switch>
 
-    <Route exact path='/businesses' component={BusinessIndexContainer}/>
-    <Route path='/businesses/:businessId' component={BusinessShowContainer}/>
+    <Route exact path='/businesses/search' component={BusinessIndexContainer}/>
+    <Route path='/businesses/search/:businessId' component={BusinessShowContainer}/>
     <Route path='/:businessId/write_review' component={ReviewFormContainer}/>
     <Route exact path='/' component={SplashContainer}/>
     <Footer/>
   </div>
 );
-// <Route path='/businesses' component={SearchContainer}/>
+// {/* <Route path='/businesses/search' component={SearchContainer}/> */}
 
 export default App;
