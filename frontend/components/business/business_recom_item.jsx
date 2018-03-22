@@ -11,7 +11,7 @@ class RecomItem extends React.Component {
   }
 
   handleClick(){
-    this.props.history.push(`/businesses/${this.props.business.id}`);
+    this.props.history.push(`/businesses/search/${this.props.business.id}`);
   }
 
   render(){
@@ -64,7 +64,7 @@ class RecomItem extends React.Component {
                 <img className="recom-pic" src={image_url}/>
               </div>
               <div className="recom-media-story">
-                <Link className="recom-item-title search-res-title" to={`/businesses/${this.props.businesses.id}`}>{biz_name}</Link>
+                <Link className="recom-item-title search-res-title" to={`/businesses/search/${this.props.businesses.id}`}>{biz_name}</Link>
                 <div className=" recom-item-rating search-res-rating">{ratingStar}</div>
                 <div className=" recom-item-cat search-res-cat">{dollar} · {category}</div>
               </div>
