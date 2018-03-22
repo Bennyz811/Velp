@@ -26,7 +26,7 @@ const App = () => (
       <Route path='/' component={GreetingContainer}/>
     </Switch>
 
-    <Route exact path='/businesses/search' component={BusinessIndexContainer}/>
+    <Route exact path='/search' component={BusinessIndexContainer}/>
     <Route path='/businesses/search/:businessId' component={BusinessShowContainer}/>
     <Route path='/:businessId/write_review' component={ReviewFormContainer}/>
     <Route exact path='/' component={SplashContainer}/>
