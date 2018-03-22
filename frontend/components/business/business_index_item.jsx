@@ -15,7 +15,6 @@ class IndexItem extends React.Component {
   }
 
   render(){
-    console.log("asdfsadgs")
     const {biz_name, category, rating, cost, neighborhood, address, phone, image_url} = this.props.businesses;
     let ratingStar;
     const ar = this.props.businesses.rating;

@@ -22,6 +22,9 @@ class BusinessIndex extends React.Component {
     window.addEventListener('scroll', this.handleScroll);
   }
 
+  componentWillUpdate(){
+  }
+
   handleScroll(){
     if (this.scroller){
       console.log(this.scroller.scrollTop);

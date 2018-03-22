@@ -25,6 +25,9 @@ class BusinessMap extends React.Component{
     this.MarkerManager = new MarkerManager(this.map);
     if (this.props.business){
       // this.props.fetchBusiness(this.props.businessId);
+      const x = {center: {lat: this.props.business.lat, lng: this.props.business.lng}, zoom: 11};
+      this.map = new google.maps.Map(map, x);
+      this.MarkerManager = new MarkerManager(this.map);
       this.MarkerManager.createMarkerFromBiz(this.props.business);
     }else {
       this.registerListener();
