@@ -31,7 +31,8 @@ class Search extends React.Component{
   }
 
   navToBizIndex(){
-    this.props.history.push('/search');
+    // this.props.history.push('/search');
+    this.props.history.push(`/search?${this.state.searchTerm}`);
   }
 
   handleSubmit(e){

@@ -15,10 +15,15 @@ class BusinessIndex extends React.Component {
   
   componentDidMount(){
     // const params = queryString.parseUrl(this.props.query.searchTerm);
-    // console.log(params.url);
-    // debugger
-    // this.props.searchForBusinesses({searchTerm: this.props.query.searchTerm});
+    // console.log(params);
+    const query = (this.props.location.search).slice(1);
+    this.props.searchForBusinesses({searchTerm: query});
     // this.props.updateFilter(params);
+    // this.props.location.push({
+    //   pathname: this.props.location.pathname,
+    //   search: queryString.parseUrl(this.props.query.searchTerm).url
+    // });
+
     window.addEventListener('scroll', this.handleScroll);
   }
 
