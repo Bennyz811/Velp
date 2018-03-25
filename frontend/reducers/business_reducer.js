@@ -1,7 +1,7 @@
 import merge from 'lodash/merge';
-import {RECEIVE_ALL_BUSINESSES, RECEIVE_BUSINESS, REMOVE_BUSINESS} from '../actions/business_actions';
+import {RECEIVE_ALL_BUSINESSES, RECEIVE_BUSINESS, REMOVE_BUSINESS, SEARCH_BUSINESSES} from '../actions/business_actions';
 
-let _initialState = {};
+let _initialState = [];
 const businessesReducer = (state = _initialState, action) => {
   Object.freeze(state);
   switch (action.type) {
@@ -9,9 +9,11 @@ const businessesReducer = (state = _initialState, action) => {
       return action.businesses;
     case RECEIVE_BUSINESS:
       // return merge({}, state, {[action.business.business.id]: action.business.business})
-      return merge({}, state, action.business);
+      return action.business;
+    case SEARCH_BUSINESSES:
+      return state.concat(action.input);
     case REMOVE_BUSINESS:
-      let newState = merge({}, state);
+      let newState = [].concat(state);
       delete newState[action.businessId];
       return newState;
     default:

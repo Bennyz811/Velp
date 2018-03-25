@@ -35,10 +35,10 @@ export const deleteBusiness = businessId => {
   });
 };
 
-export const searchBusinesses = query => {
+export const searchBusinesses = (query, offSet) => {
   return $.ajax({
     method: 'get',
     url: '/api/businesses/search',
-    data: {query: query.searchTerm}
+    data: {query: query.searchTerm, offSet}
   });
 };
