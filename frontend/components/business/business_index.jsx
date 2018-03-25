@@ -58,9 +58,6 @@ class BusinessIndex extends React.Component {
                       businesses={business}
                     />
                   ))}
-                  <p>
-                    something
-                  </p>
                 </ul>
                 {!this.props.businesses.length && <p className="error-msg">
                     Sorry! There are no results matching your search. Please

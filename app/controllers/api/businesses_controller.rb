@@ -49,8 +49,6 @@ class Api::BusinessesController < ApplicationController
   end
 
   def search
-    p "search"
-    p params[:query]
     if params[:query].present?
       @businesses = Business.where("category ILIKE :category", {category: params[:query]}).limit(5).offset(params[:offSet])
     else

@@ -38,8 +38,9 @@ class Search extends React.Component{
   handleSubmit(e){
     let query = this.state.searchTerm;
     e.preventDefault();
-    this.props.updateFilter('categories', {searchTerm: query === "" ? query : query.replace(/\s/g, '')})
-      .then( () => this.navToBizIndex());
+    // this.props.updateFilter('categories', {searchTerm: query === "" ? query : query.replace(/\s/g, '')})
+    //   .then( () => this.navToBizIndex());
+    this.navToBizIndex();
   }
 
   render(){
