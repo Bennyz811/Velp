@@ -26,7 +26,7 @@ class Splash extends React.Component{
           <div className="home-rec-container">
             <h2>Velp New York</h2>
           </div>
-          <Route exact path="/" component={RecommendedContainer}/>
+          {/* <Route exact path="/" component={RecommendedContainer}/> */}
         </div>
       </div>
     );

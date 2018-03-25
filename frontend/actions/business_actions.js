@@ -60,6 +60,8 @@ export const fetchSearchBusinesses = input => dispatch => (
   searchAPIUtil.filterBusiness(input).then(businesses => dispatch(searchBusinesses(businesses)))
 );
 
-export const searchForBusinesses = query => dispatch => (
-  bizAPIUtil.searchBusinesses(query).then(businesses => dispatch(searchBusinesses(businesses)))
-);
+export const searchForBusinesses = (query, off_set) => dispatch => {
+  return (
+    bizAPIUtil.searchBusinesses(query, off_set).then(businesses => dispatch(searchBusinesses(businesses)))
+  );
+};

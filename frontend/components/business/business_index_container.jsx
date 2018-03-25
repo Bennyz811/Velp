@@ -16,8 +16,9 @@ const mapStateToProps = (state, ownProps) => {
   //   return b !== undefined;
   // });
   return {
-    businesses: state.entities.search.input,
+    businesses: state.entities.businesses,
     query: state.ui.filters.categories,
+    offSet: state.entities.businesses.length,
   };
 };
 
@@ -26,7 +27,7 @@ const mapDispatchToProps = (dispatch) => {
   // fetchAllBusiness: () => dispatch(fetchAllBusiness()),
   // fetchBusiness: id => dispatch(fetchBusiness(id))
   return {
-    searchForBusinesses: (query) => dispatch(searchForBusinesses(query))
+    searchForBusinesses: (query, offSet) => dispatch(searchForBusinesses(query, offSet))
   };
 };
 
