@@ -4,13 +4,12 @@ import IndexItem from './business_index_item';
 import UniversalNav from './universal_nav';
 import BusinessMap from '../business_map/business_map';
 import Footer from '../footer.jsx';
-import queryString from 'query-string';
-import InfiniteScroll from 'react-infinite-scroller';
+import throttle from 'lodash/throttle';
 
 class BusinessIndex extends React.Component {
   constructor(props){
     super(props);
-    this.handleScroll = this.handleScroll.bind(this);
+    this.handleScroll = throttle(this.handleScroll.bind(this), 1000);
   }
   
   componentDidMount(){
@@ -20,17 +19,13 @@ class BusinessIndex extends React.Component {
     window.addEventListener('scroll', this.handleScroll);
   }
   
-  componentWillUpdate(){
+  componentWillReceiveProps(){
   }
 
   handleScroll(){
     const x = document.getElementById('index');
-    console.log(x.height, x.clientHeight, window.pageYOffset, x.offsetHeight);
-    if (window.pageYOffset > Math.ceil(x.offsetHeight * 0.85)){
+    if (window.pageYOffset > Math.ceil(x.offsetHeight * 0.25)){
       this.props.searchForBusinesses({ searchTerm: this.props.location.search.slice(1) }, this.props.offSet);
-      if (window.pageYOffset > x.offsetHeight){
-        window.removeEventListener('scroll', this.handleScroll);
-      }
     }
   }
 
