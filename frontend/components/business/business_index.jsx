@@ -35,7 +35,6 @@ class BusinessIndex extends React.Component {
 
 
   render(){
-    debugger
     return <div>
         <UniversalNav />
         <div className="result-super-container">
