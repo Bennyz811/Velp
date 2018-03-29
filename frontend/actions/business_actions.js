@@ -4,6 +4,7 @@ export const REMOVE_BUSINESS = 'REMOVE_BUSINESS';
 export const UPDATE_BUSINESS = 'UPDATE_BUSINESS';
 export const RECEIVE_BUSINESS_ERRORS = 'RECEIVE_BUSINESS_ERRORS';
 export const SEARCH_BUSINESSES = 'SEARCH_BUSINESSES';
+export const SEARCH_NEW_BUSINESSES = 'SEARCH_NEW_BUSINESSES';
 export const RECEIVE_SEARCH_BUSINESSES = 'RECEIVE_SEARCH_BUSINESSES';
 
 
@@ -28,6 +29,10 @@ const receiveBusinessErrors = errors => ({
 
 const searchBusinesses = input => ({
   type: SEARCH_BUSINESSES, input
+});
+
+const searchNewBusinesses = input => ({
+  type: SEARCH_NEW_BUSINESSES, input
 });
 
 const receiveSearchBusinesses = businesses => ({
@@ -56,12 +61,18 @@ export const deleteBusiness = businessId => dispatch => (
   bizAPIUtil.deleteBusiness(businessId).then(business => dispatch(removeBusiness(businessId)))
 );
 
-export const fetchSearchBusinesses = input => dispatch => (
-  searchAPIUtil.filterBusiness(input).then(businesses => dispatch(searchBusinesses(businesses)))
-);
+// export const fetchSearchBusinesses = input => dispatch => (
+//   searchAPIUtil.searchNewBusinesses(input).then(businesses => dispatch(searchNewBusinesses(businesses)))
+// );
 
 export const searchForBusinesses = (query, off_set) => dispatch => {
   return (
     bizAPIUtil.searchBusinesses(query, off_set).then(businesses => dispatch(searchBusinesses(businesses)))
+  );
+};
+
+export const searchForNewBusinesses = input => dispatch => {
+  return (
+    bizAPIUtil.searchBusinesses(input).then(businesses => dispatch(searchNewBusinesses(businesses)))
   );
 };

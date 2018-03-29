@@ -14,8 +14,8 @@ class BusinessIndex extends React.Component {
   
   componentDidMount(){
     window.scrollTo(0,0);
-    const query = (this.props.location.search).slice(1);
-    this.props.searchForBusinesses({searchTerm: query});
+    // const query = (this.props.location.search).slice(1);
+    // this.props.searchForBusinesses({searchTerm: query});
     window.addEventListener('scroll', this.handleScroll);
   }
 
@@ -35,6 +35,7 @@ class BusinessIndex extends React.Component {
 
 
   render(){
+    debugger
     return <div>
         <UniversalNav />
         <div className="result-super-container">

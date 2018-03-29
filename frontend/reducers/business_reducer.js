@@ -1,5 +1,5 @@
 import merge from 'lodash/merge';
-import {RECEIVE_ALL_BUSINESSES, RECEIVE_BUSINESS, REMOVE_BUSINESS, SEARCH_BUSINESSES} from '../actions/business_actions';
+import {RECEIVE_ALL_BUSINESSES, RECEIVE_BUSINESS, REMOVE_BUSINESS, SEARCH_BUSINESSES, SEARCH_NEW_BUSINESSES} from '../actions/business_actions';
 
 let _initialState = [];
 const businessesReducer = (state = _initialState, action) => {
@@ -12,6 +12,8 @@ const businessesReducer = (state = _initialState, action) => {
       return action.business;
     case SEARCH_BUSINESSES:
       return state.concat(action.input);
+    case SEARCH_NEW_BUSINESSES:
+      return action.input;
     case REMOVE_BUSINESS:
       let newState = [].concat(state);
       delete newState[action.businessId];
