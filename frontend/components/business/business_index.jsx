@@ -14,8 +14,7 @@ class BusinessIndex extends React.Component {
   
   componentDidMount(){
     window.scrollTo(0,0);
-    // const query = (this.props.location.search).slice(1);
-    // this.props.searchForBusinesses({searchTerm: query});
+    this.props.searchForBusinesses({ searchTerm: this.props.location.search.slice(1) }, 5);
     window.addEventListener('scroll', this.handleScroll);
   }
 
