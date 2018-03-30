@@ -49,7 +49,6 @@ class Api::BusinessesController < ApplicationController
   end
 
   def search
-    debugger
     if params[:query].present?
       @businesses = Business.where("category ILIKE :category", {category: params[:query]}).limit(5).offset(params[:offSet])
     else
@@ -66,7 +65,7 @@ class Api::BusinessesController < ApplicationController
   def recommend 
     array = []
     array.push(Business.all.sample) until array.uniq.length === 3
-    @recommend = array
+    @recommend = array.uniq
   end 
 
 
