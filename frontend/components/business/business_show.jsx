@@ -11,10 +11,18 @@ import BusinessMap from '../business_map/business_map';
 class BusinessShow extends React.Component {
   constructor(props){
     super(props);
+
+    this.state = {
+      hasMadeApiCall: false
+    };
   }
 
   componentDidMount(){
-    this.props.fetchBusiness(this.props.match.params.businessId);
+    this.props.fetchBusiness(this.props.match.params.businessId)
+      .then(() => {
+        this.setState({ hasMadeApiCall: true });
+        this.props.history.push(`/businesses/search/${this.props.bizId}`);
+      });
   }
 
   // componentWillReceiveProps(nextProps){
@@ -64,76 +72,68 @@ class BusinessShow extends React.Component {
         dollar = <div>$$$$</div>;
       }
     }
+    
+    return <div className="biz-index-item" onClick={this.handleClick}>
+        <UniversalNav />
+        {this.props.business && this.props.business.review_ids && 
+          <div className="biz-index-item" onClick={this.handleClick}>
+              <div className="top-shelf-container">
+                <div className="top-shelf">
+                  <div className="biz-content-container">
+                    <div className="biz-page-header">
+                      <div className="biz-page-header-left">
+                        <div className="biz-show-title">
+                          <Link to={`/businesses/${this.props.business.id}`}>
+                            <h1>{this.props.business.biz_name}</h1>
+                          </Link>
+                        </div>
 
-    if (this.props.business && this.props.business.review_ids){
-      const {id, biz_name, address, phone, neighborhood, category, rating, cost, hours} = this.props.business;
-      return (
-        <div className="biz-index-item" onClick={this.handleClick}>
-          <UniversalNav />
-          <div className="top-shelf-container">
-            <div className="top-shelf">
+                        <div className="biz-show-cost">
+                          <div className="biz-show-rating">
+                            {ratingStar}
+                          </div>
+                          <div className="biz-dol-cat">
+                            <span className="biz-dollar">{dollar}</span>
+                            <span className="breaker-dot">·</span>
+                            <span className="biz-cat">{this.props.business.category}</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="biz-page-header-right">
+                        <div className="review-button">
+                          <Link to={`/${this.props.business.id}/write_review`}>
+                            <i className="fa fa-star" aria-hidden="true" />
+                            Write a Review
+                          </Link>
+                        </div>
 
-              <div className="biz-content-container">
-
-                <div className="biz-page-header">
-                  <div className="biz-page-header-left">
-                    <div className="biz-show-title">
-                      <Link to={`/businesses/${this.props.business.id}`}><h1>{biz_name}</h1></Link>
-                    </div>
-
-                    <div className="biz-show-cost">
-                      <div className="biz-show-rating">{ratingStar}</div>
-                      <div className="biz-dol-cat">
-                        <span className="biz-dollar">{dollar}</span>
-                        <span className="breaker-dot">·</span>
-                        <span className="biz-cat">{category}</span>
+                        {/* <Link to='/upload_user_photos'>Add Photo</Link> */}
                       </div>
                     </div>
 
-                  </div>
-                  <div className="biz-page-header-right">
-
-                    <div className="review-button">
-                      <Link to={`/${this.props.business.id}/write_review`}>
-                        <i className="fa fa-star" aria-hidden="true"></i>
-                        Write a Review
-                      </Link>
+                    <div className="map-box">
+                      <div className="mapbox-map">
+                        <BusinessMap business={this.props.business} businessId={this.props.business.id} />
+                      </div>
+                      <address>{this.props.business.address}</address>
+                      <span>{this.props.business.phone}</span>
                     </div>
-
-                    {/* <Link to='/upload_user_photos'>Add Photo</Link> */}
+                    <div className="hour-summary">
+                      <span>{this.props.business.hours}</span>
+                    </div>
                   </div>
-                </div>
-
-                <div className='map-box'>
-                  <div className="mapbox-map">
-                    <BusinessMap
-                        business={this.props.business}
-                        businessId={this.props.business.id}
-                    />
-                  </div>
-                  <address>{address}</address>
-                  <span>{phone}</span>
-                </div>
-                <div className='hour-summary'>
-                  <span>{hours}</span>
                 </div>
               </div>
+              <div className="bottom-layout">
+                <ReviewIndexContainer />
+              </div>
+            </div>}
 
-            </div>
-          </div>
-        <div className="bottom-layout">
-          <ReviewIndexContainer />
-        </div>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <UniversalNav/>
-          <p>Sorry, seems like there are no results are for your search</p>
-        </div>
-      );
-    }
+        {this.state.hasMadeApiCall && !this.props.business && <p>
+              Sorry, seems like there are no results are for your search
+            </p>}
+
+      </div>;
   }
 }
 
