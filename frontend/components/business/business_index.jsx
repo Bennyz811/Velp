@@ -22,7 +22,7 @@ class BusinessIndex extends React.Component {
     window.removeEventListener('scroll', this.handleScroll);
   }
   
-  componentWillReceiveProps(){
+  componentDidUpdate(){
   }
 
   handleScroll(){

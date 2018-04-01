@@ -36,8 +36,7 @@ class Search extends React.Component{
 
   handleSubmit(e){
     e.preventDefault();
-    this.props.searchForNewBusinesses({ searchTerm: this.state.searchTerm });
-    this.navToBizIndex();
+    this.props.searchForNewBusinesses({ searchTerm: this.state.searchTerm }).then(() => this.navToBizIndex());
   }
 
   render(){
