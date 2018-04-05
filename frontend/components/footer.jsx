@@ -19,7 +19,7 @@ const footer = () => (
             <ul>
               <h1>Discover</h1>
               <li>
-                <a href="http://www.bennyzhao.me/">
+                <a href="https://www.bennyzhao.me/">
                   <span className="about-link">Portfolio</span>
                 </a>
               </li>
