@@ -4,13 +4,11 @@ import {fetchAllReviews} from '../../actions/review_actions';
 import ReviewIndex from './review_index';
 
 const mapStateToProps = (state, ownProps) => {
-  // const businessId = ownProps.match.params.businessId
-  // const biz = state.entities.businesses[businessId];
-  const biz = state.entities.businesses.business;
+  const biz = state.entities.selectedBusiness.business;
   const reviewIds = biz.review_ids;
   const reviews = [];
   reviewIds.forEach(id => {
-    const review = state.entities.reviews[id];
+    const review = state.entities.selectedBusiness.reviews[id];
     if (review) {
       return reviews.push(review);
     }
