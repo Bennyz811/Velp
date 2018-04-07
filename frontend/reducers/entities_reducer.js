@@ -4,7 +4,7 @@ import reviewReducer from './review_reducer';
 import searchReducer from './search_reducer';
 
 export default combineReducers({
-  businesses: businessesReducer,
+  selectedBusiness: businessesReducer,
   reviews: reviewReducer,
-  search: searchReducer,
+  searchResults: searchReducer,
 });
