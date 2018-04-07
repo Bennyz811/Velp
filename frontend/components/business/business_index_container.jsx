@@ -6,7 +6,6 @@ import {fetchSearchBusinesses, searchForBusinesses, searchForNewBusinesses} from
 import {selectAllBiz} from '../../reducers/selectors';
 
 const mapStateToProps = (state, ownProps) => {
-  console.log("index container")
     return {
       searchResults: state.entities.searchResults,
       selectedBusiness: state.entities.selectedBusiness,
@@ -15,9 +14,6 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  // updateFilter: (filters, value) => dispatch(updateFilter(filters, value)),
-  // fetchAllBusiness: () => dispatch(fetchAllBusiness()),
-  // fetchBusiness: id => dispatch(fetchBusiness(id))
   return {
     searchForBusinesses: (query, offSet) => dispatch(searchForBusinesses(query, offSet)),
     searchForNewBusinesses: input => dispatch(searchForNewBusinesses(input))
