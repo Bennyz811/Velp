@@ -14,14 +14,14 @@ class ReviewForm extends React.Component{
   }
 
   navToBizShow(){
-    const url = `/businesses/${this.props.match.params.businessId}`;
+    const url = `/businesses/search/${this.props.match.params.businessId}`;
     this.props.history.push(url);
   }
 
   handleSubmit(e){
     e.preventDefault();
     const bizId = parseInt(this.props.match.params.businessId);
-    const review = Object.assign({}, this.state, {biz_id: bizId})
+    const review = Object.assign({}, this.state, {biz_id: bizId});
     this.props.action(review).then( () => this.navToBizShow());
   }
 
@@ -30,13 +30,13 @@ class ReviewForm extends React.Component{
   // }
 
   handleRating(e){
-    this.setState({rating: e.target.value})
+    this.setState({rating: e.target.value});
   }
 
   update(field){
     return (e) => this.setState({
       [field]: e.currentTarget.value
-    })
+    });
   }
 
   render() {
