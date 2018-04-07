@@ -17,6 +17,7 @@ namespace :api, defaults: {format: :json} do
   resources :reviews
   resources :businesses do
     get "search", on: :collection
+    get "recommend", on: :collection
   end
 end
 
