@@ -5,22 +5,14 @@ import {updateFilter} from '../../actions/filter_actions';
 import {fetchSearchBusinesses, searchForBusinesses, searchForNewBusinesses} from '../../actions/business_actions';
 import {selectAllBiz} from '../../reducers/selectors';
 
-// const mapStateToProps = state => {
-//   return {
-//     businesses: Object.values(state.entities.businesses)
-//   };
-// };
-
 const mapStateToProps = (state, ownProps) => {
-  // const biz = searchForBusinesses(state.entities.search.input).filter((b) => {
-  //   return b !== undefined;
-  // });
+  console.log("index container")
     return {
-      businesses: state.entities.businesses,
-      offSet: state.entities.businesses.length,
+      searchResults: state.entities.searchResults,
+      selectedBusiness: state.entities.selectedBusiness,
+      offSet: state.entities.searchResults.length,
     };
 };
-// query: state.ui.filters.categories,
 
 const mapDispatchToProps = (dispatch) => {
   // updateFilter: (filters, value) => dispatch(updateFilter(filters, value)),

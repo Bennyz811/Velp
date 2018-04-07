@@ -44,15 +44,15 @@ class BusinessIndex extends React.Component {
             <div className="result-col-alpha">
               <div className="result-list">
                 <ul id="index" className="result-list-ul">
-                    {this.props.businesses.map(business => (
+                    {this.props.searchResults.map(business => (
                       <IndexItem
                         className="result-list-ind"
                         key={business.id}
-                        businesses={business}
+                        business={business}
                       />
                     ))}
                 </ul>
-                {!this.props.businesses.length && <p className="error-msg">
+                {!this.props.searchResults.length && <p className="error-msg">
                     Sorry! There are no results matching your search. Please
                     try another term.
                   </p>}
@@ -61,7 +61,7 @@ class BusinessIndex extends React.Component {
 
             <div className="result-col-beta">
               <div className="map-container">
-                <BusinessMap businesses={this.props.businesses} />
+                <BusinessMap businesses={this.props.searchResults} />
               </div>
             </div>
           </div>
