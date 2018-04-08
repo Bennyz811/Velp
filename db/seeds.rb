@@ -207,7 +207,7 @@ woorijip = Business.create!({
   address: "12 w 32nd st",
   phone: "212 244 1115",
   neighborhood: "ktown",
-  category: "korean",
+  category: "Korean",
   rating: 3,
   cost: 1,
   lat: 40.747351,
@@ -220,7 +220,7 @@ picnic_garden = Business.create!({
   biz_name: "Picnic Garden",
   address: "154-05 northern blvd",
   phone: "718 886 5050",
-  neighborhood: "flushing",
+  neighborhood: "Flushing",
   category: "korean",
   rating: 3,
   cost: 1,
@@ -235,7 +235,7 @@ sophies = Business.create!({
   address: "21 w 45th st New York, NY",
   phone: "212 302 1211",
   neighborhood: "Midtown West",
-  category: "cuban",
+  category: "Cuban",
   rating: 4,
   cost: 2,
   lat: 40.728349,
@@ -249,7 +249,7 @@ gong_cha = Business.create!({
   address: "75 W 38th St New York, NY",
   phone: "718 886 5050",
   neighborhood: "Midtown West",
-  category: "boba",
+  category: "Boba",
   rating: 3,
   cost: 2,
   lat: 40.7283384,
@@ -292,7 +292,7 @@ icecream = Business.create!({
 Brooklyn, NY",
   phone: "718 886 5050",
   neighborhood: "Prospect Heights",
-  category: "ice cream",
+  category: "Ice Cream",
   rating: 4,
   cost: 2,
   lat: 40.7263489,
@@ -412,7 +412,7 @@ shake_shack = Business.create!({
 New York, NY ",
   phone: "718 886 5050",
   neighborhood: "Flatiron",
-  category: "burgers",
+  category: "Burgers",
   rating: 4,
   cost: 2,
   lat: 40.7408761,
@@ -962,7 +962,7 @@ require 'faker'
       rating: [2, 2.5, 3, 3.5, 4, 4.5, 5].sample,
       cost: [2,3,4].sample,
       lat: rand(40.7..40.9),
-      lng: rand(-74.0..-73.9),
+      lng: rand(-73.9...-73.8),
       image: File.open("app/assets/images/food/#{food_pic}.jpg"),
       image_content_type: "image/jpeg"
     )
@@ -986,7 +986,7 @@ require 'faker'
   70.times {
     Business.order(:id).all.each do |biz|
       Review.create!(
-        body: Faker::Lorem.sentence(rand(4...10)),
+        body: Faker::Lorem.sentence(rand(5...10)),
         rating: [2,3,4].sample,
         user_id: User.all.sample.id,
         biz_id: biz.id
