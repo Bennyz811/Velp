@@ -55,29 +55,33 @@ class IndexItem extends React.Component {
       dollar = <div>$$$$</div>;
     }
 
-    return(
-      <li id="myLI" className="search-container">
-        <div className="biz-listing-large">
-          <div className="biz-listing-left-container">
-            <div className="biz-media-block">
-              <div className="media-avatar">
-                <img className="biz-pic" src={image_url}/>
+    const isSplash = this.props.splash;
+    
+    return <li id="myLI" className={isSplash ? "recom-list" : "search-container"}>
+        <div className={isSplash ? "recom-list-large" : "biz-listing-large"}>
+          <div className={isSplash ? "recom-list-left-container" : "biz-listing-left-container"}>
+            <div className={isSplash ? "recom-media-block" : "biz-media-block"}>
+              <div className={isSplash ? "recom-media-avatar" : "media-avatar"}>
+                <img className={isSplash ? "recom-pic" : "biz-pic"} src={image_url} />
               </div>
-              <div className="media-story">
-                <Link className="search-res-title" to={`/businesses/search/${this.props.business.id}`}>{biz_name}</Link>
-                <div className="search-res-rating">{ratingStar}</div>
-                <div className="search-res-cat">{dollar} · {category}</div>
+              <div className={isSplash ? "recom-media-story" : "media-story"}>
+                <Link className={isSplash ? "recom-item-title search-res-title" : "search-res-title"} to={`/businesses/search/${this.props.business.id}`}>
+                  {biz_name}
+                </Link>
+                <div className={isSplash ? "recom-item-rating search-res-rating" : "search-res-rating"}>{ratingStar}</div>
+                <div className={isSplash ? "recom-item-cat search-res-cat" : "search-res-cat"}>
+                  {dollar} · {category}
+                </div>
               </div>
             </div>
           </div>
-          <div className="biz-listing-right-container">
-              <span className="search-res-neigh">{neighborhood}</span>
-              <address className="search-res-addr">{address}</address>
-              <span>{phone}</span>
+          <div className={isSplash ? "hidden" : "biz-listing-right-container"}>
+            <span className="search-res-neigh">{neighborhood}</span>
+            <address className="search-res-addr">{address}</address>
+            <span>{phone}</span>
           </div>
         </div>
-      </li>
-    );
+      </li>;
   }
 }
 export default withRouter(IndexItem);
