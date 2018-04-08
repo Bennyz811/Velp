@@ -2,16 +2,20 @@ import React from 'react';
 import {Link, withRouter, Route} from 'react-router-dom';
 import SearchContainer from '../business/search_container';
 import RecommendedContainer from '../business/business_recom_container';
+import IndexItem from '../business/business_index_item';
 
 class Splash extends React.Component{
   constructor(props){
     super(props);
   }
 
+  componentDidMount(){
+    this.props.fetchRecommendations();
+  }
+
   render(){
         const classes = ["tacos", "beer", "girleed_cheese", "meal", "icecream", "perse2", "xian", "steak"];
         const rand = classes[Math.floor(Math.random() * classes.length)];
-        // $('background').css({'background': 'image_url(images/' + rand + ')'});
     return(
       <div>
         <div className={rand}>
@@ -26,7 +30,12 @@ class Splash extends React.Component{
           <div className="home-rec-container">
             <h2>Velp New York</h2>
           </div>
-          <Route exact path="/" component={RecommendedContainer}/>
+          {this.props.recommendations.map(business => (
+            <IndexItem
+              key={business.id}
+              business={business}
+            />
+          ))}
         </div>
       </div>
     );
