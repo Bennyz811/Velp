@@ -1,6 +1,6 @@
-export const fetchRecommendations = recom => {
+export const fetchRecommendationAPI = () => {
     return $.ajax({
         method: 'get',
-        url: '/api/recommend'
+        url: '/api/businesses/recommend'
     });
 };
