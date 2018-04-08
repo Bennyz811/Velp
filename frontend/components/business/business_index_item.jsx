@@ -62,7 +62,9 @@ class IndexItem extends React.Component {
           <div className={isSplash ? "recom-list-left-container" : "biz-listing-left-container"}>
             <div className={isSplash ? "recom-media-block" : "biz-media-block"}>
               <div className={isSplash ? "recom-media-avatar" : "media-avatar"}>
+              <Link to={`/businesses/search/${this.props.business.id}`}>
                 <img className={isSplash ? "recom-pic" : "biz-pic"} src={image_url} />
+              </Link>
               </div>
               <div className={isSplash ? "recom-media-story" : "media-story"}>
                 <Link className={isSplash ? "recom-item-title search-res-title" : "search-res-title"} to={`/businesses/search/${this.props.business.id}`}>
