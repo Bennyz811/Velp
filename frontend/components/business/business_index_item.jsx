@@ -69,9 +69,10 @@ class IndexItem extends React.Component {
                   {biz_name}
                 </Link>
                 <div className={isSplash ? "recom-item-rating search-res-rating" : "search-res-rating"}>{ratingStar}</div>
-                <div className={isSplash ? "recom-item-cat search-res-cat" : "search-res-cat"}>
+                <div className={isSplash ? "recom-item-cat" : "search-res-cat"}>
                   {dollar} · {category}
                 </div>
+                {isSplash && <span className="">{neighborhood}, NY</span>}
               </div>
             </div>
           </div>

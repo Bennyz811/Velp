@@ -36,11 +36,16 @@
 
 .recom-item-title{
   font-weight:700;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .splash-recom {
   display: flex;
   list-style: none;
   padding: 15px;
+}
+
+.recom-item-cat {
+  padding: 5px 0 5px 0;
+  display: flex;
 }
