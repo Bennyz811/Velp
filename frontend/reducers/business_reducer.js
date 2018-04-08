@@ -1,5 +1,6 @@
 import merge from 'lodash/merge';
 import {RECEIVE_ALL_BUSINESSES, RECEIVE_BUSINESS, REMOVE_BUSINESS, SEARCH_BUSINESSES, SEARCH_NEW_BUSINESSES} from '../actions/business_actions';
+import {FETCH_RECOM} from '../actions/recommend_actions';
 
 let _initialState = {};
 const businessesReducer = (state = _initialState, action) => {
