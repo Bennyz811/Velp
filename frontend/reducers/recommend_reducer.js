@@ -1,8 +1,8 @@
 import merge from "lodash/merge";
 import { FETCH_RECOM } from "../actions/recommend_actions";
 
-let _initialState = {};
-const businessesReducer = (state = _initialState, action) => {
+let _initialState = [];
+const recommendationReducer = (state = _initialState, action) => {
   Object.freeze(state);
   switch (action.type) {
     case FETCH_RECOM:
@@ -12,4 +12,4 @@ const businessesReducer = (state = _initialState, action) => {
   }
 };
 
-export default businessesReducer;
+export default recommendationReducer;
