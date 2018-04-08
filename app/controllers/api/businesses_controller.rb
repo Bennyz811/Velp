@@ -63,9 +63,11 @@ class Api::BusinessesController < ApplicationController
   end
 
   def recommend 
-    array = []
-    array.push(Business.all.sample) until array.uniq.length === 3
-    @recommend = array.uniq
+    @recommend = []
+    while @recommend.length < 3
+      sample = Business.all.sample
+      @recommend.push(sample)
+    end
   end 
 
 
