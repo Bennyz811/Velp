@@ -1,5 +1,3 @@
-@recommend.each do |recom|
-  json.set! recom.id do
+json.array! @recommend do |recom|
     json.partial! 'business', business: recom
-  end
-end
+end 

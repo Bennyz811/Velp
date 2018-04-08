@@ -68,8 +68,6 @@ class Api::BusinessesController < ApplicationController
       sample = Business.all.sample
       @recommend.push(sample)
     end
-
-    render json: @recommend
   end 
 
 
