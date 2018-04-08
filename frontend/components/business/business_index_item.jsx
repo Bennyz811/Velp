@@ -75,11 +75,11 @@ class IndexItem extends React.Component {
               </div>
             </div>
           </div>
-          <div className={isSplash ? "hidden" : "biz-listing-right-container"}>
+          {!isSplash && <div className="biz-listing-right-container">
             <span className="search-res-neigh">{neighborhood}</span>
             <address className="search-res-addr">{address}</address>
             <span>{phone}</span>
-          </div>
+          </div>}
         </div>
       </li>;
   }
