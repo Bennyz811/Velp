@@ -30,12 +30,15 @@ class Splash extends React.Component{
           <div className="home-rec-container">
             <h2>Velp New York</h2>
           </div>
+          <div className="splash-recom">
           {this.props.recommendations.map(business => (
             <IndexItem
+              splash="splash-recom"
               key={business.id}
               business={business}
             />
           ))}
+          </div>
         </div>
       </div>
     );
