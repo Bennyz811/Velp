@@ -14,12 +14,12 @@ const mapStateToProps = (state, ownProps) => {
     }
   });
   return {
-    reviews: reviews
+    reviews: reviews.reverse()
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  fetchAllReviews: () => dispatch(fetchAllReviews())
+  fetchAllReviews: (offSet) => dispatch(fetchAllReviews(offSet))
 });
 
 export default withRouter(connect(
