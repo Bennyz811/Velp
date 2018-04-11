@@ -2,7 +2,7 @@ import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
 import {fetchBusiness} from '../../actions/business_actions';
 import {selectBusiness} from '../../reducers/selectors';
-import {fetchReview} from '../../actions/review_actions';
+import {fetchBusinessReviews, fetchMoreReviews} from '../../actions/review_actions';
 // import businessesReducer from '../reducers/business_reducer';
 import BusinessShow from './business_show';
 
@@ -12,13 +12,16 @@ const mapStateToProps = (state, ownProps) => {
   return {
     bizId,
     business,
+    reviews: state.entities.businessReviews,
+    offSet: state.entities.businessReviews.length
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     fetchBusiness: id => dispatch(fetchBusiness(id)),
-    fetchReview: id => dispatch(fetchReview(id))
+    fetchBusinessReviews: (revBizId, offSet) => dispatch(fetchBusinessReviews(revBizId, offSet)),
+    fetchMoreReviews: (revBizId) => dispatch(fetchMoreReviews(revBizId))
   };
 };
 
