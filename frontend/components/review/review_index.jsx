@@ -1,17 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import ReviewIndexItem from './review_index_item';
+import throttle from "lodash/throttle";
 
 class ReviewIndex extends React.Component {
   constructor(props){
     super(props);
   }
 
-  // componentDidMount(){
-  //   this.props.fetchAllReviews();
-  // }
+
   render(){
-    if (this.props.reviews.length){
       return (
         <div className="rev-super-container">
           <div className="rev-container">
@@ -20,7 +18,7 @@ class ReviewIndex extends React.Component {
                 <div className="rev-feed-header">
                   <h2>Recommended Reviews</h2>
                 </div>
-                <ul className="rev-list-ul">
+                <ul id="reviews" className="rev-list-ul">
                   {
                     this.props.reviews.map(rev => (
                       <ReviewIndexItem
@@ -110,11 +108,6 @@ class ReviewIndex extends React.Component {
           </div>
         </div>
       );
-    } else {
-      return (
-        <p>Loading...</p>
-      );
-    }
   }
 }
 

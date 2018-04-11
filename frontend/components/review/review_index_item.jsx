@@ -29,18 +29,18 @@ const ReviewIndexItem = ({review}) => {
         <div className="rating-star-5"><img src={window.fiveStar}/></div>
       )
     }
-    let date = review.created_at.slice(0,10)
+    let date = review.created_at.slice(0,10);
   return (
       <li className="review-list">
         <div className="rev-reviews">
           <div className="rev-sidebar">
             <div className="media-avatar">
-              <img className="rev-user-pic" src={review.imageUrl}/>
+              <img className="rev-user-pic" src={review.user.imageUrl}/>
             </div>
             <div className="media-story">
               <div className="rev-user-name">
-                {review.firstName}
-                {review.lastName}
+                {review.user.firstName}
+                {review.user.lastName}
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@ const ReviewIndexItem = ({review}) => {
           </div>
         </div>
       </li>
-  )
-}
-// pulled user through review in back end jbuilder
+  );
+};
+
 export default withRouter(ReviewIndexItem);
