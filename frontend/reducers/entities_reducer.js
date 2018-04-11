@@ -6,6 +6,7 @@ import recommendationReducer from './recommend_reducer';
 
 export default combineReducers({
   selectedBusiness: businessesReducer,
+  businessReviews: reviewReducer,
   searchResults: searchReducer,
   recommendations: recommendationReducer
 });
