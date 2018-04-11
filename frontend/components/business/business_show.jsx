@@ -18,7 +18,7 @@ class BusinessShow extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchBusiness(this.props.match.params.businessId)
+    this.props.fetchBusiness(this.props.bizId)
       .then(() => {
         this.setState({ hasMadeApiCall: true });
         this.props.history.push(`/businesses/search/${this.props.bizId}`);
@@ -26,7 +26,6 @@ class BusinessShow extends React.Component {
   }
 
   // componentWillReceiveProps(nextProps){
-  //   if (this.props.match.params.businessId)
   // }
 
   render(){
@@ -75,7 +74,7 @@ class BusinessShow extends React.Component {
     
     return <div className="biz-index-item" onClick={this.handleClick}>
         <UniversalNav />
-        {this.props.business && this.props.business.review_ids && 
+        {this.props.business && 
           <div className="biz-index-item" onClick={this.handleClick}>
               <div className="top-shelf-container">
                 <div className="top-shelf">
@@ -125,7 +124,7 @@ class BusinessShow extends React.Component {
                 </div>
               </div>
               <div className="bottom-layout">
-                <ReviewIndexContainer />
+                {/* <ReviewIndexContainer /> */}
               </div>
             </div>}
 
