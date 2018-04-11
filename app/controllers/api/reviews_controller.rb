@@ -23,7 +23,7 @@ class Api::ReviewsController < ApplicationController
   end
 
   def index
-    @reviews = Review.where(biz_id: params[:revBizId]).offset(params[:offSet])
+    @reviews = Review.where(biz_id: params[:revBizId]).limit(5).offset(params[:offSet])
     render :index
   end
 
