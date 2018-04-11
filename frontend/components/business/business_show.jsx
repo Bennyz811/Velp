@@ -35,7 +35,6 @@ class BusinessShow extends React.Component {
   }
 
   handleScroll(){
-    console.log(this.props.offSet);
     const x = document.getElementById('list');
     if (window.pageYOffset > Math.ceil(x.offsetHeight)){
       this.props.fetchMoreReviews(this.props.bizId, this.props.offSet);
