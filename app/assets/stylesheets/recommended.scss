@@ -50,9 +50,24 @@
   display: flex;
 }
 
-@media (max-width: 1040px) {
-  .recom-item-title {
-    font-size: 16px;
+
+
+@media (max-width: 650px) {
+  
+  .recom-list-large 
+  .recom-list-left-container 
+  .recom-media-block 
+  .recom-media-block 
+  .recom-media-story {
+    width: 140px;
+  }
+
+  .splash-recom {
+    display: block;
+  }
+
+  .recom-list {
+    padding: 20px;
   }
 }
 
