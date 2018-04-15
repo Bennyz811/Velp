@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {ProtectedRoute} from '../../util/route_util';
-import UniversalNav from './universal_nav';
 import ReviewFormContainer from '../review/review_form_container';
 import ReviewIndexItem from '../review/review_index_item';
 import ReviewIndex from '../review/review_index';
@@ -86,7 +85,6 @@ class BusinessShow extends React.Component {
     }
     
     return <div className="biz-index-item" onClick={this.handleClick}>
-        <UniversalNav />
         {this.props.business && <div className="biz-index-item" onClick={this.handleClick}>
             <div className="top-shelf-container">
               <div className="top-shelf">

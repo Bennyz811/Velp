@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
-import Header from './header';
 import {withRouter} from 'react-router-dom';
+import imageUpload from './image_upload';
 import {logout} from '../../actions/session_actions';
 import {fetchAllBusiness} from '../../actions/business_actions';
 
@@ -20,4 +20,4 @@ const mapDispatchToProps = dispatch => {
 export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(Header));
+)(imageUpload));

@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
-import UniversalNav from '../business/universal_nav';
 import {signup} from '../../actions/session_actions';
 // import BusinessShow from '../business/business_show';
 
@@ -57,7 +56,6 @@ class ReviewForm extends React.Component{
     let stars = [];
     return (
       <div>
-        <UniversalNav/>
         <div className="review-form-container">
           <div className="review-form-header">
             <h3>Write a Review</h3>

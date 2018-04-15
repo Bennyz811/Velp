@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import IndexItem from './business_index_item';
-import UniversalNav from './universal_nav';
 import BusinessMap from '../business_map/business_map';
 import Footer from '../footer.jsx';
 import throttle from 'lodash/throttle';
@@ -38,7 +37,6 @@ class BusinessIndex extends React.Component {
 
   render(){
     return <div>
-        <UniversalNav />
         <div className="result-super-container">
           <div className="result-container">
             <div className="result-col-alpha">
