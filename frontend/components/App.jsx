@@ -15,17 +15,18 @@ import Footer from "./footer.jsx";
 
 const Main = (props) => {
   return <div>
-    {props.location.pathname!=="/" && <UniversalNav  />}
+      {props.location.pathname !== "/" && props.location.pathname !== "/signup" && props.location.pathname !== "/login" && <UniversalNav />}
+      {/* <UniversalNav/> */}
       <Switch>
         <AuthRoute path="/login" component={SessionFormContainer} />
         <AuthRoute path="/signup" component={SessionFormContainer} />
-        <Route path="/" component={GreetingContainer} />
+        {props.location.pathname === "/" && <Route path="/" component={GreetingContainer} />}
       </Switch>
       <Route exact path="/search" component={BusinessIndexContainer} />
       <Route path="/businesses/search/:businessId" component={BusinessShowContainer} />
       <Route path="/:businessId/write_review" component={ReviewFormContainer} />
       <Route exact path="/" component={SplashContainer} />
-    <Footer />
+      <Footer />
     </div>;
 };
 
