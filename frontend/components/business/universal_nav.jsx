@@ -24,7 +24,7 @@ class UniversalNav extends React.Component{
               </div>
               <div className="nav-search-bar">
                 <SearchContainer />
-                <Greeting
+                <GreetingContainer
                 nav={"nav"}/>
               </div>
             </div>

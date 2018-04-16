@@ -5,7 +5,7 @@ import Greeting from './greeting';
 const mapStateToProps = ({session}, ownProps) => {
   return {
     currentUser: session.currentUser,
-    pathName: ownProps.location.pathname
+    nav: ownProps.nav
   };
 };
 
