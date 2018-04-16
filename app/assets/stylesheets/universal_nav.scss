@@ -1,12 +1,6 @@
 .search-bar-nav {
-  margin-left: 18px;
-  margin-right: 18px;
-  border-spacing: 18px 0;
-  vertical-align: baseline;
-  display: block;
-  height: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  max-width: 1000px;
 }
 
 .main-nav-logo{
@@ -16,20 +10,37 @@
 }
 
 .uni-logo{
-  margin-bottom: 5px;
+  margin-bottom: 16px;
 }
 
 .uni-arr-container{
   display: flex;
   height: 100px;
-  width: 780px;
-  position: absolute;
-}
-
-.uni-search-container{
-  height: 100%;
+  width: 100%;
 }
 
 .nav-search-bar{
   width: 100%;
+}
+
+.uni-nav-greeting {
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: white;
+  display: flex;
+  padding: 15px;
+  margin: 10px 15px;
+}
+
+.uni-nav-greeting .login-link{
+  padding: 9px;
+  align-items: center;
+}
+
+.uni-nav-greeting .signup-link{
+  border: 2px solid #fff;
+  border-radius: 4px;
+  padding: 7px 24px 8px;
+  background: transparent;
 }

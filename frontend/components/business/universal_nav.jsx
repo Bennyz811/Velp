@@ -12,9 +12,7 @@ class UniversalNav extends React.Component{
   }
 
   render(){
-    return (
-    <div className="main-nav-wrapper">
-        <div className="uni-search-container">
+    return <div className="main-nav-wrapper">
           <div className="search-bar-nav">
             <div className="uni-arr-container">
               <div className="uni-logo">
@@ -24,14 +22,13 @@ class UniversalNav extends React.Component{
               </div>
               <div className="nav-search-bar">
                 <SearchContainer />
-                <GreetingContainer
-                nav={"nav"}/>
+              </div>
+              <div>
+                <GreetingContainer nav={"nav"} />
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      );
+      </div>;
   }
 }
 

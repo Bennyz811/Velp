@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const sessionLinks = (nav) => {
-  return <nav className={nav === "nav" ? "uni-nav-style" : "main-header-nav"}>
+  return <nav className={nav === "nav" ? "uni-nav-greeting" : "main-header-nav"}>
       <Link className="login-link" to="/login">
         Log In
       </Link>
