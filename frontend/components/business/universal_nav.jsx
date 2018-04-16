@@ -1,14 +1,19 @@
 import SearchContainer from './search_container';
 import GreetingContainer from '../greeting/greeting_container';
-import { Greeting } from '../greeting/greeting';
+import Greeting from '../greeting/greeting';
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {AuthRoute} from '../../util/route_util';
 import SessionFormContainer from '../session/session_form_container';
 
 class UniversalNav extends React.Component{
+  constructor(props) {
+    super(props);
+  }
+
   render(){
-    return <div className="main-nav-wrapper">
+    return (
+    <div className="main-nav-wrapper">
         <div className="uni-search-container">
           <div className="search-bar-nav">
             <div className="uni-arr-container">
@@ -19,12 +24,14 @@ class UniversalNav extends React.Component{
               </div>
               <div className="nav-search-bar">
                 <SearchContainer />
-                {Greeting}
+                <Greeting
+                nav={"nav"}/>
               </div>
             </div>
           </div>
         </div>
-      </div>;
+      </div>
+      );
   }
 }
 

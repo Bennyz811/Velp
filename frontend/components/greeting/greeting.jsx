@@ -1,13 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const sessionLinks = () => (
-  <nav className="main-header-nav">
-    <Link className="login-link" to="/login">Log In</Link>
-    <br/>
-    <Link className="signup-link" to="/signup">Sign Up</Link>
-  </nav>
-);
+const sessionLinks = (nav) => {
+  return <nav className={nav === "nav" ? "uni-nav-style" : "main-header-nav"}>
+      <Link className="login-link" to="/login">
+        Log In
+      </Link>
+      <br />
+      <Link className="signup-link" to="/signup">
+        Sign Up
+      </Link>
+    </nav>;
+};
 
 const personalGreeting = (currentUser, logout) => (
   <hgroup className="header-group">
@@ -16,8 +20,10 @@ const personalGreeting = (currentUser, logout) => (
   </hgroup>
 );
 
-const Greeting = ({ currentUser, logout }) => (
-  currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
-);
+const Greeting = ({ currentUser, logout, nav }) => {
+  return (
+    currentUser ? personalGreeting(currentUser, logout) : sessionLinks(nav)
+  );
+};
 
 export default Greeting;
