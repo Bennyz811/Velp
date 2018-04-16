@@ -48,3 +48,9 @@
 .uni-nav-greeting .signup-link:hover{
   color: black;
 }
+
+@media (max-width: 980px) {
+  .search-bar-nav {
+    width: 980px;
+  }
+}

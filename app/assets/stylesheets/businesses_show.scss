@@ -104,3 +104,9 @@
   font-weight: bold;
   margin-bottom: 5px;
 }
+
+@media (max-width: 980px) {
+  .main-nav-wrapper {
+    width: 980px;
+  }
+}
