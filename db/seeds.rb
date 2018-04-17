@@ -950,7 +950,7 @@ require 'faker'
     "pizza-bread", "pizza-bread2", "sandwich", "stew"].sample
     Business.create!(
       biz_name: [
-        "#{Faker::RickAndMorty.character}'s #{["Hole", "Place", "Restaurant", "House", "Garden", "Lab", "Plate"].sample}", 
+        "#{Faker::RickAndMorty.character}'s #{["Hole in the Wall", "Place", "Restaurant", "House", "Garden", "Lab", "Plate"].sample}", 
         "#{Faker::Friends.character}'s #{["Hole", "Place", "Restaurant", "House", "Garden", "Lab", "Plate"].sample}",
         "#{Faker::GameOfThrones.character}'s #{["Hole", "Place", "Restaurant", "House", "Garden", "Lab", "Plate"].sample}",
         "#{Faker::Simpsons.character}'s #{["Hole", "Place", "Restaurant", "House", "Garden", "Lab", "Plate"].sample}"
