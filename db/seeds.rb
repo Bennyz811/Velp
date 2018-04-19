@@ -995,11 +995,14 @@ require 'faker'
   }
 
   15.times {
+  food_pic = ["apple-pie", "chinese-chicken", "dumplings", "garlic-bread", 
+    "juicy-burger", "milkshake", "noodles", "nutella-banana", "peacan-pie", 
+    "pizza-bread", "pizza-bread2", "sandwich", "stew"].sample
     Business.order(:id).all.each do |biz|
       PictureAlbum.create!(
         biz_id: biz.id,
         user_id: User.all.sample.id,
-        image: Faker::LoremPixel.image("100x200", false, "food"),
+        image: File.open("app/assets/images/food/#{food_pic}.jpg"),
         image_content_type: "image/jpeg"
       )
     end
