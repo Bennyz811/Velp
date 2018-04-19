@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
-import { ValidatorForm, TextValidator } from 'react-form-validator-core';
 
 class SessionForm extends React.Component {
   constructor(props){
