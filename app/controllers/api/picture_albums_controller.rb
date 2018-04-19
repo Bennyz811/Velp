@@ -2,7 +2,7 @@ class PictureAlbumsController < ApplicationController
     before_action :require_log_in
 
     def index
-        @picture_album = Picture_Album.where(biz_id: params[picBizId])
+        @picture_album = PictureAlbum.where(biz_id: params[picBizId])
         render :index
     end 
     private 

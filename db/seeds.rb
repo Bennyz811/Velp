@@ -996,7 +996,7 @@ require 'faker'
 
   15.times {
     Business.order(:id).all.each do |biz|
-      Picture_Album.create!(
+      PictureAlbum.create!(
         biz_id: biz.id,
         user_id: User.all.sample.id
       )
