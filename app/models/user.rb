@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :businesses
   has_many :reviews
+  has_many :picture_albums
 
   after_initialize :ensure_session_token
   

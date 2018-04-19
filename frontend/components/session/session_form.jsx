@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
+import { ValidatorForm, TextValidator } from 'react-form-validator-core';
 
 class SessionForm extends React.Component {
   constructor(props){
@@ -77,7 +78,8 @@ class SessionForm extends React.Component {
                 type="text"
                 value={this.state.firstName}
                 onChange={this.update('firstName')}
-                placeholder="First Name" />
+                placeholder="First Name" 
+                />
             </label>
           )
           lastNameInput = (
@@ -140,12 +142,12 @@ class SessionForm extends React.Component {
           )
         }
 
-        return(
-          <div className="main-session-wrap">
-
+        return <div className="main-session-wrap">
             <div className="wrap-header">
               <div className="logo-header">
-                <Link to='/'><img className='velp-logo' src={window.velpLogo}/></Link>
+                <Link to="/">
+                  <img className="velp-logo" src={window.velpLogo} />
+                </Link>
               </div>
             </div>
 
@@ -161,43 +163,31 @@ class SessionForm extends React.Component {
                       {firstNameInput}
                       {lastNameInput}
                       <label className="input-field">
-                        <input
-                          type="email"
-                          value={this.state.email}
-                          onChange={this.update('email')}
-                          placeholder="Email" />
+                        <input type="email" value={this.state.email} onChange={this.update("email")} placeholder="Email" />
                       </label>
-
-                      <br/>
-
+                      <br />
                       <label className="input-field">
-                        <input
-                          type="password"
-                          value={this.state.password}
-                          onChange={this.update('password')}
-                          placeholder="Password"/>
+                        <input type="password" value={this.state.password} onChange={this.update("password")} placeholder="Password" />
                       </label>
                       {zipCodeInput}
                       {birthday}
-                      <br/>
-                      <input className="red-button" type='submit' value={text} />
-                      <br/>
+                      <br />
+                      <input className="red-button" type="submit" value={text} />
+                      <br />
                       {miniSignup}
                       {miniLogin}
                     </div>
                   </div>
-
                 </form>
               </div>
 
               <div className="column-img">
-                <div className="img-container"><img src={window.signupIllustration}/></div>
+                <div className="img-container">
+                  <img src={window.signupIllustration} />
+                </div>
               </div>
-
             </div>
-
-          </div>
-        )
+          </div>;
       }
     }
 

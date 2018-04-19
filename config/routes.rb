@@ -19,6 +19,7 @@ namespace :api, defaults: {format: :json} do
     get "search", on: :collection
     get "recommend", on: :collection
   end
+  resources :picture_albums
 end
 
 root to: 'static_pages#root'

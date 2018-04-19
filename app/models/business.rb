@@ -9,6 +9,9 @@ class Business < ApplicationRecord
   has_many :reviews,
   foreign_key: :biz_id
 
+  has_many :picture_albums,
+  foreign_key: :biz_id
+
   has_many :categories,
   through: :business_categories,
   source: :category

@@ -983,13 +983,22 @@ require 'faker'
     )
   }
 
-  70.times {
+  50.times {
     Business.order(:id).all.each do |biz|
       Review.create!(
         body: Faker::Lorem.sentence(rand(5...10)),
         rating: [2,3,4].sample,
         user_id: User.all.sample.id,
         biz_id: biz.id
+      )
+    end
+  }
+
+  15.times {
+    Business.order(:id).all.each do |biz|
+      Picture_Album.create!(
+        biz_id: biz.id,
+        user_id: User.all.sample.id
       )
     end
   }
