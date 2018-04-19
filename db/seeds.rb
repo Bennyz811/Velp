@@ -998,7 +998,9 @@ require 'faker'
     Business.order(:id).all.each do |biz|
       PictureAlbum.create!(
         biz_id: biz.id,
-        user_id: User.all.sample.id
+        user_id: User.all.sample.id,
+        image: Faker::LoremPixel.image("100x200", false, "food"),
+        image_content_type: "image/jpeg"
       )
     end
   }
