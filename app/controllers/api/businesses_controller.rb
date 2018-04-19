@@ -66,6 +66,7 @@ class Api::BusinessesController < ApplicationController
     while @recommend.length < 3
       sample = Business.all.sample
       @recommend.push(sample)
+      @recommend.uniq
     end
   end 
 
