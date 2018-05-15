@@ -23,20 +23,20 @@
   width: 100%;
 }
 
-.uni-nav-personal img {
+.uni-nav-personal img, .header-group img{
   width: 40px;
   height: 40px;
   border-radius: 5px;
 }
 
-.uni-nav-personal button {
-  font-size: 16px;
+.uni-nav-personal button, .header-group button{
+  font-size: 14px;
   color: #fff;
   margin-left: 15px;
   margin-bottom: 5px;
 }
 
-.uni-nav-personal button:hover {
+.uni-nav-personal button:hover, .header-group button:hover {
   cursor: pointer;
   border-bottom: 2px solid #fff;
 }
