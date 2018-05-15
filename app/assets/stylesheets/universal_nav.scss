@@ -23,7 +23,25 @@
   width: 100%;
 }
 
-.uni-nav-greeting {
+.uni-nav-personal img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.uni-nav-personal button {
+  font-size: 16px;
+  color: #fff;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
+.uni-nav-personal button:hover {
+  cursor: pointer;
+  border-bottom: 2px solid #fff;
+}
+
+.uni-nav-greeting, .uni-nav-personal {
   font-size: 14px;
   font-weight: 700;
   white-space: nowrap;
