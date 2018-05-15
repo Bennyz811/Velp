@@ -13,16 +13,18 @@ const sessionLinks = (nav) => {
     </nav>;
 };
 
-const personalGreeting = (currentUser, logout) => (
-  <hgroup className="header-group">
+const personalGreeting = (currentUser, logout, nav) => {
+  return (
+  <hgroup className={nav==="nav" ? "uni-nav-personal" : "header-group"}>
     <h2 className="header-name"><img src={currentUser.image_url}/></h2>
     <button onClick={logout}>Log out</button>
   </hgroup>
-);
+  );
+};
 
 const Greeting = ({ currentUser, logout, nav }) => {
   return (
-    currentUser ? personalGreeting(currentUser, logout) : sessionLinks(nav)
+    currentUser ? personalGreeting(currentUser, logout, nav) : sessionLinks(nav)
   );
 };
 
