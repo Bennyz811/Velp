@@ -8,7 +8,7 @@ import throttle from 'lodash/throttle';
 class BusinessIndex extends React.Component {
   constructor(props){
     super(props);
-    this.handleScroll = throttle(this.handleScroll.bind(this), 1000);
+    this.handleScroll = throttle(this.handleScroll.bind(this), 500);
   }
   
   componentDidMount(){

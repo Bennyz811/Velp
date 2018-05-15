@@ -16,7 +16,7 @@ class BusinessShow extends React.Component {
     this.state = {
       hasMadeApiCall: false
     };
-    this.handleScroll = throttle(this.handleScroll.bind(this), 1000);
+    this.handleScroll = throttle(this.handleScroll.bind(this), 500);
   }
 
   componentDidMount(){
